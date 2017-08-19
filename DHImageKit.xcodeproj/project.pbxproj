@@ -27,8 +27,6 @@
 		5478859C1F481E4400808C87 /* DHImageEditor.m in Sources */ = {isa = PBXBuildFile; fileRef = 547885541F481E4400808C87 /* DHImageEditor.m */; };
 		5478859D1F481E4400808C87 /* DHImageHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 547885551F481E4400808C87 /* DHImageHelper.h */; };
 		5478859E1F481E4400808C87 /* DHImageHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 547885561F481E4400808C87 /* DHImageHelper.m */; };
-		5478859F1F481E4400808C87 /* GPUImage.InstagramFilter.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 547885571F481E4400808C87 /* GPUImage.InstagramFilter.bundle */; };
-		547885A01F481E4400808C87 /* GPUImage.InstagramFilter.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 547885591F481E4400808C87 /* GPUImage.InstagramFilter.bundle */; };
 		547885A11F481E4400808C87 /* GPUImageFiveInputFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5478855A1F481E4400808C87 /* GPUImageFiveInputFilter.h */; };
 		547885A21F481E4400808C87 /* GPUImageFiveInputFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5478855B1F481E4400808C87 /* GPUImageFiveInputFilter.m */; };
 		547885A31F481E4400808C87 /* GPUImageFourInputFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5478855C1F481E4400808C87 /* GPUImageFourInputFilter.h */; };
@@ -112,8 +110,6 @@
 		547885541F481E4400808C87 /* DHImageEditor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHImageEditor.m; sourceTree = "<group>"; };
 		547885551F481E4400808C87 /* DHImageHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHImageHelper.h; sourceTree = "<group>"; };
 		547885561F481E4400808C87 /* DHImageHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHImageHelper.m; sourceTree = "<group>"; };
-		547885571F481E4400808C87 /* GPUImage.InstagramFilter.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GPUImage.InstagramFilter.bundle; sourceTree = "<group>"; };
-		547885591F481E4400808C87 /* GPUImage.InstagramFilter.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GPUImage.InstagramFilter.bundle; sourceTree = "<group>"; };
 		5478855A1F481E4400808C87 /* GPUImageFiveInputFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPUImageFiveInputFilter.h; sourceTree = "<group>"; };
 		5478855B1F481E4400808C87 /* GPUImageFiveInputFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPUImageFiveInputFilter.m; sourceTree = "<group>"; };
 		5478855C1F481E4400808C87 /* GPUImageFourInputFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPUImageFourInputFilter.h; sourceTree = "<group>"; };
@@ -209,7 +205,6 @@
 				547885541F481E4400808C87 /* DHImageEditor.m */,
 				547885551F481E4400808C87 /* DHImageHelper.h */,
 				547885561F481E4400808C87 /* DHImageHelper.m */,
-				547885571F481E4400808C87 /* GPUImage.InstagramFilter.bundle */,
 				547885581F481E4400808C87 /* IFFilters */,
 				547885871F481E4400808C87 /* UndoManager */,
 			);
@@ -246,7 +241,6 @@
 		547885581F481E4400808C87 /* IFFilters */ = {
 			isa = PBXGroup;
 			children = (
-				547885591F481E4400808C87 /* GPUImage.InstagramFilter.bundle */,
 				5478855A1F481E4400808C87 /* GPUImageFiveInputFilter.h */,
 				5478855B1F481E4400808C87 /* GPUImageFiveInputFilter.m */,
 				5478855C1F481E4400808C87 /* GPUImageFourInputFilter.h */,
@@ -465,8 +459,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				547885A01F481E4400808C87 /* GPUImage.InstagramFilter.bundle in Resources */,
-				5478859F1F481E4400808C87 /* GPUImage.InstagramFilter.bundle in Resources */,
 				547885D11F481E4400808C87 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

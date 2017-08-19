@@ -48,10 +48,7 @@
 }
 
 +(GPUImagePicture*)filterImageNamed:(NSString*)name {
-    NSString *bundlePath = [[NSBundle mainBundle] pathForResource:@"GPUImage.InstagramFilter" ofType:@"bundle"];
-    NSBundle* filterImageBundle = [NSBundle bundleWithPath:bundlePath];
-    
-    UIImage* image = [UIImage imageWithContentsOfFile:[filterImageBundle pathForResource:name ofType:@"png"]];
+    UIImage* image = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:name ofType:@"png"]];
     
     return [[GPUImagePicture alloc] initWithImage:image];
 }

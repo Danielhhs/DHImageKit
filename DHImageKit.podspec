@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.xcconfig = { 'CLANG_MODULES_AUTOLINK' => 'YES' }
   # s.resource  = "icon.png"
-  # s.resources = "Resources/*.png"
+  s.resources = "Resource/*.png"
   s.frameworks = "OpenGLES", "CoreMedia", "QuartzCore", "AVFoundation"
 
   s.dependency "GPUImage"
