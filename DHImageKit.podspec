@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name         = "DHImageKit"
-  s.version      = "0.0.3"
+  s.version      = "0.0.4"
   s.summary      = "DHImageKit is a library that allows you to edit image easily"
   s.description  = "DHImageKit is a image editing library based on GPUImage. Providing both the abliity to add a filter to whole image and the ability to edit single component of a image"
   s.homepage     = "https://github.com/Danielhhs/DHImageKit"
@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   s.author             = { "Daniel Huang" => "Danielhhs@163.com" }
   s.platform     = :ios, "8.0"
   s.source       = { :git => "https://github.com/Danielhhs/DHImageKit.git", :tag => "#{s.version}" }
-  s.source_files  = "Classes", "Classes/Sources/**/*.{h,m}"
+  s.source_files  = "Classes", "Classes/Source/**/*.{h,m}"
   s.exclude_files = "Classes/Exclude"
   s.requires_arc = true
   s.xcconfig = { 'CLANG_MODULES_AUTOLINK' => 'YES' }
