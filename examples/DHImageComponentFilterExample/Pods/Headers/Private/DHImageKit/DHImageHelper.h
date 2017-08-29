@@ -1,1 +1,1 @@
-../../../DHImageKit/Classes/Source/DHImageKit/DHImageHelper.h
+../../../../../../Classes/Source/DHImageKit/DHImageHelper.h

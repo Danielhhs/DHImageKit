@@ -1,1 +1,1 @@
-../../../DHImageKit/Classes/Source/DHImageKit/DHIFFiltersHelper.h
+../../../../../../Classes/Source/DHImageKit/DHIFFiltersHelper.h

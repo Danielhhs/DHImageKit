@@ -1,1 +1,1 @@
-../../../DHImageKit/Classes/Source/DHImageKit/ComponentFilter/DHImageStructureFilter.h
+../../../../../../Classes/Source/DHImageKit/ComponentFilter/DHImageStructureFilter.h

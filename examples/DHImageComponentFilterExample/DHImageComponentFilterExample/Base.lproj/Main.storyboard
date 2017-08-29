@@ -34,32 +34,41 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cRl-WL-uoF">
-                                <rect key="frame" x="82" y="629" width="42" height="30"/>
+                                <rect key="frame" x="166" y="629" width="42" height="30"/>
                                 <state key="normal" title="Filters"/>
                                 <connections>
                                     <action selector="showFilters:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f3u-ve-evz"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bq9-NF-Q09">
-                                <rect key="frame" x="247" y="629" width="30" height="30"/>
+                                <rect key="frame" x="311" y="629" width="30" height="30"/>
                                 <state key="normal" title="Edit"/>
                                 <connections>
                                     <action selector="showEdit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Pa-4B-RQ4"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e1A-ut-dXJ">
+                                <rect key="frame" x="16" y="629" width="64" height="30"/>
+                                <state key="normal" title="DHFilters"/>
+                                <connections>
+                                    <action selector="showDHFilters:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CKI-WH-3VA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="cRl-WL-uoF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="66" id="1Pn-7v-hJR"/>
                             <constraint firstAttribute="trailingMargin" secondItem="v6T-rv-T9R" secondAttribute="trailing" constant="-16" id="77t-5E-R5F"/>
                             <constraint firstItem="nre-zF-1Sc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="DPg-0v-L6N"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Bq9-NF-Q09" secondAttribute="trailing" constant="18" id="Grc-dS-xW6"/>
+                            <constraint firstItem="cRl-WL-uoF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Iot-9j-Rx7"/>
                             <constraint firstItem="v6T-rv-T9R" firstAttribute="top" secondItem="nre-zF-1Sc" secondAttribute="bottom" constant="8" id="M1P-zd-GBA"/>
                             <constraint firstItem="Bq9-NF-Q09" firstAttribute="top" secondItem="v6T-rv-T9R" secondAttribute="bottom" constant="12" id="PxU-B3-qfM"/>
                             <constraint firstItem="nre-zF-1Sc" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="bbe-Oq-4cm"/>
                             <constraint firstAttribute="trailingMargin" secondItem="nre-zF-1Sc" secondAttribute="trailing" constant="-16" id="c17-cS-Aff"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Bq9-NF-Q09" secondAttribute="trailing" constant="82" id="dYo-J0-S6A"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="cRl-WL-uoF" secondAttribute="bottom" constant="8" id="iy7-aD-KgF"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="e1A-ut-dXJ" secondAttribute="leading" id="s04-xC-cnT"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="v6T-rv-T9R" secondAttribute="bottom" constant="50" id="t9g-uG-I7l"/>
+                            <constraint firstItem="e1A-ut-dXJ" firstAttribute="centerY" secondItem="cRl-WL-uoF" secondAttribute="centerY" id="vhh-p1-dVg"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Bq9-NF-Q09" secondAttribute="bottom" constant="8" id="wZ3-Rg-khA"/>
                             <constraint firstItem="cRl-WL-uoF" firstAttribute="top" secondItem="v6T-rv-T9R" secondAttribute="bottom" constant="12" id="yEs-18-qyw"/>
                             <constraint firstItem="v6T-rv-T9R" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="zsq-tG-Lhx"/>
@@ -78,7 +87,7 @@
         <scene sceneID="orZ-42-xd4">
             <objects>
                 <collectionViewController storyboardIdentifier="DHComponentFilterPickerCollectionViewController" id="oQY-Vh-U4l" customClass="DHComponentFilterPickerCollectionViewController" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="leH-VC-ifU">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="leH-VC-ifU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -184,7 +193,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Naj-pN-4ZK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1587" y="202"/>
+            <point key="canvasLocation" x="1521" y="176"/>
         </scene>
         <!--Color Picker Collection View Controller-->
         <scene sceneID="jKM-kC-llv">
@@ -254,6 +263,57 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gXl-xl-qpz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="764" y="500.1499250374813"/>
+        </scene>
+        <!--Filter Picker Collection View Controller-->
+        <scene sceneID="QIX-Rm-QiF">
+            <objects>
+                <collectionViewController storyboardIdentifier="DHFilterPickerCollectionViewController" id="xkY-bg-zLS" customClass="DHFilterPickerCollectionViewController" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="p0v-M3-Lv4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="PFe-c0-sjQ">
+                            <size key="itemSize" width="80" height="80"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="Zu0-N6-5yO" customClass="DHIFFilterCollectionViewCell">
+                                <rect key="frame" x="0.0" y="20" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LhB-jx-Ofg">
+                                            <rect key="frame" x="19" y="30" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="LhB-jx-Ofg" firstAttribute="centerY" secondItem="Zu0-N6-5yO" secondAttribute="centerY" id="YA0-Gt-pa0"/>
+                                    <constraint firstItem="LhB-jx-Ofg" firstAttribute="centerX" secondItem="Zu0-N6-5yO" secondAttribute="centerX" id="nZb-9k-DIy"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="textLabel" destination="LhB-jx-Ofg" id="HrH-dG-8nh"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="xkY-bg-zLS" id="27E-rh-2Yn"/>
+                            <outlet property="delegate" destination="xkY-bg-zLS" id="6gi-hS-r7v"/>
+                        </connections>
+                    </collectionView>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="120"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FZC-tE-sD9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1700" y="330"/>
         </scene>
     </scenes>
 </document>

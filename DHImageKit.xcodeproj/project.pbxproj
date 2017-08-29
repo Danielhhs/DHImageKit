@@ -8,73 +8,77 @@
 
 /* Begin PBXBuildFile section */
 		4BC96BBB9EFA6CD18E033246 /* libPods-DHImageKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F6AD154790002DF779C08822 /* libPods-DHImageKit.a */; };
-		5478858C1F481E4400808C87 /* DHImageColorFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 547885431F481E4400808C87 /* DHImageColorFilter.h */; };
+		543C8D9D1F5408BC0036CD92 /* DHMoonFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 543C8D9B1F5408BC0036CD92 /* DHMoonFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		543C8D9E1F5408BC0036CD92 /* DHMoonFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 543C8D9C1F5408BC0036CD92 /* DHMoonFilter.m */; };
+		543C8DA51F540C960036CD92 /* DHImageFiltersHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 543C8DA31F540C960036CD92 /* DHImageFiltersHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		543C8DA61F540C960036CD92 /* DHImageFiltersHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 543C8DA41F540C960036CD92 /* DHImageFiltersHelper.m */; };
+		5478858C1F481E4400808C87 /* DHImageColorFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 547885431F481E4400808C87 /* DHImageColorFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5478858D1F481E4400808C87 /* DHImageColorFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 547885441F481E4400808C87 /* DHImageColorFilter.m */; };
-		5478858E1F481E4400808C87 /* DHImageRotateFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 547885451F481E4400808C87 /* DHImageRotateFilter.h */; };
+		5478858E1F481E4400808C87 /* DHImageRotateFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 547885451F481E4400808C87 /* DHImageRotateFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5478858F1F481E4400808C87 /* DHImageRotateFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 547885461F481E4400808C87 /* DHImageRotateFilter.m */; };
-		547885901F481E4400808C87 /* DHImageStructureFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 547885471F481E4400808C87 /* DHImageStructureFilter.h */; };
+		547885901F481E4400808C87 /* DHImageStructureFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 547885471F481E4400808C87 /* DHImageStructureFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		547885911F481E4400808C87 /* DHImageStructureFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 547885481F481E4400808C87 /* DHImageStructureFilter.m */; };
-		547885921F481E4400808C87 /* DHLinearTiltShiftFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 547885491F481E4400808C87 /* DHLinearTiltShiftFilter.h */; };
+		547885921F481E4400808C87 /* DHLinearTiltShiftFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 547885491F481E4400808C87 /* DHLinearTiltShiftFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		547885931F481E4400808C87 /* DHLinearTiltShiftFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5478854A1F481E4400808C87 /* DHLinearTiltShiftFilter.m */; };
-		547885941F481E4400808C87 /* DHRadialTiltShiftFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5478854B1F481E4400808C87 /* DHRadialTiltShiftFilter.h */; };
+		547885941F481E4400808C87 /* DHRadialTiltShiftFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5478854B1F481E4400808C87 /* DHRadialTiltShiftFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		547885951F481E4400808C87 /* DHRadialTiltShiftFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5478854C1F481E4400808C87 /* DHRadialTiltShiftFilter.m */; };
-		547885961F481E4400808C87 /* DHTiltShiftFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5478854D1F481E4400808C87 /* DHTiltShiftFilter.h */; };
+		547885961F481E4400808C87 /* DHTiltShiftFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5478854D1F481E4400808C87 /* DHTiltShiftFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		547885971F481E4400808C87 /* DHTiltShiftFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5478854E1F481E4400808C87 /* DHTiltShiftFilter.m */; };
-		547885981F481E4400808C87 /* DHIFFiltersHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 547885501F481E4400808C87 /* DHIFFiltersHelper.h */; };
+		547885981F481E4400808C87 /* DHIFFiltersHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 547885501F481E4400808C87 /* DHIFFiltersHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		547885991F481E4400808C87 /* DHIFFiltersHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 547885511F481E4400808C87 /* DHIFFiltersHelper.m */; };
-		5478859A1F481E4400808C87 /* DHImageConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 547885521F481E4400808C87 /* DHImageConstants.h */; };
-		5478859B1F481E4400808C87 /* DHImageEditor.h in Headers */ = {isa = PBXBuildFile; fileRef = 547885531F481E4400808C87 /* DHImageEditor.h */; };
+		5478859A1F481E4400808C87 /* DHImageConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 547885521F481E4400808C87 /* DHImageConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5478859B1F481E4400808C87 /* DHImageEditor.h in Headers */ = {isa = PBXBuildFile; fileRef = 547885531F481E4400808C87 /* DHImageEditor.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5478859C1F481E4400808C87 /* DHImageEditor.m in Sources */ = {isa = PBXBuildFile; fileRef = 547885541F481E4400808C87 /* DHImageEditor.m */; };
-		5478859D1F481E4400808C87 /* DHImageHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 547885551F481E4400808C87 /* DHImageHelper.h */; };
+		5478859D1F481E4400808C87 /* DHImageHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 547885551F481E4400808C87 /* DHImageHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5478859E1F481E4400808C87 /* DHImageHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 547885561F481E4400808C87 /* DHImageHelper.m */; };
-		547885A11F481E4400808C87 /* GPUImageFiveInputFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5478855A1F481E4400808C87 /* GPUImageFiveInputFilter.h */; };
+		547885A11F481E4400808C87 /* GPUImageFiveInputFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5478855A1F481E4400808C87 /* GPUImageFiveInputFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		547885A21F481E4400808C87 /* GPUImageFiveInputFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5478855B1F481E4400808C87 /* GPUImageFiveInputFilter.m */; };
-		547885A31F481E4400808C87 /* GPUImageFourInputFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5478855C1F481E4400808C87 /* GPUImageFourInputFilter.h */; };
+		547885A31F481E4400808C87 /* GPUImageFourInputFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5478855C1F481E4400808C87 /* GPUImageFourInputFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		547885A41F481E4400808C87 /* GPUImageFourInputFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5478855D1F481E4400808C87 /* GPUImageFourInputFilter.m */; };
-		547885A51F481E4400808C87 /* GPUImageSixInputFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5478855E1F481E4400808C87 /* GPUImageSixInputFilter.h */; };
+		547885A51F481E4400808C87 /* GPUImageSixInputFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5478855E1F481E4400808C87 /* GPUImageSixInputFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		547885A61F481E4400808C87 /* GPUImageSixInputFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5478855F1F481E4400808C87 /* GPUImageSixInputFilter.m */; };
-		547885A71F481E4400808C87 /* IF1977Filter.h in Headers */ = {isa = PBXBuildFile; fileRef = 547885601F481E4400808C87 /* IF1977Filter.h */; };
+		547885A71F481E4400808C87 /* IF1977Filter.h in Headers */ = {isa = PBXBuildFile; fileRef = 547885601F481E4400808C87 /* IF1977Filter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		547885A81F481E4400808C87 /* IF1977Filter.m in Sources */ = {isa = PBXBuildFile; fileRef = 547885611F481E4400808C87 /* IF1977Filter.m */; };
-		547885A91F481E4400808C87 /* IFAmaroFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 547885621F481E4400808C87 /* IFAmaroFilter.h */; };
+		547885A91F481E4400808C87 /* IFAmaroFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 547885621F481E4400808C87 /* IFAmaroFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		547885AA1F481E4400808C87 /* IFAmaroFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 547885631F481E4400808C87 /* IFAmaroFilter.m */; };
-		547885AB1F481E4400808C87 /* IFBrannanFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 547885641F481E4400808C87 /* IFBrannanFilter.h */; };
+		547885AB1F481E4400808C87 /* IFBrannanFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 547885641F481E4400808C87 /* IFBrannanFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		547885AC1F481E4400808C87 /* IFBrannanFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 547885651F481E4400808C87 /* IFBrannanFilter.m */; };
-		547885AD1F481E4400808C87 /* IFEarlybirdFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 547885661F481E4400808C87 /* IFEarlybirdFilter.h */; };
+		547885AD1F481E4400808C87 /* IFEarlybirdFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 547885661F481E4400808C87 /* IFEarlybirdFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		547885AE1F481E4400808C87 /* IFEarlybirdFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 547885671F481E4400808C87 /* IFEarlybirdFilter.m */; };
-		547885AF1F481E4400808C87 /* IFHefeFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 547885681F481E4400808C87 /* IFHefeFilter.h */; };
+		547885AF1F481E4400808C87 /* IFHefeFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 547885681F481E4400808C87 /* IFHefeFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		547885B01F481E4400808C87 /* IFHefeFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 547885691F481E4400808C87 /* IFHefeFilter.m */; };
-		547885B11F481E4400808C87 /* IFHudsonFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5478856A1F481E4400808C87 /* IFHudsonFilter.h */; };
+		547885B11F481E4400808C87 /* IFHudsonFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5478856A1F481E4400808C87 /* IFHudsonFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		547885B21F481E4400808C87 /* IFHudsonFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5478856B1F481E4400808C87 /* IFHudsonFilter.m */; };
-		547885B31F481E4400808C87 /* IFImageFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5478856C1F481E4400808C87 /* IFImageFilter.h */; };
+		547885B31F481E4400808C87 /* IFImageFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5478856C1F481E4400808C87 /* IFImageFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		547885B41F481E4400808C87 /* IFImageFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5478856D1F481E4400808C87 /* IFImageFilter.m */; };
-		547885B51F481E4400808C87 /* IFInkwellFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5478856E1F481E4400808C87 /* IFInkwellFilter.h */; };
+		547885B51F481E4400808C87 /* IFInkwellFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5478856E1F481E4400808C87 /* IFInkwellFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		547885B61F481E4400808C87 /* IFInkwellFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5478856F1F481E4400808C87 /* IFInkwellFilter.m */; };
-		547885B71F481E4400808C87 /* IFLomofiFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 547885701F481E4400808C87 /* IFLomofiFilter.h */; };
+		547885B71F481E4400808C87 /* IFLomofiFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 547885701F481E4400808C87 /* IFLomofiFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		547885B81F481E4400808C87 /* IFLomofiFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 547885711F481E4400808C87 /* IFLomofiFilter.m */; };
-		547885B91F481E4400808C87 /* IFLordKelvinFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 547885721F481E4400808C87 /* IFLordKelvinFilter.h */; };
+		547885B91F481E4400808C87 /* IFLordKelvinFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 547885721F481E4400808C87 /* IFLordKelvinFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		547885BA1F481E4400808C87 /* IFLordKelvinFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 547885731F481E4400808C87 /* IFLordKelvinFilter.m */; };
-		547885BB1F481E4400808C87 /* IFNashvilleFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 547885741F481E4400808C87 /* IFNashvilleFilter.h */; };
+		547885BB1F481E4400808C87 /* IFNashvilleFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 547885741F481E4400808C87 /* IFNashvilleFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		547885BC1F481E4400808C87 /* IFNashvilleFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 547885751F481E4400808C87 /* IFNashvilleFilter.m */; };
-		547885BD1F481E4400808C87 /* IFNormalFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 547885761F481E4400808C87 /* IFNormalFilter.h */; };
+		547885BD1F481E4400808C87 /* IFNormalFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 547885761F481E4400808C87 /* IFNormalFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		547885BE1F481E4400808C87 /* IFNormalFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 547885771F481E4400808C87 /* IFNormalFilter.m */; };
-		547885BF1F481E4400808C87 /* IFRiseFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 547885781F481E4400808C87 /* IFRiseFilter.h */; };
+		547885BF1F481E4400808C87 /* IFRiseFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 547885781F481E4400808C87 /* IFRiseFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		547885C01F481E4400808C87 /* IFRiseFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 547885791F481E4400808C87 /* IFRiseFilter.m */; };
-		547885C11F481E4400808C87 /* IFSierraFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5478857A1F481E4400808C87 /* IFSierraFilter.h */; };
+		547885C11F481E4400808C87 /* IFSierraFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5478857A1F481E4400808C87 /* IFSierraFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		547885C21F481E4400808C87 /* IFSierraFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5478857B1F481E4400808C87 /* IFSierraFilter.m */; };
-		547885C31F481E4400808C87 /* IFSutroFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5478857C1F481E4400808C87 /* IFSutroFilter.h */; };
+		547885C31F481E4400808C87 /* IFSutroFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5478857C1F481E4400808C87 /* IFSutroFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		547885C41F481E4400808C87 /* IFSutroFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5478857D1F481E4400808C87 /* IFSutroFilter.m */; };
-		547885C51F481E4400808C87 /* IFToasterFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5478857E1F481E4400808C87 /* IFToasterFilter.h */; };
+		547885C51F481E4400808C87 /* IFToasterFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5478857E1F481E4400808C87 /* IFToasterFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		547885C61F481E4400808C87 /* IFToasterFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5478857F1F481E4400808C87 /* IFToasterFilter.m */; };
-		547885C71F481E4400808C87 /* IFValenciaFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 547885801F481E4400808C87 /* IFValenciaFilter.h */; };
+		547885C71F481E4400808C87 /* IFValenciaFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 547885801F481E4400808C87 /* IFValenciaFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		547885C81F481E4400808C87 /* IFValenciaFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 547885811F481E4400808C87 /* IFValenciaFilter.m */; };
-		547885C91F481E4400808C87 /* IFWaldenFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 547885821F481E4400808C87 /* IFWaldenFilter.h */; };
+		547885C91F481E4400808C87 /* IFWaldenFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 547885821F481E4400808C87 /* IFWaldenFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		547885CA1F481E4400808C87 /* IFWaldenFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 547885831F481E4400808C87 /* IFWaldenFilter.m */; };
-		547885CB1F481E4400808C87 /* IFXproIIFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 547885841F481E4400808C87 /* IFXproIIFilter.h */; };
+		547885CB1F481E4400808C87 /* IFXproIIFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 547885841F481E4400808C87 /* IFXproIIFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		547885CC1F481E4400808C87 /* IFXproIIFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 547885851F481E4400808C87 /* IFXproIIFilter.m */; };
-		547885CD1F481E4400808C87 /* InstaFilters.h in Headers */ = {isa = PBXBuildFile; fileRef = 547885861F481E4400808C87 /* InstaFilters.h */; };
-		547885CE1F481E4400808C87 /* DHImageOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 547885881F481E4400808C87 /* DHImageOperation.h */; };
+		547885CD1F481E4400808C87 /* InstaFilters.h in Headers */ = {isa = PBXBuildFile; fileRef = 547885861F481E4400808C87 /* InstaFilters.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		547885CE1F481E4400808C87 /* DHImageOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 547885881F481E4400808C87 /* DHImageOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		547885CF1F481E4400808C87 /* DHImageOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 547885891F481E4400808C87 /* DHImageOperation.m */; };
-		547885D01F481E4400808C87 /* DHImageKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 5478858A1F481E4400808C87 /* DHImageKit.h */; };
+		547885D01F481E4400808C87 /* DHImageKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 5478858A1F481E4400808C87 /* DHImageKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		547885D11F481E4400808C87 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5478858B1F481E4400808C87 /* Info.plist */; };
 		54FE32DC1F48123E001C7DC4 /* DHImageKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54FE32D21F48123E001C7DC4 /* DHImageKit.framework */; };
 /* End PBXBuildFile section */
@@ -91,6 +95,10 @@
 
 /* Begin PBXFileReference section */
 		1DEDB71E932B0701134DD9CE /* Pods-DHImageKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DHImageKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DHImageKit/Pods-DHImageKit.debug.xcconfig"; sourceTree = "<group>"; };
+		543C8D9B1F5408BC0036CD92 /* DHMoonFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHMoonFilter.h; sourceTree = "<group>"; };
+		543C8D9C1F5408BC0036CD92 /* DHMoonFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHMoonFilter.m; sourceTree = "<group>"; };
+		543C8DA31F540C960036CD92 /* DHImageFiltersHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHImageFiltersHelper.h; sourceTree = "<group>"; };
+		543C8DA41F540C960036CD92 /* DHImageFiltersHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHImageFiltersHelper.m; sourceTree = "<group>"; };
 		547885431F481E4400808C87 /* DHImageColorFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHImageColorFilter.h; sourceTree = "<group>"; };
 		547885441F481E4400808C87 /* DHImageColorFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHImageColorFilter.m; sourceTree = "<group>"; };
 		547885451F481E4400808C87 /* DHImageRotateFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHImageRotateFilter.h; sourceTree = "<group>"; };
@@ -193,6 +201,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		543C8D961F5405750036CD92 /* DHFilters */ = {
+			isa = PBXGroup;
+			children = (
+				543C8D9B1F5408BC0036CD92 /* DHMoonFilter.h */,
+				543C8D9C1F5408BC0036CD92 /* DHMoonFilter.m */,
+				543C8DA31F540C960036CD92 /* DHImageFiltersHelper.h */,
+				543C8DA41F540C960036CD92 /* DHImageFiltersHelper.m */,
+			);
+			path = DHFilters;
+			sourceTree = "<group>";
+		};
 		547885411F481E4400808C87 /* DHImageKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -205,6 +224,7 @@
 				547885541F481E4400808C87 /* DHImageEditor.m */,
 				547885551F481E4400808C87 /* DHImageHelper.h */,
 				547885561F481E4400808C87 /* DHImageHelper.m */,
+				543C8D961F5405750036CD92 /* DHFilters */,
 				547885581F481E4400808C87 /* IFFilters */,
 				547885871F481E4400808C87 /* UndoManager */,
 			);
@@ -336,6 +356,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				543C8D9D1F5408BC0036CD92 /* DHMoonFilter.h in Headers */,
 				5478859B1F481E4400808C87 /* DHImageEditor.h in Headers */,
 				547885AF1F481E4400808C87 /* IFHefeFilter.h in Headers */,
 				547885981F481E4400808C87 /* DHIFFiltersHelper.h in Headers */,
@@ -371,6 +392,7 @@
 				547885B51F481E4400808C87 /* IFInkwellFilter.h in Headers */,
 				547885C31F481E4400808C87 /* IFSutroFilter.h in Headers */,
 				547885C91F481E4400808C87 /* IFWaldenFilter.h in Headers */,
+				543C8DA51F540C960036CD92 /* DHImageFiltersHelper.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -527,6 +549,7 @@
 				547885CA1F481E4400808C87 /* IFWaldenFilter.m in Sources */,
 				547885A21F481E4400808C87 /* GPUImageFiveInputFilter.m in Sources */,
 				5478859E1F481E4400808C87 /* DHImageHelper.m in Sources */,
+				543C8DA61F540C960036CD92 /* DHImageFiltersHelper.m in Sources */,
 				547885C41F481E4400808C87 /* IFSutroFilter.m in Sources */,
 				547885A81F481E4400808C87 /* IF1977Filter.m in Sources */,
 				547885931F481E4400808C87 /* DHLinearTiltShiftFilter.m in Sources */,
@@ -539,6 +562,7 @@
 				5478858D1F481E4400808C87 /* DHImageColorFilter.m in Sources */,
 				547885C61F481E4400808C87 /* IFToasterFilter.m in Sources */,
 				547885C21F481E4400808C87 /* IFSierraFilter.m in Sources */,
+				543C8D9E1F5408BC0036CD92 /* DHMoonFilter.m in Sources */,
 				547885BC1F481E4400808C87 /* IFNashvilleFilter.m in Sources */,
 				547885B41F481E4400808C87 /* IFImageFilter.m in Sources */,
 				547885971F481E4400808C87 /* DHTiltShiftFilter.m in Sources */,

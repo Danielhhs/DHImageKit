@@ -1,1 +1,1 @@
-../../../DHImageKit/Classes/Source/DHImageKit/IFFilters/GPUImageSixInputFilter.h
+../../../../../../Classes/Source/DHImageKit/IFFilters/GPUImageSixInputFilter.h

@@ -13,13 +13,17 @@
 #import "DHSliderInputPanel.h"
 #import "DHColorPickerCollectionViewController.h"
 #import "DHIFFilterPickerCollectionViewController.h"
+#import "DHFilterPickerCollectionViewController.h"
 #import "DHTiltTypeChoosePanel.h"
 
-@interface ViewController ()<DHComponentFilterPickerCollectionViewControllerDelegate, DHSliderInputPanelDelegate, DHColorPickerCollectionViewControllerDelegate, DHTiltTypeChoosePanelDelegate,DHIFFilterPickerCollectionViewControllerDelegate>
+@interface ViewController ()<DHComponentFilterPickerCollectionViewControllerDelegate, DHSliderInputPanelDelegate, DHColorPickerCollectionViewControllerDelegate, DHTiltTypeChoosePanelDelegate,DHIFFilterPickerCollectionViewControllerDelegate, DHFilterPickerCollectionViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UIView *containerView;
 @property (weak, nonatomic) IBOutlet GPUImageView *renderTarget;
 @property (nonatomic, strong) DHComponentFilterPickerCollectionViewController *editorPicker;
 @property (nonatomic, strong) DHIFFilterPickerCollectionViewController *filterPicker;
+@property (nonatomic, strong) DHFilterPickerCollectionViewController *dhFilterPicker;
+
+@property (nonatomic, weak) UIViewController *currentViewController;
 
 @property (nonatomic, weak) UIView *editPanel;
 @property (nonatomic, strong) DHColorPickerCollectionViewController *colorPicker;
@@ -35,6 +39,9 @@
     
     self.editorPicker = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"DHComponentFilterPickerCollectionViewController"];
     self.editorPicker.delegate = self;
+    
+    self.dhFilterPicker = [[UIStoryboard storyboardWithName:@"Main" bundle:nil]  instantiateViewControllerWithIdentifier:@"DHFilterPickerCollectionViewController"];
+    self.dhFilterPicker.delegate = self;
     
     [self showFilters:nil];
     // Do any additional setup after loading the view, typically from a nib.
@@ -161,7 +168,6 @@
 
 - (void) inputPanel:(DHSliderInputPanel *)panel didChangeValue:(CGFloat)value
 {
-    NSLog(@"value = %g", value);
     [[DHImageEditor sharedEditor] updateWithInput:value];
 }
 
@@ -212,14 +218,16 @@
 - (IBAction)showFilters:(id)sender {
     if (sender == nil) {
         [self addChildViewController:self.filterPicker toParentViewController:self inContainerView:self.containerView];
+        self.currentViewController = self.filterPicker;
     } else {
         self.filterPicker.view.alpha = 0.01;
         [self addChildViewController:self.filterPicker toParentViewController:self inContainerView:self.containerView];
         [UIView animateWithDuration:0.2 animations:^{
             self.filterPicker.view.alpha = 1.f;
-            self.editorPicker.view.alpha = 0.01f;
+            self.currentViewController.view.alpha = 0.01f;
         } completion:^(BOOL finished) {
-            [self removeChildViewController:self.editorPicker fromParentViewController:self];
+            [self removeChildViewController:self.currentViewController fromParentViewController:self];
+            self.currentViewController = self.filterPicker;
         }];
     }
 }
@@ -229,12 +237,24 @@
     [self addChildViewController:self.editorPicker toParentViewController:self inContainerView:self.containerView];
     [UIView animateWithDuration:0.2 animations:^{
         self.editorPicker.view.alpha = 1.f;
-        self.filterPicker.view.alpha = 0.01f;
+        self.currentViewController.view.alpha = 0.01f;
     } completion:^(BOOL finished) {
-        [self removeChildViewController:self.filterPicker fromParentViewController:self];
+        [self removeChildViewController:self.currentViewController fromParentViewController:self];
+        self.currentViewController = self.editorPicker;
     }];
 }
 
+- (IBAction)showDHFilters:(id)sender {
+    self.dhFilterPicker.view.alpha = 0.01;
+    [self addChildViewController:self.dhFilterPicker toParentViewController:self inContainerView:self.containerView];
+    [UIView animateWithDuration:0.2 animations:^{
+        self.dhFilterPicker.view.alpha = 1.f;
+        self.currentViewController.view.alpha = 0.01f;
+    } completion:^(BOOL finished) {
+        [self removeChildViewController:self.currentViewController fromParentViewController:self];
+        self.currentViewController = self.dhFilterPicker;
+    }];
+}
 #pragma mark - DHIFFilterPickerCollectionViewControllerDelegate
 - (void) filterPickerDidPickFilter:(IFImageFilter *)filter
 {

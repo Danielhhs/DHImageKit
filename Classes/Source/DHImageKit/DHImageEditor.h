@@ -30,6 +30,8 @@
 
 - (void) startProcessingWithFilter:(IFImageFilter *)filter;
 
+- (void) startProcessingWithDHFilter:(GPUImageFilter *)filter;
+
 #pragma mark - Finish Processing
 - (void) finishProcessingCurrentComponent;
 

@@ -99,6 +99,11 @@ static DHImageEditor *sharedInstance;
     [data writeToURL:self.baseImageURL atomically:YES];
 }
 
+- (void) startProcessingWithDHFilter:(GPUImageFilter *)filter
+{
+    [self _addFilter:filter];
+}
+
 - (void) startProcessingComponent:(DHImageEditComponent)component
 {
     [self startProcessingComponent:component subComponent:DHImageEidtComponentSubTypeNone];

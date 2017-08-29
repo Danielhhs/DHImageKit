@@ -1,1 +1,1 @@
-../../../DHImageKit/Classes/Source/DHImageKit/IFFilters/IF1977Filter.h
+../../../../../../Classes/Source/DHImageKit/IFFilters/IF1977Filter.h

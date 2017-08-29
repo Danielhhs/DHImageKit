@@ -34,4 +34,5 @@ typedef NS_ENUM(NSInteger, DHFilter) {
 
 + (NSArray *) availableFilters;
 + (IFImageFilter *) filterForType:(DHFilter)type;
++ (GPUImagePicture *) pictureWithImageNamed:(NSString *)imageName;
 @end

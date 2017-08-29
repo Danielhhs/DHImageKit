@@ -1,1 +1,1 @@
-../../../DHImageKit/Classes/Source/DHImageKit/IFFilters/IFInkwellFilter.h
+../../../../../../Classes/Source/DHImageKit/IFFilters/IFInkwellFilter.h

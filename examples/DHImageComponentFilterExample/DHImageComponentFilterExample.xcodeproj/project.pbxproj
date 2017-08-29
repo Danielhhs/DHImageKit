@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		543C8DA21F540BF50036CD92 /* DHFilterPickerCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 543C8DA11F540BF50036CD92 /* DHFilterPickerCollectionViewController.m */; };
 		5479B0841F2C42E100912E66 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5479B0831F2C42E100912E66 /* main.m */; };
 		5479B0871F2C42E100912E66 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5479B0861F2C42E100912E66 /* AppDelegate.m */; };
 		5479B08A1F2C42E100912E66 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5479B0891F2C42E100912E66 /* ViewController.m */; };
@@ -23,7 +24,6 @@
 		5479B1A51F300CB400912E66 /* DHTiltTypeChoosePanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5479B1A01F300CB400912E66 /* DHTiltTypeChoosePanel.m */; };
 		5479B1A91F300D2300912E66 /* DHIFFilterPickerCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5479B1A81F300D2300912E66 /* DHIFFilterPickerCollectionViewController.m */; };
 		5479B1AF1F300FE100912E66 /* DHIFFilterCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5479B1AE1F300FE100912E66 /* DHIFFilterCollectionViewCell.m */; };
-		5479B2081F301F0400912E66 /* GPUImage.InstagramFilter.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5479B2071F301F0400912E66 /* GPUImage.InstagramFilter.bundle */; };
 		7CE9E0372092281D81F550AE /* libPods-DHImageComponentFilterExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D83CAFC791B31B8303F6D25 /* libPods-DHImageComponentFilterExample.a */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		543C8DA01F540BF50036CD92 /* DHFilterPickerCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHFilterPickerCollectionViewController.h; sourceTree = "<group>"; };
+		543C8DA11F540BF50036CD92 /* DHFilterPickerCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHFilterPickerCollectionViewController.m; sourceTree = "<group>"; };
 		5479B07F1F2C42E100912E66 /* DHImageComponentFilterExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DHImageComponentFilterExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5479B0831F2C42E100912E66 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5479B0851F2C42E100912E66 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -76,7 +78,6 @@
 		5479B1A81F300D2300912E66 /* DHIFFilterPickerCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHIFFilterPickerCollectionViewController.m; sourceTree = "<group>"; };
 		5479B1AD1F300FE100912E66 /* DHIFFilterCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHIFFilterCollectionViewCell.h; sourceTree = "<group>"; };
 		5479B1AE1F300FE100912E66 /* DHIFFilterCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHIFFilterCollectionViewCell.m; sourceTree = "<group>"; };
-		5479B2071F301F0400912E66 /* GPUImage.InstagramFilter.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GPUImage.InstagramFilter.bundle; sourceTree = "<group>"; };
 		6D83CAFC791B31B8303F6D25 /* libPods-DHImageComponentFilterExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DHImageComponentFilterExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		97E620C5E377BC2D2A797B39 /* Pods-DHImageComponentFilterExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DHImageComponentFilterExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-DHImageComponentFilterExample/Pods-DHImageComponentFilterExample.release.xcconfig"; sourceTree = "<group>"; };
 		FB8CBCF47600C73A3E5F68BC /* Pods-DHImageComponentFilterExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DHImageComponentFilterExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DHImageComponentFilterExample/Pods-DHImageComponentFilterExample.debug.xcconfig"; sourceTree = "<group>"; };
@@ -125,6 +126,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		543C8D9F1F540BD90036CD92 /* DHFilter */ = {
+			isa = PBXGroup;
+			children = (
+				543C8DA01F540BF50036CD92 /* DHFilterPickerCollectionViewController.h */,
+				543C8DA11F540BF50036CD92 /* DHFilterPickerCollectionViewController.m */,
+			);
+			path = DHFilter;
+			sourceTree = "<group>";
+		};
 		5479B0761F2C42E100912E66 = {
 			isa = PBXGroup;
 			children = (
@@ -150,12 +160,12 @@
 		5479B0811F2C42E100912E66 /* DHImageComponentFilterExample */ = {
 			isa = PBXGroup;
 			children = (
-				5479B2071F301F0400912E66 /* GPUImage.InstagramFilter.bundle */,
 				5479B0BC1F2C59A400912E66 /* sample_kuru.jpg */,
 				5479B0851F2C42E100912E66 /* AppDelegate.h */,
 				5479B0861F2C42E100912E66 /* AppDelegate.m */,
 				5479B0881F2C42E100912E66 /* ViewController.h */,
 				5479B0891F2C42E100912E66 /* ViewController.m */,
+				543C8D9F1F540BD90036CD92 /* DHFilter */,
 				5479B1A61F300D0900912E66 /* IFFilter */,
 				5479B1961F300CB400912E66 /* ComponentFilter */,
 				5479B08B1F2C42E100912E66 /* Main.storyboard */,
@@ -336,7 +346,6 @@
 				5479B0921F2C42E100912E66 /* LaunchScreen.storyboard in Resources */,
 				5479B08F1F2C42E100912E66 /* Assets.xcassets in Resources */,
 				5479B0BD1F2C59A400912E66 /* sample_kuru.jpg in Resources */,
-				5479B2081F301F0400912E66 /* GPUImage.InstagramFilter.bundle in Resources */,
 				5479B08D1F2C42E100912E66 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -420,6 +429,7 @@
 				5479B1A51F300CB400912E66 /* DHTiltTypeChoosePanel.m in Sources */,
 				5479B1A41F300CB400912E66 /* DHSliderInputPanel.m in Sources */,
 				5479B1AF1F300FE100912E66 /* DHIFFilterCollectionViewCell.m in Sources */,
+				543C8DA21F540BF50036CD92 /* DHFilterPickerCollectionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

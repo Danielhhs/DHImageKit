@@ -52,3 +52,6 @@ FOUNDATION_EXPORT const unsigned char DHImageKitVersionString[];
 #import "DHImageEditor.h"
 #import "DHImageHelper.h"
 #import "DHIFFiltersHelper.h"
+
+#import "DHMoonFilter.h"
+#import "DHImageFiltersHelper.h"

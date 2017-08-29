@@ -1,1 +1,1 @@
-../../../DHImageKit/Classes/Source/DHImageKit/IFFilters/IFAmaroFilter.h
+../../../../../../Classes/Source/DHImageKit/IFFilters/IFAmaroFilter.h

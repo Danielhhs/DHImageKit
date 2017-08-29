@@ -1,1 +1,1 @@
-../../../DHImageKit/Classes/Source/DHImageKit/IFFilters/IFEarlybirdFilter.h
+../../../../../../Classes/Source/DHImageKit/IFFilters/IFEarlybirdFilter.h

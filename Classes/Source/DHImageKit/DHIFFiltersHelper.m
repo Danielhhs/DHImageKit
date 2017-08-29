@@ -58,4 +58,12 @@
     }
     return nil;
 }
+
++ (GPUImagePicture *) pictureWithImageNamed:(NSString *)imageName
+{
+    UIImage* image = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:imageName ofType:@"png"]];
+    
+    return [[GPUImagePicture alloc] initWithImage:image];
+    
+}
 @end

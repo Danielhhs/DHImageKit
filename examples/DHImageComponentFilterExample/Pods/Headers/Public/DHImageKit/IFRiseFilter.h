@@ -1,1 +1,1 @@
-../../../DHImageKit/Classes/Source/DHImageKit/IFFilters/IFRiseFilter.h
+../../../../../../Classes/Source/DHImageKit/IFFilters/IFRiseFilter.h
