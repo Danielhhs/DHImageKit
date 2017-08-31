@@ -1,1 +1,1 @@
-../../../../../../Classes/Source/DHImageKit/DHFilters/DHImageGrayFilter.h
+../../../../../../Classes/Source/DHImageKit/DHFilters/DHImageFilters/DHImageGrayFilter.h

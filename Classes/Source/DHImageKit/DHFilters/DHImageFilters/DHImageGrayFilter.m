@@ -8,14 +8,14 @@
 
 #import "DHImageGrayFilter.h"
 #import "DHImageFalseColorFilter.h"
+#import "DHImageToneCurveFilter.h"
 
 @interface DHImageGrayFilter () {
     DHImageFalseColorFilter *falseColorFilter;
-    GPUImageToneCurveFilter *curveFilter;
+    DHImageToneCurveFilter *curveFilter;
 }
 
 @property (nonatomic) GPUVector4 originalFirstColor;
-@property (nonatomic, strong) NSArray *originalCurvePoints;
 @end
 
 @implementation DHImageGrayFilter
@@ -32,9 +32,8 @@
     falseColorFilter.intensity = 1.f;
     [self addFilter:falseColorFilter];
     
-    curveFilter = [[GPUImageToneCurveFilter alloc] initWithACV:@"moon-curve"];
+    curveFilter = [[DHImageToneCurveFilter alloc] initWithACV:@"gray-curve"];
     [self addFilter:curveFilter];
-    _originalCurvePoints = [[curveFilter rgbCompositeControlPoints] copy];
     [falseColorFilter addTarget:curveFilter];
     
     self.initialFilters = @[falseColorFilter];
@@ -42,17 +41,10 @@
     return self;
 }
 
-- (void) updateWithStrength:(CGFloat)strength
+- (void) updateWithStrength:(double)strength
 {
-    NSMutableArray *values = [NSMutableArray array];
-    for (NSValue *value in self.originalCurvePoints) {
-        CGSize size = [value CGSizeValue];
-        CGFloat difference = size.height - size.width;
-        size.height = size.width + difference * strength;
-        [values addObject:[NSValue valueWithCGSize:size]];
-    }
-    [curveFilter setRgbCompositeControlPoints:values];
-    [falseColorFilter setIntensity:strength];
+    [falseColorFilter updateWithStrength:strength];
+    [curveFilter updateWithStrength:strength];
 }
 
 - (NSString *) name

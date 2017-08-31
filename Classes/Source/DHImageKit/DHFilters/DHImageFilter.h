@@ -7,12 +7,11 @@
 //
 
 #import <GPUImage/GPUImage.h>
+#import "DHImageUpdatable.h"
 
-@interface DHImageFilter : GPUImageFilterGroup
+@interface DHImageFilter : GPUImageFilterGroup<DHImageUpdatable>
 - (id)initWithFragmentShaderFromString:(NSString *)fragmentShaderString sources:(NSArray<GPUImagePicture*>*)sources;
 - (id)initWithFragmentShaderFromString:(NSString *)fragmentShaderString;
 
 - (NSString*)name;
-
-- (void) updateWithStrength:(CGFloat)strength;
 @end

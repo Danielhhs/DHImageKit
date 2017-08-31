@@ -84,4 +84,9 @@ NSString *const kDHFalseColorFragmentShaderString = SHADER_STRING
     [self setFloat:intensity forUniform:intensityUniform program:filterProgram];
 }
 
+- (void) updateWithStrength:(double)strength
+{
+    [self setIntensity:strength];
+}
+
 @end

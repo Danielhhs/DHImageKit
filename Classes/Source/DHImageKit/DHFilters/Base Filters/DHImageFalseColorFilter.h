@@ -7,8 +7,9 @@
 //
 
 #import <GPUImage/GPUImage.h>
+#import "DHImageUpdatable.h"
 
-@interface DHImageFalseColorFilter : GPUImageFilter
+@interface DHImageFalseColorFilter : GPUImageFilter<DHImageUpdatable>
 {
     GLint firstColorUniform, secondColorUniform, intensityUniform;
 }

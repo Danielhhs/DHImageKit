@@ -59,7 +59,7 @@
     return nil;
 }
 
-- (void) updateWithStrength:(CGFloat)strength
+- (void) updateWithStrength:(double)strength
 {
     
 }
