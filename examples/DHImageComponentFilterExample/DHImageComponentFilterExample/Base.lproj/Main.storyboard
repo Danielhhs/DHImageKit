@@ -271,7 +271,7 @@
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="p0v-M3-Lv4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="PFe-c0-sjQ">
                             <size key="itemSize" width="80" height="80"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -294,6 +294,7 @@
                                         </label>
                                     </subviews>
                                 </view>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="LhB-jx-Ofg" firstAttribute="centerY" secondItem="Zu0-N6-5yO" secondAttribute="centerY" id="YA0-Gt-pa0"/>
                                     <constraint firstItem="LhB-jx-Ofg" firstAttribute="centerX" secondItem="Zu0-N6-5yO" secondAttribute="centerX" id="nZb-9k-DIy"/>
@@ -313,7 +314,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FZC-tE-sD9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1700" y="330"/>
+            <point key="canvasLocation" x="1521" y="348"/>
         </scene>
     </scenes>
 </document>

@@ -6,14 +6,14 @@
 //  Copyright © 2017年 Huang Hongsen. All rights reserved.
 //
 
-#import "DHColorDarkenBlendFilter.h"
+#import "DHImageColorDarkenBlendFilter.h"
 NSString *const kDHImageDarkenBlendColorFragmentShaderString = SHADER_STRING
 (
  varying highp vec2 textureCoordinate;
  
  uniform sampler2D inputImageTexture;
 
- uniform vec4 blendColor;
+ uniform highp vec4 blendColor;
  
  void main()
  {
@@ -23,13 +23,13 @@ NSString *const kDHImageDarkenBlendColorFragmentShaderString = SHADER_STRING
  }
  );
 
-@interface DHColorDarkenBlendFilter () {
+@interface DHImageColorDarkenBlendFilter () {
     CGFloat red, green, blue, alpha;
 }
 
 @end
 
-@implementation DHColorDarkenBlendFilter
+@implementation DHImageColorDarkenBlendFilter
 
 - (instancetype) init
 {
@@ -55,6 +55,8 @@ NSString *const kDHImageDarkenBlendColorFragmentShaderString = SHADER_STRING
 
 - (void) updateWithStrength:(double)strength
 {
-    
+    [self setVec4:(GPUVector4){red * strength, green * strength, blue * strength, alpha * strength}
+       forUniform:blendColorUniform
+          program:filterProgram];
 }
 @end

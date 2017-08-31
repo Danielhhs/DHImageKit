@@ -221,6 +221,9 @@
 }
 
 - (IBAction)showFilters:(id)sender {
+    if ([self.currentViewController isEqual:self.filterPicker]) {
+        return;
+    }
     if (sender == nil) {
         [self addChildViewController:self.filterPicker toParentViewController:self inContainerView:self.containerView];
         self.currentViewController = self.filterPicker;
@@ -238,6 +241,9 @@
 }
 
 - (IBAction)showEdit:(id)sender {
+    if ([self.currentViewController isEqual:self.editorPicker]) {
+        return;
+    }
     self.editorPicker.view.alpha = 0.01;
     [self addChildViewController:self.editorPicker toParentViewController:self inContainerView:self.containerView];
     [UIView animateWithDuration:0.2 animations:^{
@@ -250,6 +256,9 @@
 }
 
 - (IBAction)showDHFilters:(id)sender {
+    if ([self.currentViewController isEqual:self.dhFilterPicker]) {
+        return;
+    }
     self.dhFilterPicker.view.alpha = 0.01;
     [self addChildViewController:self.dhFilterPicker toParentViewController:self inContainerView:self.containerView];
     [UIView animateWithDuration:0.2 animations:^{

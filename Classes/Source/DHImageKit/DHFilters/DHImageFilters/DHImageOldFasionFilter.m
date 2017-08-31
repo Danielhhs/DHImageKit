@@ -7,9 +7,13 @@
 //
 
 #import "DHImageOldFasionFilter.h"
+#import "DHImageToneCurveFilter.h"
+#import "DHImageColorDarkenBlendFilter.h"
 
 @interface DHImageOldFasionFilter ()
-@property (nonatomic, strong) GPUImageToneCurveFilter *curveFilter;
+@property (nonatomic, strong) DHImageToneCurveFilter *curveFilter;
+@property (nonatomic, strong) DHImageColorDarkenBlendFilter *darkenFilter;
+
 @end
 
 @implementation DHImageOldFasionFilter
@@ -21,18 +25,23 @@
         return nil;
     }
     
-    _curveFilter = [[GPUImageToneCurveFilter alloc] initWithACV:@"old-fasion.acv"];
+    _curveFilter = [[DHImageToneCurveFilter alloc] initWithACV:@"old-fashion"];
     [self addFilter:_curveFilter];
     
+    _darkenFilter = [[DHImageColorDarkenBlendFilter alloc] init];
+    _darkenFilter.blendColor = [UIColor colorWithRed:211.f / 255.f green:1.f blue:215.f / 255.f alpha:1.f];
+    [self addFilter:_darkenFilter];
+    [_curveFilter addTarget:_darkenFilter];
+    
     self.initialFilters = @[_curveFilter];
-    self.terminalFilter = _curveFilter;
+    self.terminalFilter = _darkenFilter;
     
     return self;
 }
 
-- (void) updateWithStrength:(double)strength
+- (NSString *) name
 {
-    
+    return @"Old Fashion";
 }
 
 @end

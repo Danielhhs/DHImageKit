@@ -59,7 +59,7 @@ FOUNDATION_EXPORT const unsigned char DHImageKitVersionString[];
 //Base Filter
 #import "DHImageTwoInputFilter.h"
 #import "DHImageFalseColorFilter.h"
-#import "DHColorDarkenBlendFilter.h"
+#import "DHImageColorDarkenBlendFilter.h"
 #import "DHImageToneCurveFilter.h"
 
 

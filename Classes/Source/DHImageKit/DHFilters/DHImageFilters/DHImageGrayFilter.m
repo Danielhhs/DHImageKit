@@ -41,12 +41,6 @@
     return self;
 }
 
-- (void) updateWithStrength:(double)strength
-{
-    [falseColorFilter updateWithStrength:strength];
-    [curveFilter updateWithStrength:strength];
-}
-
 - (NSString *) name
 {
     return @"Gray";
