@@ -9,6 +9,7 @@
 #import <GPUImage/GPUImage.h>
 #import "DHImageConstants.h"
 #import "InstaFilters.h"
+#import "DHImageFilter.h"
 
 @interface DHImageEditor : NSObject
 
@@ -30,7 +31,7 @@
 
 - (void) startProcessingWithFilter:(IFImageFilter *)filter;
 
-- (void) startProcessingWithDHFilter:(GPUImageFilter *)filter;
+- (void) startProcessingWithDHFilter:(DHImageFilter *)filter;
 
 #pragma mark - Finish Processing
 - (void) finishProcessingCurrentComponent;
@@ -44,6 +45,9 @@
 - (void) showProcessedImage;
 - (UIImage *) processedImage;
 - (UIImage *) originalImage;
+
+#pragma mark - Update DHImageFilter
+- (void) updateDHFilterWithStrength:(CGFloat)strength;
 
 #pragma mark - Update Input
 - (void) updateWithInput:(CGFloat)inputValue;

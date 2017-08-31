@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
   s.platform     = :ios, "8.0"
   s.source       = { :git => "https://github.com/Danielhhs/DHImageKit.git", :tag => "#{s.version}" }
   s.source_files  = "Classes", "Classes/Source/**/*.{h,m}"
-  s.resources = "Classes/Resource/*.png"
+  s.resources = "Classes/Resource/*.png", "Classes/Resource/*.acv"
   s.exclude_files = "Classes/Exclude"
   s.requires_arc = true
   s.xcconfig = { 'CLANG_MODULES_AUTOLINK' => 'YES' }

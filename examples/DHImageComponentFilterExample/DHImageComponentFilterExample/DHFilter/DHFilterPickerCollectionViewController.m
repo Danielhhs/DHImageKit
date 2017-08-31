@@ -54,8 +54,8 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
         DHIFFilterCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
-        
-        [cell setText:[self.filters objectAtIndex:indexPath.row]];
+    DHImageFilterInfo *info = [self.filters objectAtIndex:indexPath.row];
+        [cell setText:info.filterName];
         
         return cell;
 }
@@ -64,7 +64,7 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (void) collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    GPUImageFilter *filter = [DHImageFiltersHelper filterForType:indexPath.row];
-    [self.delegate filterPickerDidPickFilter:filter];
+    DHImageFilter *filter = [DHImageFiltersHelper filterForType:indexPath.row];
+    [self.delegate DHFilterPickerDidPickFilter:filter];
 }
 @end

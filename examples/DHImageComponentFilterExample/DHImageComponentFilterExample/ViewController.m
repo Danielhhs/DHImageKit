@@ -27,6 +27,7 @@
 
 @property (nonatomic, weak) UIView *editPanel;
 @property (nonatomic, strong) DHColorPickerCollectionViewController *colorPicker;
+
 @end
 
 @implementation ViewController
@@ -168,7 +169,11 @@
 
 - (void) inputPanel:(DHSliderInputPanel *)panel didChangeValue:(CGFloat)value
 {
-    [[DHImageEditor sharedEditor] updateWithInput:value];
+    if ([self.currentViewController isEqual:self.dhFilterPicker]) {
+        [[DHImageEditor sharedEditor] updateDHFilterWithStrength:value];
+    } else {
+        [[DHImageEditor sharedEditor] updateWithInput:value];
+    }
 }
 
 - (void) tiltTypePickerDidPickRadial
@@ -259,6 +264,23 @@
 - (void) filterPickerDidPickFilter:(IFImageFilter *)filter
 {
     [[DHImageEditor sharedEditor] startProcessingWithFilter:filter];
+}
+
+- (void) DHFilterPickerDidPickFilter:(DHImageFilter *)filter
+{
+    [[DHImageEditor sharedEditor] startProcessingWithDHFilter:filter];
+    DHSliderInputPanel *inputPanel = [[DHSliderInputPanel alloc] initWithFrame:self.containerView.bounds];
+    inputPanel.delegate = self;
+    inputPanel.alpha = 0.01;
+    [inputPanel setMinValue:0];
+    [inputPanel setMaxValue:1];
+    [inputPanel setInitialValue:1];
+    self.editPanel = inputPanel;
+    [self.containerView addSubview:inputPanel];
+    [UIView animateWithDuration:0.2 animations:^{
+        inputPanel.alpha = 1.f;
+        self.dhFilterPicker.view.alpha = 0.01;
+    }];
 }
 #pragma mark - Helper
 - (void) addChildViewController:(UIViewController *)viewController

@@ -11,7 +11,7 @@
 
 @protocol DHFilterPickerCollectionViewControllerDelegate <NSObject>
 
-- (void) filterPickerDidPickFilter:(GPUImageFilter *) filter;
+- (void) DHFilterPickerDidPickFilter:(DHImageFilter *) filter;
 
 @end
 

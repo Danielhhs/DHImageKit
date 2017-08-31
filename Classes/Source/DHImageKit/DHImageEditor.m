@@ -25,6 +25,7 @@ static DHImageEditor *sharedInstance;
 @property (nonatomic, strong) GPUImagePicture *picture;
 @property (nonatomic, strong) GPUImageFilterGroup *filterGroup;
 @property (nonatomic, strong) IFImageFilter *ifFilter;
+@property (nonatomic, strong) DHImageFilter *dhFilter;
 @property (nonatomic, weak) id<GPUImageInput> renderTarget;
 
 //Status keeper
@@ -88,20 +89,22 @@ static DHImageEditor *sharedInstance;
 #pragma mark - Start Processing
 - (void) startProcessingWithFilter:(IFImageFilter *)filter
 {
-    self.ifFilter = filter;
-    NSString *fileName = [[self.imageURL lastPathComponent] stringByAppendingString:@"base"];;
-    self.baseImageURL = [[self.imageURL URLByDeletingLastPathComponent] URLByAppendingPathComponent:fileName];;
-    UIImage *image = [filter imageByFilteringImage:[UIImage imageWithContentsOfFile:[self.imageURL path]]];
-    [self.picture removeAllTargets];
-    self.picture = [[GPUImagePicture alloc] initWithImage:image];
-    [self _processImage];
-    NSData *data = UIImageJPEGRepresentation(image, 1);
-    [data writeToURL:self.baseImageURL atomically:YES];
+//    self.ifFilter = filter;
+//    NSString *fileName = [[self.imageURL lastPathComponent] stringByAppendingString:@"base"];;
+//    self.baseImageURL = [[self.imageURL URLByDeletingLastPathComponent] URLByAppendingPathComponent:fileName];;
+//    UIImage *image = [filter imageByFilteringImage:[UIImage imageWithContentsOfFile:[self.imageURL path]]];
+//    [self.picture removeAllTargets];
+//    self.picture = [[GPUImagePicture alloc] initWithImage:image];
+//    [self _processImage];
+//    NSData *data = UIImageJPEGRepresentation(image, 1);
+//    [data writeToURL:self.baseImageURL atomically:YES];
 }
 
-- (void) startProcessingWithDHFilter:(GPUImageFilter *)filter
+- (void) startProcessingWithDHFilter:(DHImageFilter *)filter
 {
+    self.dhFilter = filter;
     [self _addFilter:filter];
+    [self _processImage];
 }
 
 - (void) startProcessingComponent:(DHImageEditComponent)component
@@ -206,6 +209,13 @@ static DHImageEditor *sharedInstance;
         }
         [self _processImage];
     }
+}
+
+#pragma mark - Update DHImageFilter
+- (void) updateDHFilterWithStrength:(CGFloat)strength
+{
+    [self.dhFilter updateWithStrength:strength];
+    [self _processImage];
 }
 
 #pragma mark - Update

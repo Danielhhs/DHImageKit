@@ -53,5 +53,13 @@ FOUNDATION_EXPORT const unsigned char DHImageKitVersionString[];
 #import "DHImageHelper.h"
 #import "DHIFFiltersHelper.h"
 
-#import "DHMoonFilter.h"
 #import "DHImageFiltersHelper.h"
+#import "DHImageFilterInfo.h"
+
+//Base Filter
+#import "DHImageTwoInputFilter.h"
+#import "DHImageFalseColorFilter.h"
+
+
+#import "DHImageFilter.h"
+#import "DHImageGrayFilter.h"

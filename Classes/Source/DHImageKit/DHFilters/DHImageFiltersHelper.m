@@ -7,15 +7,15 @@
 //
 
 #import "DHImageFiltersHelper.h"
-#import "DHMoonFilter.h"
+#import "DHImageGrayFilter.h"
 
 @implementation DHImageFiltersHelper
 
-+ (GPUImageFilter *)filterForType:(DHImageFilterType)type
++ (DHImageFilter *)filterForType:(DHImageFilterType)type
 {
     switch (type) {
-        case DHImageFilterTypeMoon:
-            return [[DHMoonFilter alloc] init];
+        case DHImageFilterTypeGray:
+            return [[DHImageGrayFilter alloc] init];
             break;
         default:
             break;
@@ -25,6 +25,15 @@
 
 + (NSArray *) availableFilters
 {
-    return @[@"Moon"];
+    DHImageFilterInfo *filterInfo = [DHImageFilterInfo filterInfoForFilterClass:[DHImageGrayFilter class] name:@"Gray" type:DHImageFilterTypeGray];
+    return @[filterInfo];
+}
+
++ (GPUImagePicture *) pictureWithImageNamed:(NSString *)imageName
+{
+    UIImage* image = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:imageName ofType:@"png"]];
+    
+    return [[GPUImagePicture alloc] initWithImage:image];
+    
 }
 @end

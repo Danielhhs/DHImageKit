@@ -8,14 +8,14 @@
 
 #import <Foundation/Foundation.h>
 #import <GPUImage/GPUImage.h>
-
-typedef NS_ENUM(NSInteger, DHImageFilterType) {
-    DHImageFilterTypeMoon,
-};
+#import "DHImageFilter.h"
+#import "DHImageFilterInfo.h"
 
 @interface DHImageFiltersHelper : NSObject
 
-+ (NSArray *) availableFilters;
++ (NSArray <DHImageFilterInfo*> *) availableFilters;
 
-+ (GPUImageFilter *) filterForType:(DHImageFilterType)type;
++ (DHImageFilter *) filterForType:(DHImageFilterType)type;
+
++ (GPUImagePicture *) pictureWithImageNamed:(NSString *)imageName;
 @end

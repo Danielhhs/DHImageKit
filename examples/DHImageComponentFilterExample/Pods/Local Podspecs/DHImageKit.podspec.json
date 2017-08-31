@@ -19,7 +19,10 @@
     "Classes",
     "Classes/Source/**/*.{h,m}"
   ],
-  "resources": "Classes/Resource/*.png",
+  "resources": [
+    "Classes/Resource/*.png",
+    "Classes/Resource/*.acv"
+  ],
   "exclude_files": "Classes/Exclude",
   "requires_arc": true,
   "xcconfig": {
