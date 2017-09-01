@@ -7,10 +7,11 @@
 //
 
 #import <GPUImage/GPUImage.h>
+#import "DHImageUpdatable.h"
 
 extern NSString *const kDHImageTwoInputTextureVertexShaderString;
 
-@interface DHImageTwoInputFilter : GPUImageFilter
+@interface DHImageTwoInputFilter : GPUImageFilter<DHImageUpdatable>
 {
     GPUImageFramebuffer *secondInputFramebuffer;
     

@@ -268,5 +268,9 @@ NSString *const kDHImageTwoInputTextureVertexShaderString = SHADER_STRING
     }
 }
 
+- (void) updateWithStrength:(double)strength
+{
+    
+}
 
 @end

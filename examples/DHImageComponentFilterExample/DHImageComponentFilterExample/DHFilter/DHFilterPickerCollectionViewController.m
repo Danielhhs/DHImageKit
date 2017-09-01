@@ -23,7 +23,6 @@ static NSString * const reuseIdentifier = @"Cell";
     [super viewDidLoad];
     
     self.filters = [DHImageFiltersHelper availableFilters];
-    
 }
 
 - (void)didReceiveMemoryWarning {

@@ -9,10 +9,15 @@
 #import "DHImageOldFasionFilter.h"
 #import "DHImageToneCurveFilter.h"
 #import "DHImageColorDarkenBlendFilter.h"
+#import "DHImageScreenBlendFilter.h"
+#import "DHImageFiltersHelper.h"
 
-@interface DHImageOldFasionFilter ()
+@interface DHImageOldFasionFilter () {
+    GPUImagePicture *screenPicture;
+}
 @property (nonatomic, strong) DHImageToneCurveFilter *curveFilter;
 @property (nonatomic, strong) DHImageColorDarkenBlendFilter *darkenFilter;
+@property (nonatomic, strong) DHImageScreenBlendFilter *screenBlendFilter;
 
 @end
 
@@ -29,12 +34,20 @@
     [self addFilter:_curveFilter];
     
     _darkenFilter = [[DHImageColorDarkenBlendFilter alloc] init];
-    _darkenFilter.blendColor = [UIColor colorWithRed:211.f / 255.f green:1.f blue:215.f / 255.f alpha:1.f];
+    _darkenFilter.blendColor = [UIColor colorWithRed:227.f / 255.f green:228.f / 255.f blue:143.f / 255.f alpha:1.f];
     [self addFilter:_darkenFilter];
     [_curveFilter addTarget:_darkenFilter];
     
+    _screenBlendFilter = [[DHImageScreenBlendFilter alloc] init];
+    [self addFilter:_screenBlendFilter];
+    [_darkenFilter addTarget:_screenBlendFilter atTextureLocation:0];
+    
+    screenPicture = [DHImageFiltersHelper pictureWithImageNamed:@"old-fashion-screen"];
+    [screenPicture addTarget:_screenBlendFilter atTextureLocation:1];
+    [screenPicture processImage];
+    
     self.initialFilters = @[_curveFilter];
-    self.terminalFilter = _darkenFilter;
+    self.terminalFilter = _screenBlendFilter;
     
     return self;
 }

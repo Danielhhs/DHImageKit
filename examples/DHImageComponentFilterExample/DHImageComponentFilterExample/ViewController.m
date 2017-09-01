@@ -279,6 +279,7 @@
 {
     [[DHImageEditor sharedEditor] startProcessingWithDHFilter:filter];
     DHSliderInputPanel *inputPanel = [[DHSliderInputPanel alloc] initWithFrame:self.containerView.bounds];
+    inputPanel.backgroundColor = [UIColor whiteColor];
     inputPanel.delegate = self;
     inputPanel.alpha = 0.01;
     [inputPanel setMinValue:0];
@@ -298,6 +299,7 @@
 {
     [parentViewController addChildViewController:viewController];
     [containerView addSubview:viewController.view];
+    viewController.view.frame = containerView.bounds;
     [viewController didMoveToParentViewController:parentViewController];
 }
 
