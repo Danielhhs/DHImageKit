@@ -66,3 +66,4 @@ FOUNDATION_EXPORT const unsigned char DHImageKitVersionString[];
 #import "DHImageFilter.h"
 #import "DHImageGrayFilter.h"
 #import "DHImageOldFasionFilter.h"
+#import "DHImageFreshFilter.h"

@@ -9,6 +9,7 @@
 #import "DHImageFiltersHelper.h"
 #import "DHImageGrayFilter.h"
 #import "DHImageOldFasionFilter.h"
+#import "DHImageFreshFilter.h"
 
 @implementation DHImageFiltersHelper
 
@@ -19,6 +20,8 @@
             return [[DHImageGrayFilter alloc] init];
         case DHImageFilterTypeOldFashion:
             return [[DHImageOldFasionFilter alloc] init];
+        case DHImageFilterTypeFresh:
+            return [[DHImageFreshFilter alloc] init];
         default:
             break;
     }
@@ -29,7 +32,8 @@
 {
     DHImageFilterInfo *gray = [DHImageFilterInfo filterInfoForFilterClass:[DHImageGrayFilter class] name:@"Gray" type:DHImageFilterTypeGray];
     DHImageFilterInfo *oldFashion = [DHImageFilterInfo filterInfoForFilterClass:[DHImageOldFasionFilter class] name:@"Old Fashion" type:DHImageFilterTypeOldFashion];
-    return @[gray, oldFashion];
+    DHImageFilterInfo *fresh = [DHImageFilterInfo filterInfoForFilterClass:[DHImageFreshFilter class] name:@"Fresh" type:DHImageFilterTypeFresh];
+    return @[gray, oldFashion, fresh];
 }
 
 + (GPUImagePicture *) pictureWithImageNamed:(NSString *)imageName
