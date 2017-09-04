@@ -63,7 +63,7 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (void) collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    DHImageFilter *filter = [DHImageFiltersHelper filterForType:indexPath.row];
+    DHImageFilter *filter = [DHImageFiltersHelper filterForFilterInfo:self.filters[indexPath.row]];
     [self.delegate DHFilterPickerDidPickFilter:filter];
 }
 @end

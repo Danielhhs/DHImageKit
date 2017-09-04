@@ -27,31 +27,14 @@ NSString *const kDHImageScreenBlendFragmentShaderString = SHADER_STRING
  }
 );
 
-@interface DHImageScreenBlendFilter ()
-@property (nonatomic) double strength;
-@end
-
 @implementation DHImageScreenBlendFilter
 
 - (instancetype) init
 {
     self = [super initWithFragmentShaderFromString:kDHImageScreenBlendFragmentShaderString];
     if (self) {
-        strengthUniform = [filterProgram uniformIndex:@"strength"];
-        self.strength = 1.f;
     }
     return self;
-}
-
-- (void) updateWithStrength:(double)strength
-{
-    self.strength = strength;
-}
-
-- (void) setStrength:(double)strength
-{
-    _strength = strength;
-    [self setFloat:strength forUniform:strengthUniform program:filterProgram];
 }
 
 @end

@@ -29,7 +29,7 @@
     falseColorFilter = [[DHImageFalseColorFilter alloc] init];
     falseColorFilter.firstColor = _originalFirstColor;
     falseColorFilter.secondColor = (GPUVector4) {1.f, 1.f, 1.f, 1.f};
-    falseColorFilter.intensity = 1.f;
+    [falseColorFilter updateWithStrength:1.f];
     [self addFilter:falseColorFilter];
     
     curveFilter = [[DHImageToneCurveFilter alloc] initWithACV:@"gray-curve"];

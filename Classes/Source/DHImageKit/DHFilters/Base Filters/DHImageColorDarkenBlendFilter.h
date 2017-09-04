@@ -7,9 +7,9 @@
 //
 
 #import <DHImageKit/DHImageKit.h>
-#import "DHImageUpdatable.h"
+#import "DHImageBaseFilter.h"
 
-@interface DHImageColorDarkenBlendFilter : GPUImageFilter<DHImageUpdatable> {
+@interface DHImageColorDarkenBlendFilter : DHImageBaseFilter {
     GLuint blendColorUniform;
 }
 

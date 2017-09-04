@@ -120,7 +120,7 @@
 {
     [UIView animateWithDuration:0.2 animations:^{
         self.editPanel.alpha = 0.01;
-        self.editorPicker.view.alpha = 1.f;
+        self.currentViewController.view.alpha = 1.f;
     } completion:^(BOOL finished) {
         [self.editPanel removeFromSuperview];
     }];
@@ -237,6 +237,7 @@
             [self removeChildViewController:self.currentViewController fromParentViewController:self];
             self.currentViewController = self.filterPicker;
         }];
+        
     }
 }
 

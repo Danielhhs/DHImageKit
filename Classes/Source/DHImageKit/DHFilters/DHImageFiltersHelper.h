@@ -15,7 +15,7 @@
 
 + (NSArray <DHImageFilterInfo*> *) availableFilters;
 
-+ (DHImageFilter *) filterForType:(DHImageFilterType)type;
++ (DHImageFilter *) filterForFilterInfo:(DHImageFilterInfo *)filterInfo;
 
 + (GPUImagePicture *) pictureWithImageNamed:(NSString *)imageName;
 @end

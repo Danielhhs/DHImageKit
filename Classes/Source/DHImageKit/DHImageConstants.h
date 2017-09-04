@@ -38,4 +38,11 @@ typedef struct {
     double initialValue;
 }DHImageEditorValues;
 
+#define kDHImageMaxBrightness 1.0
+#define kDHImageMinBrightness -1.0
+#define kDHImageMinContrast 0.0
+#define kDHImageMaxContrast 4.0
+
+#define DHMix(x, y, a) (x * (1 - a) + y * a)
+
 #endif /* DHImageConstants_h */

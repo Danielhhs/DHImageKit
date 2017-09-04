@@ -15,11 +15,13 @@ NSString *const kDHImageDarkenBlendColorFragmentShaderString = SHADER_STRING
 
  uniform highp vec4 blendColor;
  
+ uniform lowp float strength;
+ 
  void main()
  {
      lowp vec4 base = texture2D(inputImageTexture, textureCoordinate);
      
-     gl_FragColor = vec4(min(blendColor.rgb * base.a, base.rgb * blendColor.a) + blendColor.rgb * (1.0 - base.a) + base.rgb * (1.0 - blendColor.a), 1.0);
+     gl_FragColor = vec4(mix(base.rgb, min(blendColor.rgb * base.a, base.rgb * blendColor.a) + blendColor.rgb * (1.0 - base.a) + base.rgb * (1.0 - blendColor.a), strength), 1.0);
  }
  );
 
@@ -53,10 +55,4 @@ NSString *const kDHImageDarkenBlendColorFragmentShaderString = SHADER_STRING
           program:filterProgram];
 }
 
-- (void) updateWithStrength:(double)strength
-{
-    [self setVec4:(GPUVector4){red * strength, green * strength, blue * strength, alpha * strength}
-       forUniform:blendColorUniform
-          program:filterProgram];
-}
 @end

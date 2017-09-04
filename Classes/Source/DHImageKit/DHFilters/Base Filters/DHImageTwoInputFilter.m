@@ -62,6 +62,9 @@ NSString *const kDHImageTwoInputTextureVertexShaderString = SHADER_STRING
     firstFrameTime = kCMTimeInvalid;
     secondFrameTime = kCMTimeInvalid;
     
+    strengthUniform = [filterProgram uniformIndex:@"strength"];
+    [self updateWithStrength:1.f];
+    
     runSynchronouslyOnVideoProcessingQueue(^{
         [GPUImageContext useImageProcessingContext];
         filterSecondTextureCoordinateAttribute = [filterProgram attributeIndex:@"inputTextureCoordinate2"];
@@ -270,7 +273,7 @@ NSString *const kDHImageTwoInputTextureVertexShaderString = SHADER_STRING
 
 - (void) updateWithStrength:(double)strength
 {
-    
+    [self setFloat:strength forUniform:strengthUniform program:filterProgram];
 }
 
 @end

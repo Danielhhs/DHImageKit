@@ -14,9 +14,9 @@ NSString *const kDHFalseColorFragmentShaderString = SHADER_STRING
  varying highp vec2 textureCoordinate;
  
  uniform sampler2D inputImageTexture;
- uniform float intensity;
  uniform vec3 firstColor;
  uniform vec3 secondColor;
+ uniform mediump float strength;
  
  const mediump vec3 luminanceWeighting = vec3(0.2125, 0.7154, 0.0721);
  
@@ -25,15 +25,13 @@ NSString *const kDHFalseColorFragmentShaderString = SHADER_STRING
      lowp vec4 textureColor = texture2D(inputImageTexture, textureCoordinate);
      float luminance = dot(textureColor.rgb, luminanceWeighting);
      
-     gl_FragColor = vec4(mix(textureColor.rgb, mix(firstColor.rgb, secondColor.rgb, luminance), intensity), textureColor.a);
+     gl_FragColor = vec4(mix(textureColor.rgb, mix(firstColor.rgb, secondColor.rgb, luminance), strength), textureColor.a);
  }
  );
-
 @implementation DHImageFalseColorFilter
 
 @synthesize firstColor = _firstColor;
 @synthesize secondColor = _secondColor;
-@synthesize intensity = _intensity;
 
 - (instancetype) init
 {
@@ -41,11 +39,9 @@ NSString *const kDHFalseColorFragmentShaderString = SHADER_STRING
     if (self) {
         firstColorUniform = [filterProgram uniformIndex:@"firstColor"];
         secondColorUniform = [filterProgram uniformIndex:@"secondColor"];
-        intensityUniform = [filterProgram uniformIndex:@"intensity"];
         
         self.firstColor = (GPUVector4){0.f, 0.f, 0.5f, 1.f};
         self.secondColor = (GPUVector4){1.f, 0.f, 0.f, 1.f};
-        self.intensity = 1.f;
     }
     return self;
 }
@@ -78,15 +74,9 @@ NSString *const kDHFalseColorFragmentShaderString = SHADER_STRING
     [self setVec3:secondColor forUniform:secondColorUniform program:filterProgram];
 }
 
-- (void) setIntensity:(CGFloat)intensity
-{
-    _intensity = intensity;
-    [self setFloat:intensity forUniform:intensityUniform program:filterProgram];
-}
-
 - (void) updateWithStrength:(double)strength
 {
-    [self setIntensity:strength];
+    [self setFloat:strength forUniform:strengthUniform program:filterProgram];
 }
 
 @end

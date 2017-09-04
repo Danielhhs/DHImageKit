@@ -10,22 +10,14 @@
 #import "DHImageGrayFilter.h"
 #import "DHImageOldFasionFilter.h"
 #import "DHImageFreshFilter.h"
+#import "DHImageMetalicFilter.h"
 
 @implementation DHImageFiltersHelper
 
-+ (DHImageFilter *)filterForType:(DHImageFilterType)type
++ (DHImageFilter *)filterForFilterInfo:(DHImageFilterInfo *)filterInfo
 {
-    switch (type) {
-        case DHImageFilterTypeGray:
-            return [[DHImageGrayFilter alloc] init];
-        case DHImageFilterTypeOldFashion:
-            return [[DHImageOldFasionFilter alloc] init];
-        case DHImageFilterTypeFresh:
-            return [[DHImageFreshFilter alloc] init];
-        default:
-            break;
-    }
-    return nil;
+    Class filterClass = filterInfo.filterClass;
+    return [[filterClass alloc] init];
 }
 
 + (NSArray *) availableFilters
@@ -33,7 +25,8 @@
     DHImageFilterInfo *gray = [DHImageFilterInfo filterInfoForFilterClass:[DHImageGrayFilter class] name:@"Gray" type:DHImageFilterTypeGray];
     DHImageFilterInfo *oldFashion = [DHImageFilterInfo filterInfoForFilterClass:[DHImageOldFasionFilter class] name:@"Old Fashion" type:DHImageFilterTypeOldFashion];
     DHImageFilterInfo *fresh = [DHImageFilterInfo filterInfoForFilterClass:[DHImageFreshFilter class] name:@"Fresh" type:DHImageFilterTypeFresh];
-    return @[gray, oldFashion, fresh];
+    DHImageFilterInfo *metalic = [DHImageFilterInfo filterInfoForFilterClass:[DHImageMetalicFilter class] name:@"Metalic" type:DHImageFilterTypeMetalic];
+    return @[gray, oldFashion, fresh, metalic];
 }
 
 + (GPUImagePicture *) pictureWithImageNamed:(NSString *)imageName

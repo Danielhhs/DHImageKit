@@ -9,8 +9,6 @@
 #import <GPUImage/GPUImage.h>
 #import "DHImageTwoInputFilter.h"
 
-@interface DHImageScreenBlendFilter : DHImageTwoInputFilter {
-    GLint strengthUniform;
-}
+@interface DHImageScreenBlendFilter : DHImageTwoInputFilter 
 
 @end
