@@ -15,6 +15,7 @@
 #import "DHImageSierraFilter.h"
 #import "DHImageCremaFilter.h"
 #import "DHImageRiseFilter.h"
+#import "DHImageLarkFilter.h"
 @implementation DHImageFiltersHelper
 
 + (DHImageFilter *)filterForFilterInfo:(DHImageFilterInfo *)filterInfo
@@ -33,7 +34,8 @@
     DHImageFilterInfo *sierra = [DHImageFilterInfo filterInfoForFilterClass:[DHImageSierraFilter class] name:@"Sierra" type:DHImageFilterTypeSierra];
     DHImageFilterInfo *crema = [DHImageFilterInfo filterInfoForFilterClass:[DHImageCremaFilter class] name:@"Crema" type:DHImageFilterTypeCrema];
     DHImageFilterInfo *rise = [DHImageFilterInfo filterInfoForFilterClass:[DHImageRiseFilter class] name:@"Rise" type:DHImageFilterTypeRise];
-    return @[gray, oldFashion, fresh, metalic, gringham, sierra, crema, rise];
+    DHImageFilterInfo *lark = [DHImageFilterInfo filterInfoForFilterClass:[DHImageLarkFilter class] name:@"Lark" type:DHImageFilterTypeLark];
+    return @[gray, oldFashion, fresh, metalic, gringham, sierra, crema, rise, lark];
 }
 
 + (GPUImagePicture *) pictureWithImageNamed:(NSString *)imageName

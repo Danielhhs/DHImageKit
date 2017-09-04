@@ -6,9 +6,9 @@
 //  Copyright © 2017年 Huang Hongsen. All rights reserved.
 //
 
-#import "DHImageThreeInputFilter.h"
+#import <DHImageKit/DHImageKit.h>
 
-@interface DHImageFourInputFilter : DHImageThreeInputFilter<DHImageUpdatable>
+@interface DHImageFourInputFilter : DHImageThreeInputFilter
 {
     GPUImageFramebuffer *fourthInputFramebuffer;
     
