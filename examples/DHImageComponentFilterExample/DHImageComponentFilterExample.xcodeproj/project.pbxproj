@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		543C8DA21F540BF50036CD92 /* DHFilterPickerCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 543C8DA11F540BF50036CD92 /* DHFilterPickerCollectionViewController.m */; };
+		543C8DFF1F5CEDAB0036CD92 /* scene.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 543C8DFE1F5CEDAB0036CD92 /* scene.jpg */; };
+		543C8E051F5CFD010036CD92 /* portrait.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 543C8E041F5CFD010036CD92 /* portrait.jpg */; };
 		5479B0841F2C42E100912E66 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5479B0831F2C42E100912E66 /* main.m */; };
 		5479B0871F2C42E100912E66 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5479B0861F2C42E100912E66 /* AppDelegate.m */; };
 		5479B08A1F2C42E100912E66 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5479B0891F2C42E100912E66 /* ViewController.m */; };
@@ -47,6 +49,8 @@
 /* Begin PBXFileReference section */
 		543C8DA01F540BF50036CD92 /* DHFilterPickerCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHFilterPickerCollectionViewController.h; sourceTree = "<group>"; };
 		543C8DA11F540BF50036CD92 /* DHFilterPickerCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHFilterPickerCollectionViewController.m; sourceTree = "<group>"; };
+		543C8DFE1F5CEDAB0036CD92 /* scene.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = scene.jpg; sourceTree = "<group>"; };
+		543C8E041F5CFD010036CD92 /* portrait.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = portrait.jpg; sourceTree = "<group>"; };
 		5479B07F1F2C42E100912E66 /* DHImageComponentFilterExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DHImageComponentFilterExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5479B0831F2C42E100912E66 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5479B0851F2C42E100912E66 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -160,7 +164,9 @@
 		5479B0811F2C42E100912E66 /* DHImageComponentFilterExample */ = {
 			isa = PBXGroup;
 			children = (
+				543C8DFE1F5CEDAB0036CD92 /* scene.jpg */,
 				5479B0BC1F2C59A400912E66 /* sample_kuru.jpg */,
+				543C8E041F5CFD010036CD92 /* portrait.jpg */,
 				5479B0851F2C42E100912E66 /* AppDelegate.h */,
 				5479B0861F2C42E100912E66 /* AppDelegate.m */,
 				5479B0881F2C42E100912E66 /* ViewController.h */,
@@ -343,8 +349,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				543C8E051F5CFD010036CD92 /* portrait.jpg in Resources */,
 				5479B0921F2C42E100912E66 /* LaunchScreen.storyboard in Resources */,
 				5479B08F1F2C42E100912E66 /* Assets.xcassets in Resources */,
+				543C8DFF1F5CEDAB0036CD92 /* scene.jpg in Resources */,
 				5479B0BD1F2C59A400912E66 /* sample_kuru.jpg in Resources */,
 				5479B08D1F2C42E100912E66 /* Main.storyboard in Resources */,
 			);

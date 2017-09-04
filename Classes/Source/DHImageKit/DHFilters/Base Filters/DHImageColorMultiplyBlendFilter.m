@@ -13,14 +13,14 @@ NSString *const kDHImageMultiplyBlendFragmentShaderString = SHADER_STRING
  varying highp vec2 textureCoordinate;
  
  uniform sampler2D inputImageTexture;
+ uniform mediump vec4 blendColor;
  uniform lowp float strength;
  
  void main()
  {
      lowp vec4 base = texture2D(inputImageTexture, textureCoordinate);
-     lowp vec4 overlayer = texture2D(inputImageTexture2, textureCoordinate2);
      
-     gl_FragColor = vec4(mix(base.rgb, overlayer * base + overlayer * (1.0 - base.a) + base * (1.0 - overlayer.a).rgb), base.a);
+     gl_FragColor = mix(base, vec4(blendColor * base + blendColor * (1.0 - base.a) + base * (1.0 - blendColor.a)), strength);
  }
  );
 
@@ -30,7 +30,17 @@ NSString *const kDHImageMultiplyBlendFragmentShaderString = SHADER_STRING
 {
     self = [super initWithFragmentShaderFromString:kDHImageMultiplyBlendFragmentShaderString];
     if (self) {
+        blendColorUniform = [filterProgram uniformIndex:@"blendColor"];
+        self.blendColor = [UIColor clearColor];
     }
     return self;
+}
+
+- (void) setBlendColor:(UIColor *)blendColor
+{
+    _blendColor = blendColor;
+    CGFloat red, green, blue, alpha;
+    [blendColor getRed:&red green:&green blue:&blue alpha:&alpha];
+    [self setVec4:(GPUVector4){red, green, blue, alpha} forUniform:blendColorUniform program:filterProgram];
 }
 @end

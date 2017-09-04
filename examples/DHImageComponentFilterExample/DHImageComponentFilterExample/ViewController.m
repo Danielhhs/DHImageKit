@@ -50,7 +50,7 @@
     UIGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePan:)];
     [self.renderTarget addGestureRecognizer:pan];
     
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"sample_kuru" ofType:@"jpg"];
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"portrait" ofType:@"jpg"];
     
     [[DHImageEditor sharedEditor] initiateEditorWithImageURL:[NSURL fileURLWithPath:filePath] renderTarget:self.renderTarget completion:nil];
 }

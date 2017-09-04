@@ -9,6 +9,10 @@
 #import <DHImageKit/DHImageKit.h>
 #import "DHImageBaseFilter.h"
 
-@interface DHImageColorMultiplyBlendFilter : DHImageBaseFilter
+@interface DHImageColorMultiplyBlendFilter : DHImageBaseFilter {
+    GLuint blendColorUniform;
+}
+
+@property (nonatomic, strong) UIColor *blendColor;
 
 @end
