@@ -45,6 +45,10 @@
 		543C8E031F5CF47F0036CD92 /* DHImageVignetteFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 543C8E011F5CF47F0036CD92 /* DHImageVignetteFilter.m */; };
 		543C8E081F5D06390036CD92 /* DHImageGringhamFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 543C8E061F5D06390036CD92 /* DHImageGringhamFilter.h */; };
 		543C8E091F5D06390036CD92 /* DHImageGringhamFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 543C8E071F5D06390036CD92 /* DHImageGringhamFilter.m */; };
+		543C8E0C1F5D23850036CD92 /* DHImageSierraFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 543C8E0A1F5D23850036CD92 /* DHImageSierraFilter.h */; };
+		543C8E0D1F5D23850036CD92 /* DHImageSierraFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 543C8E0B1F5D23850036CD92 /* DHImageSierraFilter.m */; };
+		543C8E101F5D29560036CD92 /* DHImageRGBFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 543C8E0E1F5D29560036CD92 /* DHImageRGBFilter.h */; };
+		543C8E111F5D29560036CD92 /* DHImageRGBFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 543C8E0F1F5D29560036CD92 /* DHImageRGBFilter.m */; };
 		5478858C1F481E4400808C87 /* DHImageColorFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 547885431F481E4400808C87 /* DHImageColorFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5478858D1F481E4400808C87 /* DHImageColorFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 547885441F481E4400808C87 /* DHImageColorFilter.m */; };
 		5478858E1F481E4400808C87 /* DHImageRotateFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 547885451F481E4400808C87 /* DHImageRotateFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -165,6 +169,10 @@
 		543C8E011F5CF47F0036CD92 /* DHImageVignetteFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHImageVignetteFilter.m; sourceTree = "<group>"; };
 		543C8E061F5D06390036CD92 /* DHImageGringhamFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHImageGringhamFilter.h; sourceTree = "<group>"; };
 		543C8E071F5D06390036CD92 /* DHImageGringhamFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHImageGringhamFilter.m; sourceTree = "<group>"; };
+		543C8E0A1F5D23850036CD92 /* DHImageSierraFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHImageSierraFilter.h; sourceTree = "<group>"; };
+		543C8E0B1F5D23850036CD92 /* DHImageSierraFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHImageSierraFilter.m; sourceTree = "<group>"; };
+		543C8E0E1F5D29560036CD92 /* DHImageRGBFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHImageRGBFilter.h; sourceTree = "<group>"; };
+		543C8E0F1F5D29560036CD92 /* DHImageRGBFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHImageRGBFilter.m; sourceTree = "<group>"; };
 		547885431F481E4400808C87 /* DHImageColorFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHImageColorFilter.h; sourceTree = "<group>"; };
 		547885441F481E4400808C87 /* DHImageColorFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHImageColorFilter.m; sourceTree = "<group>"; };
 		547885451F481E4400808C87 /* DHImageRotateFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHImageRotateFilter.h; sourceTree = "<group>"; };
@@ -306,6 +314,8 @@
 				543C8DCF1F57E9160036CD92 /* DHImageColorDarkenBlendFilter.m */,
 				543C8E001F5CF47F0036CD92 /* DHImageVignetteFilter.h */,
 				543C8E011F5CF47F0036CD92 /* DHImageVignetteFilter.m */,
+				543C8E0E1F5D29560036CD92 /* DHImageRGBFilter.h */,
+				543C8E0F1F5D29560036CD92 /* DHImageRGBFilter.m */,
 			);
 			path = "Base Filters";
 			sourceTree = "<group>";
@@ -323,6 +333,8 @@
 				543C8DEB1F590BB10036CD92 /* DHImageMetalicFilter.m */,
 				543C8E061F5D06390036CD92 /* DHImageGringhamFilter.h */,
 				543C8E071F5D06390036CD92 /* DHImageGringhamFilter.m */,
+				543C8E0A1F5D23850036CD92 /* DHImageSierraFilter.h */,
+				543C8E0B1F5D23850036CD92 /* DHImageSierraFilter.m */,
 			);
 			path = DHImageFilters;
 			sourceTree = "<group>";
@@ -472,12 +484,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				5478859B1F481E4400808C87 /* DHImageEditor.h in Headers */,
+				543C8E0C1F5D23850036CD92 /* DHImageSierraFilter.h in Headers */,
 				547885AF1F481E4400808C87 /* IFHefeFilter.h in Headers */,
 				547885981F481E4400808C87 /* DHIFFiltersHelper.h in Headers */,
 				547885C11F481E4400808C87 /* IFSierraFilter.h in Headers */,
 				543C8DBF1F57D9840036CD92 /* DHImageTwoInputFilter.h in Headers */,
 				543C8DC81F57E3A90036CD92 /* DHImageGrayFilter.h in Headers */,
 				547885CD1F481E4400808C87 /* InstaFilters.h in Headers */,
+				543C8E101F5D29560036CD92 /* DHImageRGBFilter.h in Headers */,
 				547885A11F481E4400808C87 /* GPUImageFiveInputFilter.h in Headers */,
 				547885BF1F481E4400808C87 /* IFRiseFilter.h in Headers */,
 				5478859D1F481E4400808C87 /* DHImageHelper.h in Headers */,
@@ -683,6 +697,7 @@
 				547885B61F481E4400808C87 /* IFInkwellFilter.m in Sources */,
 				547885B81F481E4400808C87 /* IFLomofiFilter.m in Sources */,
 				547885B21F481E4400808C87 /* IFHudsonFilter.m in Sources */,
+				543C8E0D1F5D23850036CD92 /* DHImageSierraFilter.m in Sources */,
 				543C8DD11F57E9160036CD92 /* DHImageColorDarkenBlendFilter.m in Sources */,
 				547885CF1F481E4400808C87 /* DHImageOperation.m in Sources */,
 				547885CA1F481E4400808C87 /* IFWaldenFilter.m in Sources */,
@@ -692,6 +707,7 @@
 				543C8DC01F57D9840036CD92 /* DHImageTwoInputFilter.m in Sources */,
 				543C8DA61F540C960036CD92 /* DHImageFiltersHelper.m in Sources */,
 				547885C41F481E4400808C87 /* IFSutroFilter.m in Sources */,
+				543C8E111F5D29560036CD92 /* DHImageRGBFilter.m in Sources */,
 				543C8DF91F593A260036CD92 /* DHImageColorMultiplyBlendFilter.m in Sources */,
 				547885A81F481E4400808C87 /* IF1977Filter.m in Sources */,
 				543C8DF51F5936120036CD92 /* DHImageLevelsFilter.m in Sources */,
