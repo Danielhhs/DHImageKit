@@ -11,6 +11,7 @@
 #import "DHImageOldFasionFilter.h"
 #import "DHImageFreshFilter.h"
 #import "DHImageMetalicFilter.h"
+#import "DHImageGringhamFilter.h"
 
 @implementation DHImageFiltersHelper
 
@@ -26,7 +27,8 @@
     DHImageFilterInfo *oldFashion = [DHImageFilterInfo filterInfoForFilterClass:[DHImageOldFasionFilter class] name:@"Old Fashion" type:DHImageFilterTypeOldFashion];
     DHImageFilterInfo *fresh = [DHImageFilterInfo filterInfoForFilterClass:[DHImageFreshFilter class] name:@"Fresh" type:DHImageFilterTypeFresh];
     DHImageFilterInfo *metalic = [DHImageFilterInfo filterInfoForFilterClass:[DHImageMetalicFilter class] name:@"Metalic" type:DHImageFilterTypeMetalic];
-    return @[gray, oldFashion, fresh, metalic];
+    DHImageFilterInfo *gringham = [DHImageFilterInfo filterInfoForFilterClass:[DHImageGringhamFilter class] name:@"Gringham" type:DHImageFilterTypeMetalic];
+    return @[gray, oldFashion, fresh, metalic, gringham];
 }
 
 + (GPUImagePicture *) pictureWithImageNamed:(NSString *)imageName
