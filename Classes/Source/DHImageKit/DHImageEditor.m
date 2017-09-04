@@ -91,15 +91,15 @@ static DHImageEditor *sharedInstance;
 #pragma mark - Start Processing
 - (void) startProcessingWithFilter:(IFImageFilter *)filter
 {
-//    self.ifFilter = filter;
-//    NSString *fileName = [[self.imageURL lastPathComponent] stringByAppendingString:@"base"];;
-//    self.baseImageURL = [[self.imageURL URLByDeletingLastPathComponent] URLByAppendingPathComponent:fileName];;
-//    UIImage *image = [filter imageByFilteringImage:[UIImage imageWithContentsOfFile:[self.imageURL path]]];
-//    [self.picture removeAllTargets];
-//    self.picture = [[GPUImagePicture alloc] initWithImage:image];
-//    [self _processImage];
-//    NSData *data = UIImageJPEGRepresentation(image, 1);
-//    [data writeToURL:self.baseImageURL atomically:YES];
+    self.ifFilter = filter;
+    NSString *fileName = [[self.imageURL lastPathComponent] stringByAppendingString:@"base"];;
+    self.baseImageURL = [[self.imageURL URLByDeletingLastPathComponent] URLByAppendingPathComponent:fileName];;
+    UIImage *image = [filter imageByFilteringImage:[UIImage imageWithContentsOfFile:[self.imageURL path]]];
+    [self.picture removeAllTargets];
+    self.picture = [[GPUImagePicture alloc] initWithImage:image];
+    [self _processImage];
+    NSData *data = UIImageJPEGRepresentation(image, 1);
+    [data writeToURL:self.baseImageURL atomically:YES];
 }
 
 - (void) startProcessingWithDHFilter:(DHImageFilter *)filter
