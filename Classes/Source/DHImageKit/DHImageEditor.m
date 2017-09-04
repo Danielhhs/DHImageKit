@@ -51,6 +51,7 @@ static DHImageEditor *sharedInstance;
     self.image = image;
     self.baseImage = image;
     self.renderTarget = renderTarget;
+    self.dhFilter = nil;
     dispatch_sync(imageProcessingQ, ^{
         self.picture = [[GPUImagePicture alloc] initWithImage:image];
         self.filterGroup = [[GPUImageFilterGroup alloc] init];
@@ -65,6 +66,7 @@ static DHImageEditor *sharedInstance;
     self.image = nil;
     self.baseImage = nil;
     self.renderTarget = renderTarget;
+    self.dhFilter = nil;
     dispatch_async(imageProcessingQ, ^{
         self.picture = [[GPUImagePicture alloc] initWithURL:imageURL];
         self.filterGroup = [[GPUImageFilterGroup alloc] init];
@@ -102,8 +104,12 @@ static DHImageEditor *sharedInstance;
 
 - (void) startProcessingWithDHFilter:(DHImageFilter *)filter
 {
+    if (self.dhFilter) {
+        [self _replaceFilter:self.dhFilter withFilter:filter];
+    } else {
+        [self _addFilter:filter];
+    }
     self.dhFilter = filter;
-    [self _addFilter:filter];
     [self _processImage];
 }
 

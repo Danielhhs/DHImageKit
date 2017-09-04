@@ -23,7 +23,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nre-zF-1Sc" customClass="GPUImageView">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="485"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="421"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v6T-rv-T9R">
@@ -54,6 +54,30 @@
                                     <action selector="showDHFilters:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CKI-WH-3VA"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w3c-EL-Ace">
+                                <rect key="frame" x="174" y="20" width="31" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="kuru"/>
+                                <connections>
+                                    <action selector="changeToKuru:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xzn-w3-1gc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wcI-4A-g8e">
+                                <rect key="frame" x="40" y="20" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Kriss"/>
+                                <connections>
+                                    <action selector="changeToKriss:" destination="BYZ-38-t0r" eventType="touchUpInside" id="clo-IS-8sW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kfz-ZI-bd7">
+                                <rect key="frame" x="315" y="20" width="43" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Scene"/>
+                                <connections>
+                                    <action selector="changeToScene:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XKw-eu-FX7"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -63,7 +87,7 @@
                             <constraint firstItem="cRl-WL-uoF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Iot-9j-Rx7"/>
                             <constraint firstItem="v6T-rv-T9R" firstAttribute="top" secondItem="nre-zF-1Sc" secondAttribute="bottom" constant="8" id="M1P-zd-GBA"/>
                             <constraint firstItem="Bq9-NF-Q09" firstAttribute="top" secondItem="v6T-rv-T9R" secondAttribute="bottom" constant="12" id="PxU-B3-qfM"/>
-                            <constraint firstItem="nre-zF-1Sc" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="bbe-Oq-4cm"/>
+                            <constraint firstItem="nre-zF-1Sc" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="44" id="bbe-Oq-4cm"/>
                             <constraint firstAttribute="trailingMargin" secondItem="nre-zF-1Sc" secondAttribute="trailing" constant="-16" id="c17-cS-Aff"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="cRl-WL-uoF" secondAttribute="bottom" constant="8" id="iy7-aD-KgF"/>
                             <constraint firstAttribute="leadingMargin" secondItem="e1A-ut-dXJ" secondAttribute="leading" id="s04-xC-cnT"/>

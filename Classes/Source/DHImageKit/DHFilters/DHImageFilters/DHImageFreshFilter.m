@@ -8,9 +8,11 @@
 
 #import "DHImageFreshFilter.h"
 #import "DHImageToneCurveFilter.h"
+#import "DHImageContrastBrightnessFilter.h"
 
 @interface DHImageFreshFilter ()
 @property (nonatomic, strong) DHImageToneCurveFilter *curveFilter;
+@property (nonatomic, strong) DHImageContrastBrightnessFilter *contrastFilter;
 @end
 
 @implementation DHImageFreshFilter
@@ -22,8 +24,13 @@
         _curveFilter = [[DHImageToneCurveFilter alloc] initWithACV:@"fresh"];
         [self addFilter:_curveFilter];
         
+        _contrastFilter = [[DHImageContrastBrightnessFilter alloc] init];
+        _contrastFilter.brightness = -0.05;
+        [_curveFilter addTarget:_contrastFilter];
+        [self addFilter:_contrastFilter];
+        
         self.initialFilters = @[_curveFilter];
-        self.terminalFilter = _curveFilter;
+        self.terminalFilter = _contrastFilter;
     }
     return self;
 }

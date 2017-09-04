@@ -39,7 +39,7 @@
     [falseColorFilter addTarget:curveFilter];
     
     contrastFilter = [[DHImageContrastBrightnessFilter alloc] init];
-    contrastFilter.contrast = 1.3f;
+    contrastFilter.contrast = 1.2f;
     [self addFilter:contrastFilter];
     [curveFilter addTarget:contrastFilter];
     

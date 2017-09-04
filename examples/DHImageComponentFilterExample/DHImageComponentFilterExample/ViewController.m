@@ -50,9 +50,7 @@
     UIGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePan:)];
     [self.renderTarget addGestureRecognizer:pan];
     
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"portrait" ofType:@"jpg"];
-    
-    [[DHImageEditor sharedEditor] initiateEditorWithImageURL:[NSURL fileURLWithPath:filePath] renderTarget:self.renderTarget completion:nil];
+    [self changeToKuru:nil];
 }
 
 - (void) viewDidAppear:(BOOL)animated
@@ -321,6 +319,27 @@
         [self removeChildViewController:self.colorPicker fromParentViewController:self];
         self.colorPicker = nil;
     }];
+}
+
+- (IBAction)changeToKriss:(id)sender {
+    
+    
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"portrait" ofType:@"jpg"];
+    
+    [[DHImageEditor sharedEditor] initiateEditorWithImageURL:[NSURL fileURLWithPath:filePath] renderTarget:self.renderTarget completion:nil];
+}
+
+- (IBAction)changeToKuru:(id)sender {
+    
+    
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"sample_kuru" ofType:@"jpg"];
+    
+    [[DHImageEditor sharedEditor] initiateEditorWithImageURL:[NSURL fileURLWithPath:filePath] renderTarget:self.renderTarget completion:nil];
+}
+- (IBAction)changeToScene:(id)sender {
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"scene" ofType:@"jpg"];
+    
+    [[DHImageEditor sharedEditor] initiateEditorWithImageURL:[NSURL fileURLWithPath:filePath] renderTarget:self.renderTarget completion:nil];
 }
 
 @end

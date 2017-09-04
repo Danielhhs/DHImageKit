@@ -39,6 +39,7 @@
         [self addFilter:_contrastFilter];
         
         _rgbFilter = [[DHImageRGBFilter alloc] init];
+        _rgbFilter.red = 0.97;
         _rgbFilter.green = 0.93;
         _rgbFilter.blue = 0.96;
         [_contrastFilter addTarget:_rgbFilter];
