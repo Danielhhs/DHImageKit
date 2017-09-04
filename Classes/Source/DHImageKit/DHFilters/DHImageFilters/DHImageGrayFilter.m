@@ -9,10 +9,12 @@
 #import "DHImageGrayFilter.h"
 #import "DHImageFalseColorFilter.h"
 #import "DHImageToneCurveFilter.h"
+#import "DHImageContrastBrightnessFilter.h"
 
 @interface DHImageGrayFilter () {
     DHImageFalseColorFilter *falseColorFilter;
     DHImageToneCurveFilter *curveFilter;
+    DHImageContrastBrightnessFilter *contrastFilter;
 }
 
 @property (nonatomic) GPUVector4 originalFirstColor;
@@ -36,8 +38,13 @@
     [self addFilter:curveFilter];
     [falseColorFilter addTarget:curveFilter];
     
+    contrastFilter = [[DHImageContrastBrightnessFilter alloc] init];
+    contrastFilter.contrast = 1.3f;
+    [self addFilter:contrastFilter];
+    [curveFilter addTarget:contrastFilter];
+    
     self.initialFilters = @[falseColorFilter];
-    self.terminalFilter = curveFilter;
+    self.terminalFilter = contrastFilter;
     return self;
 }
 
