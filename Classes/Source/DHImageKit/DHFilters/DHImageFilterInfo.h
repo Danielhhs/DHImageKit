@@ -16,6 +16,7 @@ typedef NS_ENUM(NSInteger, DHImageFilterType) {
     DHImageFilterTypeMetalic,
     DHImageFilterTypeGringham,
     DHImageFilterTypeSierra,
+    DHImageFilterTypeCrema,
 };
 
 @interface DHImageFilterInfo : NSObject

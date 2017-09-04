@@ -13,7 +13,7 @@
 #import "DHImageMetalicFilter.h"
 #import "DHImageGringhamFilter.h"
 #import "DHImageSierraFilter.h"
-
+#import "DHImageCremaFilter.h"
 @implementation DHImageFiltersHelper
 
 + (DHImageFilter *)filterForFilterInfo:(DHImageFilterInfo *)filterInfo
@@ -30,7 +30,8 @@
     DHImageFilterInfo *metalic = [DHImageFilterInfo filterInfoForFilterClass:[DHImageMetalicFilter class] name:@"Metalic" type:DHImageFilterTypeMetalic];
     DHImageFilterInfo *gringham = [DHImageFilterInfo filterInfoForFilterClass:[DHImageGringhamFilter class] name:@"Gringham" type:DHImageFilterTypeGringham];
     DHImageFilterInfo *sierra = [DHImageFilterInfo filterInfoForFilterClass:[DHImageSierraFilter class] name:@"Sierra" type:DHImageFilterTypeSierra];
-    return @[gray, oldFashion, fresh, metalic, gringham, sierra];
+    DHImageFilterInfo *crema = [DHImageFilterInfo filterInfoForFilterClass:[DHImageCremaFilter class] name:@"Crema" type:DHImageFilterTypeCrema];
+    return @[gray, oldFashion, fresh, metalic, gringham, sierra, crema];
 }
 
 + (GPUImagePicture *) pictureWithImageNamed:(NSString *)imageName
