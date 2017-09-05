@@ -79,3 +79,4 @@ FOUNDATION_EXPORT const unsigned char DHImageKitVersionString[];
 #import "DHImageClarendonFilter.h"
 #import "DHImageNashvilleFilter.h"
 #import "DHImageHudsonFilter.h"
+#import "DHImageValenciaFilter.h"
