@@ -24,6 +24,7 @@ typedef NS_ENUM(NSInteger, DHImageFilterType) {
     DHImageFilterTypeJuno,
     DHImageFilterTypeAmaro,
     DHImageFilterTypeHudson,
+    DHImageFilterTypeXProII,
 };
 
 @interface DHImageFilterInfo : NSObject

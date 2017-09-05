@@ -17,7 +17,7 @@ NSString *const kIFValenciaShaderString = SHADER_STRING
  
  uniform sampler2D inputImageTexture;
  uniform sampler2D inputImageTexture2; //map
- uniform sampler2D inputImageTexture3; //gradMap
+ uniform sampler2D inputImageTexture3; //gradMapz
  
  mat3 saturateMatrix = mat3(
                             1.1402,

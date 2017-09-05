@@ -22,6 +22,7 @@
 #import "DHImageAmaroFilter.h"
 #import "DHImageHudsonFilter.h"
 #import "DHImageValenciaFilter.h"
+#import "DHImageXprollFilter.h"
 
 @implementation DHImageFiltersHelper
 
@@ -48,7 +49,8 @@
     DHImageFilterInfo *amaro = [DHImageFilterInfo filterInfoForFilterClass:[DHImageAmaroFilter class] name:@"Amaro" type:DHImageFilterTypeAmaro];
     DHImageFilterInfo *hudson = [DHImageFilterInfo filterInfoForFilterClass:[DHImageHudsonFilter class] name:@"Hundson" type:DHImageFilterTypeAmaro];
     DHImageFilterInfo *valencia = [DHImageFilterInfo filterInfoForFilterClass:[DHImageValenciaFilter class] name:@"Valencia" type:DHImageFilterTypeAmaro];
-    return @[gray, oldFashion, fresh, metalic, gringham, sierra, crema, rise, lark, nashville, clarendon, juno, amaro, hudson, valencia];
+    DHImageFilterInfo *xproll = [DHImageFilterInfo filterInfoForFilterClass:[DHImageXprollFilter class] name:@"X Pro II" type:DHImageFilterTypeXProII];
+    return @[gray, oldFashion, fresh, metalic, gringham, sierra, crema, rise, lark, nashville, clarendon, juno, amaro, hudson, valencia, xproll];
 }
 
 + (GPUImagePicture *) pictureWithImageNamed:(NSString *)imageName
