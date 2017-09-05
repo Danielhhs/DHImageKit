@@ -10,6 +10,7 @@
 		543C8DA21F540BF50036CD92 /* DHFilterPickerCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 543C8DA11F540BF50036CD92 /* DHFilterPickerCollectionViewController.m */; };
 		543C8DFF1F5CEDAB0036CD92 /* scene.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 543C8DFE1F5CEDAB0036CD92 /* scene.jpg */; };
 		543C8E051F5CFD010036CD92 /* portrait.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 543C8E041F5CFD010036CD92 /* portrait.jpg */; };
+		543C8E3C1F5E79600036CD92 /* TakePictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 543C8E3B1F5E79600036CD92 /* TakePictureViewController.m */; };
 		5479B0841F2C42E100912E66 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5479B0831F2C42E100912E66 /* main.m */; };
 		5479B0871F2C42E100912E66 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5479B0861F2C42E100912E66 /* AppDelegate.m */; };
 		5479B08A1F2C42E100912E66 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5479B0891F2C42E100912E66 /* ViewController.m */; };
@@ -51,6 +52,8 @@
 		543C8DA11F540BF50036CD92 /* DHFilterPickerCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHFilterPickerCollectionViewController.m; sourceTree = "<group>"; };
 		543C8DFE1F5CEDAB0036CD92 /* scene.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = scene.jpg; sourceTree = "<group>"; };
 		543C8E041F5CFD010036CD92 /* portrait.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = portrait.jpg; sourceTree = "<group>"; };
+		543C8E3A1F5E79600036CD92 /* TakePictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TakePictureViewController.h; sourceTree = "<group>"; };
+		543C8E3B1F5E79600036CD92 /* TakePictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TakePictureViewController.m; sourceTree = "<group>"; };
 		5479B07F1F2C42E100912E66 /* DHImageComponentFilterExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DHImageComponentFilterExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5479B0831F2C42E100912E66 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5479B0851F2C42E100912E66 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -171,6 +174,8 @@
 				5479B0861F2C42E100912E66 /* AppDelegate.m */,
 				5479B0881F2C42E100912E66 /* ViewController.h */,
 				5479B0891F2C42E100912E66 /* ViewController.m */,
+				543C8E3A1F5E79600036CD92 /* TakePictureViewController.h */,
+				543C8E3B1F5E79600036CD92 /* TakePictureViewController.m */,
 				543C8D9F1F540BD90036CD92 /* DHFilter */,
 				5479B1A61F300D0900912E66 /* IFFilter */,
 				5479B1961F300CB400912E66 /* ComponentFilter */,
@@ -437,6 +442,7 @@
 				5479B1A51F300CB400912E66 /* DHTiltTypeChoosePanel.m in Sources */,
 				5479B1A41F300CB400912E66 /* DHSliderInputPanel.m in Sources */,
 				5479B1AF1F300FE100912E66 /* DHIFFilterCollectionViewCell.m in Sources */,
+				543C8E3C1F5E79600036CD92 /* TakePictureViewController.m in Sources */,
 				543C8DA21F540BF50036CD92 /* DHFilterPickerCollectionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

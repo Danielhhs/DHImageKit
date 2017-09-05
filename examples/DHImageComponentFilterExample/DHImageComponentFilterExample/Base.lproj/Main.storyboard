@@ -54,14 +54,6 @@
                                     <action selector="showDHFilters:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CKI-WH-3VA"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w3c-EL-Ace">
-                                <rect key="frame" x="174" y="20" width="31" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="kuru"/>
-                                <connections>
-                                    <action selector="changeToKuru:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xzn-w3-1gc"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wcI-4A-g8e">
                                 <rect key="frame" x="40" y="20" width="34" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -76,6 +68,22 @@
                                 <state key="normal" title="Scene"/>
                                 <connections>
                                     <action selector="changeToScene:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XKw-eu-FX7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1qx-Fp-htW">
+                                <rect key="frame" x="203" y="20" width="69" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Take a pic"/>
+                                <connections>
+                                    <action selector="takeAPicture:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Jk-Za-ekk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w3c-EL-Ace">
+                                <rect key="frame" x="115" y="20" width="31" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="kuru"/>
+                                <connections>
+                                    <action selector="changeToKuru:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xzn-w3-1gc"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -287,6 +295,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gXl-xl-qpz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="764" y="500.1499250374813"/>
+        </scene>
+        <!--Take Picture View Controller-->
+        <scene sceneID="uZt-Rs-oYB">
+            <objects>
+                <viewController storyboardIdentifier="TakePictureViewController" id="HSD-U7-yLV" customClass="TakePictureViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KqR-uu-lKs"/>
+                        <viewControllerLayoutGuide type="bottom" id="EOm-sz-UGX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6bE-IJ-UEr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GHX-WA-aZp" customClass="GPUImageView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="target" destination="GHX-WA-aZp" id="1kP-CG-72J"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H8k-wR-dJo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="74.400000000000006" y="940.47976011994012"/>
         </scene>
         <!--Filter Picker Collection View Controller-->
         <scene sceneID="QIX-Rm-QiF">

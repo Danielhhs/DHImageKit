@@ -69,6 +69,8 @@
 		543C8E351F5E4A120036CD92 /* DHImageJunoFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 543C8E331F5E4A120036CD92 /* DHImageJunoFilter.m */; };
 		543C8E381F5E721D0036CD92 /* DHImageAmaroFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 543C8E361F5E721D0036CD92 /* DHImageAmaroFilter.h */; };
 		543C8E391F5E721D0036CD92 /* DHImageAmaroFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 543C8E371F5E721D0036CD92 /* DHImageAmaroFilter.m */; };
+		543C8E3F1F5E893E0036CD92 /* DHImageHudsonFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 543C8E3D1F5E893E0036CD92 /* DHImageHudsonFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		543C8E401F5E893E0036CD92 /* DHImageHudsonFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 543C8E3E1F5E893E0036CD92 /* DHImageHudsonFilter.m */; };
 		5478858C1F481E4400808C87 /* DHImageColorFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 547885431F481E4400808C87 /* DHImageColorFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5478858D1F481E4400808C87 /* DHImageColorFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 547885441F481E4400808C87 /* DHImageColorFilter.m */; };
 		5478858E1F481E4400808C87 /* DHImageRotateFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 547885451F481E4400808C87 /* DHImageRotateFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -213,6 +215,8 @@
 		543C8E331F5E4A120036CD92 /* DHImageJunoFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHImageJunoFilter.m; sourceTree = "<group>"; };
 		543C8E361F5E721D0036CD92 /* DHImageAmaroFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHImageAmaroFilter.h; sourceTree = "<group>"; };
 		543C8E371F5E721D0036CD92 /* DHImageAmaroFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHImageAmaroFilter.m; sourceTree = "<group>"; };
+		543C8E3D1F5E893E0036CD92 /* DHImageHudsonFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHImageHudsonFilter.h; sourceTree = "<group>"; };
+		543C8E3E1F5E893E0036CD92 /* DHImageHudsonFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHImageHudsonFilter.m; sourceTree = "<group>"; };
 		547885431F481E4400808C87 /* DHImageColorFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHImageColorFilter.h; sourceTree = "<group>"; };
 		547885441F481E4400808C87 /* DHImageColorFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHImageColorFilter.m; sourceTree = "<group>"; };
 		547885451F481E4400808C87 /* DHImageRotateFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHImageRotateFilter.h; sourceTree = "<group>"; };
@@ -395,6 +399,8 @@
 				543C8E331F5E4A120036CD92 /* DHImageJunoFilter.m */,
 				543C8E361F5E721D0036CD92 /* DHImageAmaroFilter.h */,
 				543C8E371F5E721D0036CD92 /* DHImageAmaroFilter.m */,
+				543C8E3D1F5E893E0036CD92 /* DHImageHudsonFilter.h */,
+				543C8E3E1F5E893E0036CD92 /* DHImageHudsonFilter.m */,
 			);
 			path = DHImageFilters;
 			sourceTree = "<group>";
@@ -577,6 +583,7 @@
 				543C8E141F5D383C0036CD92 /* DHImageCremaFilter.h in Headers */,
 				547885BB1F481E4400808C87 /* IFNashvilleFilter.h in Headers */,
 				543C8E081F5D06390036CD92 /* DHImageGringhamFilter.h in Headers */,
+				543C8E3F1F5E893E0036CD92 /* DHImageHudsonFilter.h in Headers */,
 				543C8DF01F5926C10036CD92 /* DHImageContrastBrightnessFilter.h in Headers */,
 				543C8DC31F57D99F0036CD92 /* DHImageFalseColorFilter.h in Headers */,
 				547885A91F481E4400808C87 /* IFAmaroFilter.h in Headers */,
@@ -804,6 +811,7 @@
 				547885A41F481E4400808C87 /* GPUImageFourInputFilter.m in Sources */,
 				547885CC1F481E4400808C87 /* IFXproIIFilter.m in Sources */,
 				5478858F1F481E4400808C87 /* DHImageRotateFilter.m in Sources */,
+				543C8E401F5E893E0036CD92 /* DHImageHudsonFilter.m in Sources */,
 				5478858D1F481E4400808C87 /* DHImageColorFilter.m in Sources */,
 				547885C61F481E4400808C87 /* IFToasterFilter.m in Sources */,
 				547885C21F481E4400808C87 /* IFSierraFilter.m in Sources */,

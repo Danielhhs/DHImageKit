@@ -15,8 +15,9 @@
 #import "DHIFFilterPickerCollectionViewController.h"
 #import "DHFilterPickerCollectionViewController.h"
 #import "DHTiltTypeChoosePanel.h"
+#import "TakePictureViewController.h"
 
-@interface ViewController ()<DHComponentFilterPickerCollectionViewControllerDelegate, DHSliderInputPanelDelegate, DHColorPickerCollectionViewControllerDelegate, DHTiltTypeChoosePanelDelegate,DHIFFilterPickerCollectionViewControllerDelegate, DHFilterPickerCollectionViewControllerDelegate>
+@interface ViewController ()<DHComponentFilterPickerCollectionViewControllerDelegate, DHSliderInputPanelDelegate, DHColorPickerCollectionViewControllerDelegate, DHTiltTypeChoosePanelDelegate,DHIFFilterPickerCollectionViewControllerDelegate, DHFilterPickerCollectionViewControllerDelegate, TakePictureViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UIView *containerView;
 @property (weak, nonatomic) IBOutlet GPUImageView *renderTarget;
 @property (nonatomic, strong) DHComponentFilterPickerCollectionViewController *editorPicker;
@@ -340,6 +341,24 @@
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"scene" ofType:@"jpg"];
     
     [[DHImageEditor sharedEditor] initiateEditorWithImageURL:[NSURL fileURLWithPath:filePath] renderTarget:self.renderTarget completion:nil];
+}
+
+- (IBAction)takeAPicture:(id)sender {
+    TakePictureViewController *vc = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"TakePictureViewController"];
+    vc.delegate = self;
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+    [self presentViewController:nav animated:YES completion:nil];
+}
+
+- (void) didTakePicture:(UIImage *)picture
+{
+    NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+    NSString *fileName = [NSString stringWithFormat:@"%@.png", [[NSUUID UUID] UUIDString]];
+    path = [path stringByAppendingPathComponent:fileName];
+    
+    [UIImagePNGRepresentation(picture) writeToFile:path atomically:YES];
+    [[DHImageEditor sharedEditor] initiateEditorWithImageURL:[NSURL fileURLWithPath:path] renderTarget:self.renderTarget completion:nil];
+    
 }
 
 @end
