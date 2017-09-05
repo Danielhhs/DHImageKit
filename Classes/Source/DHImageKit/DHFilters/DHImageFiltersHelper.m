@@ -24,6 +24,7 @@
 #import "DHImageValenciaFilter.h"
 #import "DHImageXprollFilter.h"
 #import "DHImageWaldenFilter.h"
+#import "DHImageInkWellFilter.h"
 
 @implementation DHImageFiltersHelper
 
@@ -52,7 +53,8 @@
     DHImageFilterInfo *valencia = [DHImageFilterInfo filterInfoForFilterClass:[DHImageValenciaFilter class] name:@"Valencia" type:DHImageFilterTypeAmaro];
     DHImageFilterInfo *xproll = [DHImageFilterInfo filterInfoForFilterClass:[DHImageXprollFilter class] name:@"X Pro II" type:DHImageFilterTypeXProII];
     DHImageFilterInfo *walden = [DHImageFilterInfo filterInfoForFilterClass:[DHImageWaldenFilter class] name:@"Walden" type:DHImageFilterTypeWalden];
-    return @[gray, oldFashion, fresh, metalic, gringham, sierra, crema, rise, lark, nashville, clarendon, juno, amaro, hudson, valencia, xproll, walden];
+    DHImageFilterInfo *inkwell = [DHImageFilterInfo filterInfoForFilterClass:[DHImageInkWellFilter class] name:@"Inkwell" type:DHImageFilterTypeInkwell];
+    return @[gray, oldFashion, fresh, metalic, gringham, sierra, crema, rise, lark, nashville, clarendon, juno, amaro, hudson, valencia, xproll, walden, inkwell];
 }
 
 + (GPUImagePicture *) pictureWithImageNamed:(NSString *)imageName
