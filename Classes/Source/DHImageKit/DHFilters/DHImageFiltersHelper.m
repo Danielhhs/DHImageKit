@@ -16,6 +16,9 @@
 #import "DHImageCremaFilter.h"
 #import "DHImageRiseFilter.h"
 #import "DHImageLarkFilter.h"
+#import "DHImageNashvilleFilter.h"
+#import "DHImageClarendonFilter.h"
+
 @implementation DHImageFiltersHelper
 
 + (DHImageFilter *)filterForFilterInfo:(DHImageFilterInfo *)filterInfo
@@ -35,7 +38,9 @@
     DHImageFilterInfo *crema = [DHImageFilterInfo filterInfoForFilterClass:[DHImageCremaFilter class] name:@"Crema" type:DHImageFilterTypeCrema];
     DHImageFilterInfo *rise = [DHImageFilterInfo filterInfoForFilterClass:[DHImageRiseFilter class] name:@"Rise" type:DHImageFilterTypeRise];
     DHImageFilterInfo *lark = [DHImageFilterInfo filterInfoForFilterClass:[DHImageLarkFilter class] name:@"Lark" type:DHImageFilterTypeLark];
-    return @[gray, oldFashion, fresh, metalic, gringham, sierra, crema, rise, lark];
+    DHImageFilterInfo *nashville = [DHImageFilterInfo filterInfoForFilterClass:[DHImageNashvilleFilter class] name:@"Nashville" type:DHImageFilterTypeNashville];
+    DHImageFilterInfo *clarendon = [DHImageFilterInfo filterInfoForFilterClass:[DHImageClarendonFilter class] name:@"Clarendon" type:DHImageFilterTypeClarendon];
+    return @[gray, oldFashion, fresh, metalic, gringham, sierra, crema, rise, lark, nashville, clarendon];
 }
 
 + (GPUImagePicture *) pictureWithImageNamed:(NSString *)imageName
