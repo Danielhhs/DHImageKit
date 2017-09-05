@@ -25,6 +25,7 @@
 #import "DHImageXprollFilter.h"
 #import "DHImageWaldenFilter.h"
 #import "DHImageInkWellFilter.h"
+#import "DHImageKelvinFilter.h"
 
 @implementation DHImageFiltersHelper
 
@@ -54,7 +55,8 @@
     DHImageFilterInfo *xproll = [DHImageFilterInfo filterInfoForFilterClass:[DHImageXprollFilter class] name:@"X Pro II" type:DHImageFilterTypeXProII];
     DHImageFilterInfo *walden = [DHImageFilterInfo filterInfoForFilterClass:[DHImageWaldenFilter class] name:@"Walden" type:DHImageFilterTypeWalden];
     DHImageFilterInfo *inkwell = [DHImageFilterInfo filterInfoForFilterClass:[DHImageInkWellFilter class] name:@"Inkwell" type:DHImageFilterTypeInkwell];
-    return @[gray, oldFashion, fresh, metalic, gringham, sierra, crema, rise, lark, nashville, clarendon, juno, amaro, hudson, valencia, xproll, walden, inkwell];
+    DHImageFilterInfo *kelvin = [DHImageFilterInfo filterInfoForFilterClass:[DHImageKelvinFilter class] name:@"Kelvin" type:DHImageFilterTypeKelvin];
+    return @[gray, oldFashion, fresh, metalic, gringham, sierra, crema, rise, lark, nashville, clarendon, juno, amaro, hudson, valencia, xproll, walden, inkwell, kelvin];
 }
 
 + (GPUImagePicture *) pictureWithImageNamed:(NSString *)imageName
