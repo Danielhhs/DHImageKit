@@ -30,6 +30,7 @@
 #import "DHImageEarlybirdFilter.h"
 #import "DHImageSutroFilter.h"
 #import "DHImageToasterFilter.h"
+#import "DHImageWillowFilter.h"
 
 @implementation DHImageFiltersHelper
 
@@ -64,7 +65,8 @@
     DHImageFilterInfo *earlyBird = [DHImageFilterInfo filterInfoForFilterClass:[DHImageEarlybirdFilter class] name:@"Early Bird" type:DHImageFilterTypeEarlyBird];
     DHImageFilterInfo *sutro = [DHImageFilterInfo filterInfoForFilterClass:[DHImageSutroFilter class] name:@"Sutro" type:DHImageFilterTypeSutro];
     DHImageFilterInfo *toaster = [DHImageFilterInfo filterInfoForFilterClass:[DHImageToasterFilter class] name:@"Toaster" type:DHImageFilterTypeToaster];
-    return @[gray, oldFashion, fresh, metalic, gringham, sierra, crema, rise, lark, nashville, clarendon, juno, amaro, hudson, valencia, xproll, walden, inkwell, kelvin, hefe, earlyBird, sutro, toaster];
+    DHImageFilterInfo *willow = [DHImageFilterInfo filterInfoForFilterClass:[DHImageWillowFilter class] name:@"Willow" type:DHImageFilterTypeWillow];
+    return @[gray, oldFashion, fresh, metalic, gringham, sierra, crema, rise, lark, nashville, clarendon, juno, amaro, hudson, valencia, xproll, walden, inkwell, kelvin, hefe, earlyBird, sutro, toaster, willow];
 }
 
 + (GPUImagePicture *) pictureWithImageNamed:(NSString *)imageName
