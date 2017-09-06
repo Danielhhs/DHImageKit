@@ -19,10 +19,6 @@ static DHImageEditor *sharedInstance;
 @interface DHImageEditor () {
     dispatch_queue_t imageProcessingQ;
 }
-@property (nonatomic, strong) UIImage *image;
-@property (nonatomic, strong) UIImage *baseImage;
-@property (nonatomic, strong) NSURL *imageURL;
-@property (nonatomic, strong) NSURL *baseImageURL;
 @property (nonatomic, strong) GPUImagePicture *picture;
 @property (nonatomic, strong) GPUImageFilterGroup *filterGroup;
 @property (nonatomic, strong) DHImageFilter *dhFilter;
@@ -46,35 +42,33 @@ static DHImageEditor *sharedInstance;
 @implementation DHImageEditor
 
 #pragma mark - Initialization
-- (void) initiateEditorWithImage:(UIImage *)image renderTarget:(id<GPUImageInput>)renderTarget
+- (void) initiateEditorWithImage:(UIImage *)image
+                    renderTarget:(id<GPUImageInput>)renderTarget
+                      completion:(void (^)(BOOL))completion
 {
-    self.image = image;
-    self.baseImage = image;
     self.renderTarget = renderTarget;
     self.dhFilter = nil;
     dispatch_sync(imageProcessingQ, ^{
         self.picture = [[GPUImagePicture alloc] initWithImage:image];
         self.filterGroup = [[GPUImageFilterGroup alloc] init];
+        if (completion) {
+            completion(YES);
+        }
     });
 }
 
 - (void) initiateEditorWithImageURL:(NSURL *)imageURL
                        renderTarget:(id<GPUImageInput>)renderTarget
-                         completion:(void (^)(void))complection
+                         completion:(void (^)(BOOL))complection
 {
-    self.imageURL = imageURL;
-    self.image = nil;
-    self.baseImage = nil;
-    self.renderTarget = renderTarget;
-    self.dhFilter = nil;
-    dispatch_async(imageProcessingQ, ^{
-        self.picture = [[GPUImagePicture alloc] initWithURL:imageURL];
-        self.filterGroup = [[GPUImageFilterGroup alloc] init];
-        [self _processImage];
+    UIImage *image = [UIImage imageWithContentsOfFile:[imageURL path]];
+    if (image == nil) {
         if (complection) {
-            complection();
+            complection(NO);
         }
-    });
+    } else {
+        [self initiateEditorWithImage:image renderTarget:renderTarget completion:complection];
+    }
 }
 
 - (BOOL) imageModified
@@ -373,29 +367,11 @@ static DHImageEditor *sharedInstance;
 
 - (UIImage *) processedImage
 {
-    if ([self.filterGroup filterCount] == 0) {
-        return [self _baseImage];
-    } else {
-        [self.filterGroup removeAllTargets];
-        return [self.filterGroup imageByFilteringImage:[self _baseImage]];
-    }
-}
-
-- (UIImage *) _baseImage
-{
-    if (self.baseImage) {
-        return self.baseImage;
-    } else if (self.baseImageURL) {
-        return [UIImage imageWithContentsOfFile:[self.baseImageURL path]];
-    } else {
-        return [UIImage imageWithContentsOfFile:[self.imageURL path]];
-    }
-}
-
-- (UIImage *) originalImage
-{
-    UIImage *image = [UIImage imageWithContentsOfFile:[self.imageURL path]];
-    return image;
+    [self.filterGroup removeAllTargets];
+    [self.picture useNextFrameForImageCapture];
+    [self.filterGroup useNextFrameForImageCapture];
+    [self.picture processImage];
+    return [self.filterGroup imageFromCurrentFramebuffer];
 }
 
 - (void) _printFilterChain
@@ -522,10 +498,7 @@ static DHImageEditor *sharedInstance;
     [self _resetStatus];
     [_picture removeAllTargets];
     _picture = nil;
-    _image = nil;
     [_filterGroup removeAllTargets];
-    _baseImage = nil;
-    _baseImageURL = nil;
     _filterGroup = nil;
     _renderTarget = nil;
 }

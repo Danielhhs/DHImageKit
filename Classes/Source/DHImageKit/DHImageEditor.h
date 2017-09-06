@@ -16,11 +16,12 @@
 
 #pragma mark - Initialization
 - (void) initiateEditorWithImage:(UIImage *)image
-                    renderTarget:(id<GPUImageInput>)renderTarget;
+                    renderTarget:(id<GPUImageInput>)renderTarget
+                      completion:(void (^)(BOOL))completion;
 
 - (void) initiateEditorWithImageURL:(NSURL *)imageURL
                        renderTarget:(id<GPUImageInput>)renderTarget
-                         completion:(void (^)(void))complection;
+                         completion:(void (^)(BOOL))complection;
 
 #pragma mark - Start Processing
 - (void) startProcessingComponent:(DHImageEditComponent)component;
@@ -41,7 +42,6 @@
 - (void) showOriginalImage;
 - (void) showProcessedImage;
 - (UIImage *) processedImage;
-- (UIImage *) originalImage;
 
 #pragma mark - Update DHImageFilter
 - (void) updateDHFilterWithStrength:(CGFloat)strength;
