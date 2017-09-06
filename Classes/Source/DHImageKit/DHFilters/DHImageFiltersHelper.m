@@ -29,6 +29,7 @@
 #import "DHImageHefeFilter.h"
 #import "DHImageEarlybirdFilter.h"
 #import "DHImageSutroFilter.h"
+#import "DHImageToasterFilter.h"
 
 @implementation DHImageFiltersHelper
 
@@ -61,8 +62,9 @@
     DHImageFilterInfo *kelvin = [DHImageFilterInfo filterInfoForFilterClass:[DHImageKelvinFilter class] name:@"Kelvin" type:DHImageFilterTypeKelvin];
     DHImageFilterInfo *hefe = [DHImageFilterInfo filterInfoForFilterClass:[DHImageHefeFilter class] name:@"Hefe" type:DHImageFilterTypeHefe];
     DHImageFilterInfo *earlyBird = [DHImageFilterInfo filterInfoForFilterClass:[DHImageEarlybirdFilter class] name:@"Early Bird" type:DHImageFilterTypeEarlyBird];
-    DHImageFilterInfo *sutro = [DHImageFilterInfo filterInfoForFilterClass:[DHImageSutroFilter class] name:@"Sutro" type:DHImageFilterTypeEarlyBird];
-    return @[gray, oldFashion, fresh, metalic, gringham, sierra, crema, rise, lark, nashville, clarendon, juno, amaro, hudson, valencia, xproll, walden, inkwell, kelvin, hefe, earlyBird, sutro];
+    DHImageFilterInfo *sutro = [DHImageFilterInfo filterInfoForFilterClass:[DHImageSutroFilter class] name:@"Sutro" type:DHImageFilterTypeSutro];
+    DHImageFilterInfo *toaster = [DHImageFilterInfo filterInfoForFilterClass:[DHImageToasterFilter class] name:@"Toaster" type:DHImageFilterTypeToaster];
+    return @[gray, oldFashion, fresh, metalic, gringham, sierra, crema, rise, lark, nashville, clarendon, juno, amaro, hudson, valencia, xproll, walden, inkwell, kelvin, hefe, earlyBird, sutro, toaster];
 }
 
 + (GPUImagePicture *) pictureWithImageNamed:(NSString *)imageName
