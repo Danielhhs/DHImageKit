@@ -30,6 +30,7 @@ typedef NS_ENUM(NSInteger, DHImageFilterType) {
     DHImageFilterTypeKelvin,
     DHImageFilterTypeHefe,
     DHImageFilterTypeEarlyBird,
+    DHImageFilterTypeSutro,
 };
 
 @interface DHImageFilterInfo : NSObject
