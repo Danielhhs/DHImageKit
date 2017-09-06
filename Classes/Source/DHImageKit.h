@@ -30,7 +30,6 @@ FOUNDATION_EXPORT const unsigned char DHImageKitVersionString[];
 #import "GPUImageFiveInputFilter.h"
 #import "GPUImageSixInputFilter.h"
 #import "GPUImageFourInputFilter.h"
-#import "IF1977Filter.h"
 #import "IFAmaroFilter.h"
 #import "IFBrannanFilter.h"
 #import "IFEarlybirdFilter.h"
@@ -80,3 +79,4 @@ FOUNDATION_EXPORT const unsigned char DHImageKitVersionString[];
 #import "DHImageNashvilleFilter.h"
 #import "DHImageHudsonFilter.h"
 #import "DHImageValenciaFilter.h"
+#import "DHImageAmaroFilter.h"
