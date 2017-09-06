@@ -51,6 +51,8 @@ static DHImageEditor *sharedInstance;
     dispatch_sync(imageProcessingQ, ^{
         self.picture = [[GPUImagePicture alloc] initWithImage:image];
         self.filterGroup = [[GPUImageFilterGroup alloc] init];
+        DHImageNormalFilter *filter = [[DHImageNormalFilter alloc] init];
+        [self startProcessingWithDHFilter:filter];
         if (completion) {
             completion(YES);
         }
