@@ -24,15 +24,8 @@ FOUNDATION_EXPORT const unsigned char DHImageKitVersionString[];
 #import "DHImageStructureFilter.h"
 #import "DHImageColorFilter.h"
 #import "DHImageRotateFilter.h"
-
-#import "GPUImageFiveInputFilter.h"
-#import "GPUImageSixInputFilter.h"
-#import "GPUImageFourInputFilter.h"
-#import "IFLomofiFilter.h"
-#import "InstaFilters.h"
 #import "DHImageEditor.h"
 #import "DHImageHelper.h"
-#import "DHIFFiltersHelper.h"
 
 #import "DHImageFiltersHelper.h"
 #import "DHImageFilterInfo.h"
@@ -41,6 +34,8 @@ FOUNDATION_EXPORT const unsigned char DHImageKitVersionString[];
 #import "DHImageTwoInputFilter.h"
 #import "DHImageThreeInputFilter.h"
 #import "DHImageFourInputFilter.h"
+#import "DHImageFiveInputFilter.h"
+#import "DHImageSixInputFilter.h"
 #import "DHImageFalseColorFilter.h"
 #import "DHImageColorDarkenBlendFilter.h"
 #import "DHImageToneCurveFilter.h"
@@ -72,4 +67,5 @@ FOUNDATION_EXPORT const unsigned char DHImageKitVersionString[];
 #import "DHImageToasterFilter.h"
 #import "DHImageWaldenFilter.h"
 #import "DHImageXprollFilter.h"
+#import "DHImageLofiFilter.h"
 

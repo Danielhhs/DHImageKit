@@ -8,7 +8,6 @@
 
 #import <GPUImage/GPUImage.h>
 #import "DHImageConstants.h"
-#import "InstaFilters.h"
 #import "DHImageFilter.h"
 
 @interface DHImageEditor : NSObject
@@ -28,8 +27,6 @@
 
 - (void) startProcessingComponent:(DHImageEditComponent)component
                      subComponent:(DHImageEidtComponentSubType)subType;
-
-- (void) startProcessingWithFilter:(IFImageFilter *)filter;
 
 - (void) startProcessingWithDHFilter:(DHImageFilter *)filter;
 

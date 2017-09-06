@@ -33,13 +33,6 @@
                                     <constraint firstAttribute="height" constant="124" id="j63-r6-cpO"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cRl-WL-uoF">
-                                <rect key="frame" x="166" y="629" width="42" height="30"/>
-                                <state key="normal" title="Filters"/>
-                                <connections>
-                                    <action selector="showFilters:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f3u-ve-evz"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bq9-NF-Q09">
                                 <rect key="frame" x="311" y="629" width="30" height="30"/>
                                 <state key="normal" title="Edit"/>
@@ -90,19 +83,16 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="v6T-rv-T9R" secondAttribute="trailing" constant="-16" id="77t-5E-R5F"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="e1A-ut-dXJ" secondAttribute="bottom" constant="8" id="AHR-MH-Kf1"/>
                             <constraint firstItem="nre-zF-1Sc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="DPg-0v-L6N"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Bq9-NF-Q09" secondAttribute="trailing" constant="18" id="Grc-dS-xW6"/>
-                            <constraint firstItem="cRl-WL-uoF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Iot-9j-Rx7"/>
                             <constraint firstItem="v6T-rv-T9R" firstAttribute="top" secondItem="nre-zF-1Sc" secondAttribute="bottom" constant="8" id="M1P-zd-GBA"/>
                             <constraint firstItem="Bq9-NF-Q09" firstAttribute="top" secondItem="v6T-rv-T9R" secondAttribute="bottom" constant="12" id="PxU-B3-qfM"/>
                             <constraint firstItem="nre-zF-1Sc" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="44" id="bbe-Oq-4cm"/>
                             <constraint firstAttribute="trailingMargin" secondItem="nre-zF-1Sc" secondAttribute="trailing" constant="-16" id="c17-cS-Aff"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="cRl-WL-uoF" secondAttribute="bottom" constant="8" id="iy7-aD-KgF"/>
                             <constraint firstAttribute="leadingMargin" secondItem="e1A-ut-dXJ" secondAttribute="leading" id="s04-xC-cnT"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="v6T-rv-T9R" secondAttribute="bottom" constant="50" id="t9g-uG-I7l"/>
-                            <constraint firstItem="e1A-ut-dXJ" firstAttribute="centerY" secondItem="cRl-WL-uoF" secondAttribute="centerY" id="vhh-p1-dVg"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Bq9-NF-Q09" secondAttribute="bottom" constant="8" id="wZ3-Rg-khA"/>
-                            <constraint firstItem="cRl-WL-uoF" firstAttribute="top" secondItem="v6T-rv-T9R" secondAttribute="bottom" constant="12" id="yEs-18-qyw"/>
                             <constraint firstItem="v6T-rv-T9R" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="zsq-tG-Lhx"/>
                         </constraints>
                     </view>

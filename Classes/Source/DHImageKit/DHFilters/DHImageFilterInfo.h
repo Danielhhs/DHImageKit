@@ -10,6 +10,7 @@
 
 
 typedef NS_ENUM(NSInteger, DHImageFilterType) {
+    DHImageFilterTypeNormal,
     DHImageFilterTypeGray,
     DHImageFilterTypeOldFashion,
     DHImageFilterTypeFresh,

@@ -12,6 +12,7 @@
 #import "DHImageHelper.h"
 #import "DHImageColorFilter.h"
 #import "DHImageRotateFilter.h"
+#import "DHImageNormalFilter.h"
 
 static DHImageEditor *sharedInstance;
 
@@ -24,7 +25,6 @@ static DHImageEditor *sharedInstance;
 @property (nonatomic, strong) NSURL *baseImageURL;
 @property (nonatomic, strong) GPUImagePicture *picture;
 @property (nonatomic, strong) GPUImageFilterGroup *filterGroup;
-@property (nonatomic, strong) IFImageFilter *ifFilter;
 @property (nonatomic, strong) DHImageFilter *dhFilter;
 @property (nonatomic, weak) id<GPUImageInput> renderTarget;
 
@@ -79,7 +79,7 @@ static DHImageEditor *sharedInstance;
 
 - (BOOL) imageModified
 {
-    BOOL hasIFFilter = self.ifFilter && ![self.ifFilter isKindOfClass:[IFNormalFilter class]];
+    BOOL hasIFFilter = self.dhFilter && ![self.dhFilter isKindOfClass:[DHImageNormalFilter class]];
     BOOL hasComponentFilter = ([self.filterGroup filterCount] != 0);
     if (hasIFFilter || hasComponentFilter) {
         return YES;
@@ -89,19 +89,6 @@ static DHImageEditor *sharedInstance;
 }
 
 #pragma mark - Start Processing
-- (void) startProcessingWithFilter:(IFImageFilter *)filter
-{
-    self.ifFilter = filter;
-    NSString *fileName = [[self.imageURL lastPathComponent] stringByAppendingString:@"base"];;
-    self.baseImageURL = [[self.imageURL URLByDeletingLastPathComponent] URLByAppendingPathComponent:fileName];;
-    UIImage *image = [filter imageByFilteringImage:[UIImage imageWithContentsOfFile:[self.imageURL path]]];
-    [self.picture removeAllTargets];
-    self.picture = [[GPUImagePicture alloc] initWithImage:image];
-    [self _processImage];
-    NSData *data = UIImageJPEGRepresentation(image, 1);
-    [data writeToURL:self.baseImageURL atomically:YES];
-}
-
 - (void) startProcessingWithDHFilter:(DHImageFilter *)filter
 {
     if (self.dhFilter) {
