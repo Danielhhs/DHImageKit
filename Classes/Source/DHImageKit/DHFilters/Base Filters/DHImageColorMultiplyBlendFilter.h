@@ -10,9 +10,10 @@
 #import "DHImageBaseFilter.h"
 
 @interface DHImageColorMultiplyBlendFilter : DHImageBaseFilter {
-    GLuint blendColorUniform;
+    GLuint blendColorUniform, opacityUniform;
 }
 
 @property (nonatomic, strong) UIColor *blendColor;
+@property (nonatomic) CGFloat opacity;
 
 @end

@@ -16,11 +16,16 @@ NSString *const kDHImageRGBFragmentShaderString = SHADER_STRING
  uniform highp float greenAdjustment;
  uniform highp float blueAdjustment;
  
+ uniform highp float opacity;
+ 
+ uniform mediump float strength;
+ 
  void main()
  {
      highp vec4 textureColor = texture2D(inputImageTexture, textureCoordinate);
      
-     gl_FragColor = vec4(textureColor.r * redAdjustment, textureColor.g * greenAdjustment, textureColor.b * blueAdjustment, textureColor.a);
+     highp vec4 adjustedColor = vec4(textureColor.r * redAdjustment * opacity, textureColor.g * greenAdjustment * opacity, textureColor.b * blueAdjustment * opacity, textureColor.a);
+     gl_FragColor = vec4(mix(textureColor.rgb, adjustedColor.rgb, strength), 1.0);
  }
  );
 @implementation DHImageRGBFilter
@@ -39,6 +44,9 @@ NSString *const kDHImageRGBFragmentShaderString = SHADER_STRING
     
     blueUniform = [filterProgram uniformIndex:@"blueAdjustment"];
     self.blue = 1.0;
+    
+    opacityUniform = [filterProgram uniformIndex:@"opacity"];
+    self.opacity = 1.f;
     
     return self;
 }
@@ -67,17 +75,9 @@ NSString *const kDHImageRGBFragmentShaderString = SHADER_STRING
     [self setFloat:_blue forUniform:blueUniform program:filterProgram];
 }
 
-- (void) updateWithStrength:(double)strength
+- (void) setOpacity:(CGFloat)opacity
 {
-    CGFloat r,g,b;
-    r = (1.f - self.red) * (1.f - strength) + self.red;
-    g = (1.f - self.green) * (1.f - strength) + self.green;
-    b = (1.f - self.blue) * (1.f - strength) + self.blue;
-    
-    [self setFloat:r forUniform:redUniform program:filterProgram];
-    [self setFloat:g forUniform:greenUniform program:filterProgram];
-    [self setFloat:b forUniform:blueUniform program:filterProgram];
+    _opacity = opacity;
+    [self setFloat:_opacity forUniform:opacityUniform program:filterProgram];
 }
-
-
 @end

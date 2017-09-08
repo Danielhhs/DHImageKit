@@ -7,18 +7,17 @@
 //
 
 #import "DHImageOldFasionFilter.h"
-#import "DHImageToneCurveFilter.h"
-#import "DHImageColorDarkenBlendFilter.h"
-#import "DHImageScreenBlendFilter.h"
+#import "DHImageOverlayBlendFilter.h"
 #import "DHImageFiltersHelper.h"
+#import "DHImageColorMultiplyBlendFilter.h"
 
 @interface DHImageOldFasionFilter () {
     GPUImagePicture *screenPicture;
 }
-@property (nonatomic, strong) DHImageToneCurveFilter *curveFilter;
-@property (nonatomic, strong) DHImageColorDarkenBlendFilter *darkenFilter;
-@property (nonatomic, strong) DHImageScreenBlendFilter *screenBlendFilter;
-
+@property (nonatomic, strong) DHImageOverlayBlendFilter *blendFilter;
+@property (nonatomic, strong) GPUImagePicture *blendPicture;
+@property (nonatomic, strong) DHImageFalseColorFilter *gradientFilter;
+@property (nonatomic, strong) DHImageColorMultiplyBlendFilter *multiplyFilter;
 @end
 
 @implementation DHImageOldFasionFilter
@@ -29,25 +28,26 @@
     if (self == nil) {
         return nil;
     }
+    _blendFilter = [[DHImageOverlayBlendFilter alloc] init];
+    _blendPicture = [DHImageFiltersHelper pictureWithImageNamed:@"old-picture-texture"];
+    [_blendPicture addTarget:_blendFilter atTextureLocation:1];
+    [self addFilter:_blendFilter];
+    [_blendPicture processImage];
     
-    _curveFilter = [[DHImageToneCurveFilter alloc] initWithACV:@"old-fashion"];
-    [self addFilter:_curveFilter];
+    _gradientFilter = [[DHImageFalseColorFilter alloc] init];
+    _gradientFilter.firstColor = (GPUVector4){49.f / 255.f, 31.f / 255.f, 0.f, 1.f};
+    _gradientFilter.secondColor = (GPUVector4){1.f, 1.f, 1.f, 1.f};
+    [self addFilter:_gradientFilter];
+    [_blendFilter addTarget:_gradientFilter];
     
-    _darkenFilter = [[DHImageColorDarkenBlendFilter alloc] init];
-    _darkenFilter.blendColor = [UIColor colorWithRed:227.f / 255.f green:228.f / 255.f blue:143.f / 255.f alpha:1.f];
-    [self addFilter:_darkenFilter];
-    [_curveFilter addTarget:_darkenFilter];
+    _multiplyFilter = [[DHImageColorMultiplyBlendFilter alloc] init];
+    _multiplyFilter.blendColor = [UIColor colorWithRed:1.f green:213.f / 255.f blue:0.f alpha:1];
+    _multiplyFilter.opacity = 0.50;
+    [_gradientFilter addTarget:_multiplyFilter];
+    [self addFilter:_multiplyFilter];
     
-    _screenBlendFilter = [[DHImageScreenBlendFilter alloc] init];
-    [self addFilter:_screenBlendFilter];
-    [_darkenFilter addTarget:_screenBlendFilter atTextureLocation:0];
-    
-    screenPicture = [DHImageFiltersHelper pictureWithImageNamed:@"old-fashion-screen"];
-    [screenPicture addTarget:_screenBlendFilter atTextureLocation:1];
-    [screenPicture processImage];
-    
-    self.initialFilters = @[_curveFilter];
-    self.terminalFilter = _screenBlendFilter;
+    self.initialFilters = @[_blendFilter];
+    self.terminalFilter = _multiplyFilter;
     
     return self;
 }
