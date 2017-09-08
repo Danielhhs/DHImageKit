@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '6123C71E48AD5EDF6ED4D0E9BE27171C'
+               BlueprintIdentifier = 'DBFA4184D8405AEF4EA89A25C8BFEE6C'
                BlueprintName = 'DHImageKit'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libDHImageKit.a'>

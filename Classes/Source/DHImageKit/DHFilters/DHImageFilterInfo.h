@@ -35,6 +35,7 @@ typedef NS_ENUM(NSInteger, DHImageFilterType) {
     DHImageFilterTypeToaster,
     DHImageFilterTypeWillow,
     DHImageFilterTypeLomo,
+    DHImageFilterTypeIcy,
 };
 
 @interface DHImageFilterInfo : NSObject

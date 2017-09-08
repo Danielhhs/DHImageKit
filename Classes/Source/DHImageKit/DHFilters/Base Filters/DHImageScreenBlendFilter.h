@@ -9,6 +9,10 @@
 #import <GPUImage/GPUImage.h>
 #import "DHImageTwoInputFilter.h"
 
-@interface DHImageScreenBlendFilter : DHImageTwoInputFilter 
+@interface DHImageScreenBlendFilter : DHImageTwoInputFilter  {
+    GLint opacityUniform;
+}
+
+@property (nonatomic) CGFloat opacity;
 
 @end
