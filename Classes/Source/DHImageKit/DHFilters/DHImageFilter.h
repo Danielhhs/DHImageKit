@@ -7,11 +7,9 @@
 //
 
 #import <GPUImage/GPUImage.h>
-#import "DHImageUpdatable.h"
+#import "DHImageFilterGroup.h"
 
-@interface DHImageFilter : GPUImageFilterGroup<DHImageUpdatable>
-
-@property (nonatomic) CGFloat strength;
+@interface DHImageFilter : DHImageFilterGroup
 
 - (id)initWithFragmentShaderFromString:(NSString *)fragmentShaderString sources:(NSArray<GPUImagePicture*>*)sources;
 - (id)initWithFragmentShaderFromString:(NSString *)fragmentShaderString;

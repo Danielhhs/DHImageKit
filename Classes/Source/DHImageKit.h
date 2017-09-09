@@ -31,6 +31,7 @@ FOUNDATION_EXPORT const unsigned char DHImageKitVersionString[];
 #import "DHImageFilterInfo.h"
 
 //Base Filter
+#import "DHImageFilterGroup.h"
 #import "DHImageTwoInputFilter.h"
 #import "DHImageThreeInputFilter.h"
 #import "DHImageFourInputFilter.h"
@@ -44,6 +45,7 @@ FOUNDATION_EXPORT const unsigned char DHImageKitVersionString[];
 #import "DHImageColorMultiplyBlendFilter.h"
 #import "DHImageSaturationFilter.h"
 
+//Composite filter
 #import "DHImageFilter.h"
 #import "DHImageGrayFilter.h"
 #import "DHImageOldFasionFilter.h"
@@ -68,4 +70,7 @@ FOUNDATION_EXPORT const unsigned char DHImageKitVersionString[];
 #import "DHImageWaldenFilter.h"
 #import "DHImageXprollFilter.h"
 #import "DHImageLofiFilter.h"
+
+//Skin Retouch
+#import "DHImageSkinSmoothFilter.h"
 

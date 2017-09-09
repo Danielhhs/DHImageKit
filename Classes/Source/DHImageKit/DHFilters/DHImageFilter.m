@@ -68,13 +68,4 @@
     return nil;
 }
 
-- (void) updateWithStrength:(double)strength
-{
-    self.strength = strength;
-    for (int i = 0; i < self.filterCount; i++) {
-        id<DHImageUpdatable> updatable = (id<DHImageUpdatable>)[self filterAtIndex:i];
-        [updatable updateWithStrength:strength];
-    }
-}
-
 @end
