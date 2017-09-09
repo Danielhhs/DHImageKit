@@ -42,7 +42,7 @@
     
     _multiplyFilter = [[DHImageColorMultiplyBlendFilter alloc] init];
     _multiplyFilter.blendColor = [UIColor colorWithRed:1.f green:213.f / 255.f blue:0.f alpha:1];
-    _multiplyFilter.opacity = 0.50;
+    _multiplyFilter.opacity = 0.49;
     [_gradientFilter addTarget:_multiplyFilter];
     [self addFilter:_multiplyFilter];
     

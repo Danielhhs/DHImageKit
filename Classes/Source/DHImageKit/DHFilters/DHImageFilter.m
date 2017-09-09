@@ -54,6 +54,15 @@
     return self;
 }
 
+- (instancetype) init
+{
+    self = [super init];
+    if (self) {
+        [self updateWithStrength:1.f];
+    }
+    return self;
+}
+
 - (NSString *) name
 {
     return nil;
@@ -61,6 +70,7 @@
 
 - (void) updateWithStrength:(double)strength
 {
+    self.strength = strength;
     for (int i = 0; i < self.filterCount; i++) {
         id<DHImageUpdatable> updatable = (id<DHImageUpdatable>)[self filterAtIndex:i];
         [updatable updateWithStrength:strength];
