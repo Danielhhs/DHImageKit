@@ -27,6 +27,8 @@
 		5479B1A41F300CB400912E66 /* DHSliderInputPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5479B19E1F300CB400912E66 /* DHSliderInputPanel.m */; };
 		5479B1A51F300CB400912E66 /* DHTiltTypeChoosePanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5479B1A01F300CB400912E66 /* DHTiltTypeChoosePanel.m */; };
 		54C47F0E1F63815A00ACECD1 /* food.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 54C47F0D1F63815A00ACECD1 /* food.jpg */; };
+		54C47F271F63B0B500ACECD1 /* DHSkinRetouchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54C47F261F63B0B500ACECD1 /* DHSkinRetouchViewController.m */; };
+		54C47F291F63B4B200ACECD1 /* SampleImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 54C47F281F63B4B200ACECD1 /* SampleImage.jpg */; };
 		7CE9E0372092281D81F550AE /* libPods-DHImageComponentFilterExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D83CAFC791B31B8303F6D25 /* libPods-DHImageComponentFilterExample.a */; };
 /* End PBXBuildFile section */
 
@@ -84,6 +86,9 @@
 		5479B19F1F300CB400912E66 /* DHTiltTypeChoosePanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTiltTypeChoosePanel.h; sourceTree = "<group>"; };
 		5479B1A01F300CB400912E66 /* DHTiltTypeChoosePanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTiltTypeChoosePanel.m; sourceTree = "<group>"; };
 		54C47F0D1F63815A00ACECD1 /* food.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = food.jpg; sourceTree = "<group>"; };
+		54C47F251F63B0B500ACECD1 /* DHSkinRetouchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHSkinRetouchViewController.h; sourceTree = "<group>"; };
+		54C47F261F63B0B500ACECD1 /* DHSkinRetouchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHSkinRetouchViewController.m; sourceTree = "<group>"; };
+		54C47F281F63B4B200ACECD1 /* SampleImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = SampleImage.jpg; sourceTree = "<group>"; };
 		6D83CAFC791B31B8303F6D25 /* libPods-DHImageComponentFilterExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DHImageComponentFilterExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		97E620C5E377BC2D2A797B39 /* Pods-DHImageComponentFilterExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DHImageComponentFilterExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-DHImageComponentFilterExample/Pods-DHImageComponentFilterExample.release.xcconfig"; sourceTree = "<group>"; };
 		FB8CBCF47600C73A3E5F68BC /* Pods-DHImageComponentFilterExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DHImageComponentFilterExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DHImageComponentFilterExample/Pods-DHImageComponentFilterExample.debug.xcconfig"; sourceTree = "<group>"; };
@@ -172,12 +177,14 @@
 				5479B0BC1F2C59A400912E66 /* sample_kuru.jpg */,
 				54C47F0D1F63815A00ACECD1 /* food.jpg */,
 				543C8E041F5CFD010036CD92 /* portrait.jpg */,
+				54C47F281F63B4B200ACECD1 /* SampleImage.jpg */,
 				5479B0851F2C42E100912E66 /* AppDelegate.h */,
 				5479B0861F2C42E100912E66 /* AppDelegate.m */,
 				5479B0881F2C42E100912E66 /* ViewController.h */,
 				5479B0891F2C42E100912E66 /* ViewController.m */,
 				543C8E3A1F5E79600036CD92 /* TakePictureViewController.h */,
 				543C8E3B1F5E79600036CD92 /* TakePictureViewController.m */,
+				54C47F241F63B0A100ACECD1 /* Skin Retouch */,
 				543C8D9F1F540BD90036CD92 /* DHFilter */,
 				5479B1961F300CB400912E66 /* ComponentFilter */,
 				5479B08B1F2C42E100912E66 /* Main.storyboard */,
@@ -230,6 +237,16 @@
 				5479B1A01F300CB400912E66 /* DHTiltTypeChoosePanel.m */,
 			);
 			path = ComponentFilter;
+			sourceTree = "<group>";
+		};
+		54C47F241F63B0A100ACECD1 /* Skin Retouch */ = {
+			isa = PBXGroup;
+			children = (
+				54C47F251F63B0B500ACECD1 /* DHSkinRetouchViewController.h */,
+				54C47F261F63B0B500ACECD1 /* DHSkinRetouchViewController.m */,
+			);
+			name = "Skin Retouch";
+			path = "ComponentFilter/Skin Retouch";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -347,6 +364,7 @@
 				54C47F0E1F63815A00ACECD1 /* food.jpg in Resources */,
 				543C8E051F5CFD010036CD92 /* portrait.jpg in Resources */,
 				5479B0921F2C42E100912E66 /* LaunchScreen.storyboard in Resources */,
+				54C47F291F63B4B200ACECD1 /* SampleImage.jpg in Resources */,
 				5479B08F1F2C42E100912E66 /* Assets.xcassets in Resources */,
 				543C8DFF1F5CEDAB0036CD92 /* scene.jpg in Resources */,
 				5479B0BD1F2C59A400912E66 /* sample_kuru.jpg in Resources */,
@@ -425,6 +443,7 @@
 			files = (
 				5479B08A1F2C42E100912E66 /* ViewController.m in Sources */,
 				5479B0871F2C42E100912E66 /* AppDelegate.m in Sources */,
+				54C47F271F63B0B500ACECD1 /* DHSkinRetouchViewController.m in Sources */,
 				5479B1A11F300CB400912E66 /* DHColorPickerCollectionViewController.m in Sources */,
 				5479B1A21F300CB400912E66 /* DHComponentEditFilterCollectionViewCell.m in Sources */,
 				5479B1A31F300CB400912E66 /* DHComponentFilterPickerCollectionViewController.m in Sources */,

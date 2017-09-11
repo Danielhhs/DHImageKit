@@ -68,7 +68,7 @@
                   moduleName = "DHImageComponentFilterExample"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/huanghongsen/Developer/DHKit/DHImageKit/examples/DHImageComponentFilterExample/Pods/GPUImage/framework/Source/GPUImageFilter.m"
-                  timestampString = "526555976.503194"
+                  timestampString = "526788312.295731"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "94"
@@ -83,7 +83,7 @@
                   moduleName = "DHImageComponentFilterExample"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/huanghongsen/Developer/DHKit/DHImageKit/examples/DHImageComponentFilterExample/Pods/GPUImage/framework/Source/GPUImageFilter.m"
-                  timestampString = "526555976.506104"
+                  timestampString = "526788312.297983"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "94"
@@ -91,6 +91,22 @@
                   offsetFromSymbolStart = "730">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../Classes/Source/DHImageKit/SkinRetouch/DHImageSkinSmoothFilter.m"
+            timestampString = "526790858.552365"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
+            landmarkName = "-init"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
