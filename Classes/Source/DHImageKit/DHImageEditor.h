@@ -44,7 +44,10 @@
 - (UIImage *) processedImage;
 
 #pragma mark - Update DHImageFilter
+- (void) startUpdatingStrengthForDHImageFilter;
 - (void) updateDHFilterWithStrength:(CGFloat)strength;
+- (CGFloat) currentDHFilterStrength;
+- (void) cancelUpdatingStrengthForDHImageFilter;
 
 #pragma mark - Update Input
 - (void) updateWithInput:(CGFloat)inputValue;

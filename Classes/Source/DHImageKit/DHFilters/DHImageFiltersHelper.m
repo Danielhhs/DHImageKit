@@ -74,7 +74,7 @@
     DHImageFilterInfo *normal = [DHImageFilterInfo filterInfoForFilterClass:[DHImageNormalFilter class] name:@"Normal" type:DHImageFilterTypeNormal];
     DHImageFilterInfo *icy = [DHImageFilterInfo filterInfoForFilterClass:[DHImageIcyFilter class] name:@"Icy" type:DHImageFilterTypeIcy];
     DHImageFilterInfo *food = [DHImageFilterInfo filterInfoForFilterClass:[DHImageFoodFilter class] name:@"Food" type:DHImageFilterTypeFood];
-    return @[normal, gray, oldFashion, fresh, icy, food, metalic, gringham, sierra, crema, rise, lark, nashville, clarendon, juno, amaro, hudson, valencia, xproll, walden, inkwell, kelvin, hefe, earlyBird, sutro, toaster, willow, lomo];
+    return @[normal, gray, fresh, icy, food, metalic, gringham, sierra, crema, rise, oldFashion, lark, nashville, clarendon, juno, amaro, hudson, valencia, xproll, walden, inkwell, kelvin, hefe, earlyBird, sutro, toaster, willow, lomo];
 }
 
 + (GPUImagePicture *) pictureWithImageNamed:(NSString *)imageName

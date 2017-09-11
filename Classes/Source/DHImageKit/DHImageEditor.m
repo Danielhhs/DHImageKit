@@ -23,6 +23,7 @@ static DHImageEditor *sharedInstance;
 @property (nonatomic, strong) GPUImageFilterGroup *filterGroup;
 @property (nonatomic, strong) DHImageFilter *dhFilter;
 @property (nonatomic, weak) id<GPUImageInput> renderTarget;
+@property (nonatomic, strong) DHImageNormalFilter *normalFilter;
 
 //Status keeper
 @property (nonatomic, strong) GPUImageOutput<GPUImageInput> *currentFilter;
@@ -31,6 +32,7 @@ static DHImageEditor *sharedInstance;
 @property (nonatomic) NSMutableDictionary *initialParams;
 @property (nonatomic) NSMutableDictionary *intermediateParams;
 @property (nonatomic) BOOL isCurrentFilterANewFilter;
+@property (nonatomic) CGFloat initialStrength;
 
 //Adjustment filter
 @property (nonatomic) CGPoint accumulatedTranslation;
@@ -75,8 +77,8 @@ static DHImageEditor *sharedInstance;
 
 - (BOOL) imageModified
 {
-    BOOL hasIFFilter = self.dhFilter && ![self.dhFilter isKindOfClass:[DHImageNormalFilter class]];
-    BOOL hasComponentFilter = ([self.filterGroup filterCount] != 0);
+    BOOL hasIFFilter =  ![self.dhFilter isKindOfClass:[DHImageNormalFilter class]];
+    BOOL hasComponentFilter = ([self.filterGroup filterCount] > 1);
     if (hasIFFilter || hasComponentFilter) {
         return YES;
     } else {
@@ -203,8 +205,25 @@ static DHImageEditor *sharedInstance;
 #pragma mark - Update DHImageFilter
 - (void) updateDHFilterWithStrength:(CGFloat)strength
 {
-    [self.dhFilter updateWithStrength:strength];
-    [self _processImage];
+    dispatch_async(imageProcessingQ, ^{
+        [self.dhFilter updateWithStrength:strength];
+        [self _processImage];
+    });
+}
+
+- (CGFloat) currentDHFilterStrength
+{
+    return self.dhFilter.strength;
+}
+
+- (void) startUpdatingStrengthForDHImageFilter
+{
+    self.initialStrength = self.dhFilter.strength;
+}
+
+- (void) cancelUpdatingStrengthForDHImageFilter
+{
+    [self updateDHFilterWithStrength:self.initialStrength];
 }
 
 #pragma mark - Update
