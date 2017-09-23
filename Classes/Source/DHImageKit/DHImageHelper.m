@@ -12,7 +12,8 @@
 #import "DHImageStructureFilter.h"
 #import "DHImageRotateFilter.h"
 #import "DHImageColorFilter.h"
-
+#import "DHImageHighlightFilter.h"
+#import "DHImageShadowsFilter.h"
 @implementation DHImageHelper
 + (DHImageEditorValues) valuesforComponent:(DHImageEditComponent)component
 {
@@ -55,15 +56,15 @@
         }
             break;
         case DHImageEditComponentHighlight: {
-            values.minValue = 0;
-            values.maxValue = 0.5;
-            values.initialValue = 0.f;
+            values.minValue = 0.9;
+            values.maxValue = 1.1;
+            values.initialValue = 1.f;
         }
             break;
         case DHImageEditComponentShadows: {
-            values.minValue = 0;
-            values.maxValue = 0.5;
-            values.initialValue = 0.5f;
+            values.minValue = 0.9;
+            values.maxValue = 1.1;
+            values.initialValue = 1.f;
         }
             break;
         case DHImageEditComponentVignette: {
@@ -191,7 +192,7 @@
             return [GPUImageSaturationFilter class];
             break;
         case DHImageEditComponentHighlight:
-            return [GPUImageHighlightShadowFilter class];
+            return [DHImageHighlightFilter class];
             break;
         case DHImageEditComponentVignette:
             return [GPUImageVignetteFilter class];
@@ -203,7 +204,7 @@
             return [GPUImageHazeFilter class];
             break;
         case DHImageEditComponentShadows:
-            return [GPUImageHighlightShadowFilter class];
+            return [DHImageShadowsFilter class];
             break;
         case DHImageEditComponentTiltShift:{
             if (subType == DHTiltShiftSubTypeRadial) {

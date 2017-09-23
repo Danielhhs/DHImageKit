@@ -1,5 +1,5 @@
 PODS:
-  - DHImageKit (1.1.2):
+  - DHImageKit (1.1.5):
     - GPUImage
   - GPUImage (0.1.7)
 
@@ -11,7 +11,7 @@ EXTERNAL SOURCES:
     :path: ../..
 
 SPEC CHECKSUMS:
-  DHImageKit: 5609457140b087ed84c844bb302f31debcefe381
+  DHImageKit: 4488c89c57666c004a722ac609264903d0c61cc4
   GPUImage: 733a5f0fab92df9de1c37ba9df520a833ccb406d
 
 PODFILE CHECKSUM: 4f32a52a7189b50fbd75b207bdf6c3761b04160c

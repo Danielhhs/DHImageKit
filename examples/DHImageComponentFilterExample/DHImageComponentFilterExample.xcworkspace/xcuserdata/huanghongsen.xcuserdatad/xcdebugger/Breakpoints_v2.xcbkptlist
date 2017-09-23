@@ -68,12 +68,12 @@
                   moduleName = "DHImageComponentFilterExample"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/huanghongsen/Developer/DHKit/DHImageKit/examples/DHImageComponentFilterExample/Pods/GPUImage/framework/Source/GPUImageFilter.m"
-                  timestampString = "526788312.295731"
+                  timestampString = "527850627.79357"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "94"
                   endingLineNumber = "94"
-                  offsetFromSymbolStart = "509">
+                  offsetFromSymbolStart = "648">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -83,12 +83,12 @@
                   moduleName = "DHImageComponentFilterExample"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/huanghongsen/Developer/DHKit/DHImageKit/examples/DHImageComponentFilterExample/Pods/GPUImage/framework/Source/GPUImageFilter.m"
-                  timestampString = "526788312.297983"
+                  timestampString = "527850627.794944"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "94"
                   endingLineNumber = "94"
-                  offsetFromSymbolStart = "730">
+                  offsetFromSymbolStart = "852">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -106,6 +106,38 @@
             startingLineNumber = "85"
             endingLineNumber = "85"
             landmarkName = "-init"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../Classes/Source/DHImageKit/DHFilters/Base Filters/DHImageHighlightFilter.m"
+            timestampString = "527850901.05464"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "-setHighlights:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../Classes/Source/DHImageKit/DHFilters/Base Filters/DHImageShadowsFilter.m"
+            timestampString = "527850901.054723"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "-setShadows:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -301,7 +301,7 @@
 - (IBAction)changeToKuru:(id)sender {
     
     
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"food" ofType:@"jpg"];
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"sample_kuru" ofType:@"jpg"];
     
     [[DHImageEditor sharedEditor] initiateEditorWithImageURL:[NSURL fileURLWithPath:filePath] renderTarget:self.renderTarget completion:nil];
 }
