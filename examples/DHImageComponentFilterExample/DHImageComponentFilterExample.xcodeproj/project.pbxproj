@@ -12,6 +12,8 @@
 		543C8E051F5CFD010036CD92 /* portrait.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 543C8E041F5CFD010036CD92 /* portrait.jpg */; };
 		543C8E3C1F5E79600036CD92 /* TakePictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 543C8E3B1F5E79600036CD92 /* TakePictureViewController.m */; };
 		543C8E831F5FD87A0036CD92 /* DHIFFilterCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 543C8E821F5FD87A0036CD92 /* DHIFFilterCollectionViewCell.m */; };
+		544E91C41F7E509300B6AA88 /* DHImageAlphaMask.m in Sources */ = {isa = PBXBuildFile; fileRef = 544E91C31F7E509300B6AA88 /* DHImageAlphaMask.m */; };
+		544E91C81F7F327400B6AA88 /* DHImageMaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 544E91C71F7F327300B6AA88 /* DHImageMaskViewController.m */; };
 		5479B0841F2C42E100912E66 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5479B0831F2C42E100912E66 /* main.m */; };
 		5479B0871F2C42E100912E66 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5479B0861F2C42E100912E66 /* AppDelegate.m */; };
 		5479B08A1F2C42E100912E66 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5479B0891F2C42E100912E66 /* ViewController.m */; };
@@ -58,6 +60,12 @@
 		543C8E3B1F5E79600036CD92 /* TakePictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TakePictureViewController.m; sourceTree = "<group>"; };
 		543C8E811F5FD87A0036CD92 /* DHIFFilterCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DHIFFilterCollectionViewCell.h; path = ../DHIFFilterCollectionViewCell.h; sourceTree = "<group>"; };
 		543C8E821F5FD87A0036CD92 /* DHIFFilterCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DHIFFilterCollectionViewCell.m; path = ../DHIFFilterCollectionViewCell.m; sourceTree = "<group>"; };
+		544E91C21F7E509300B6AA88 /* DHImageAlphaMask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DHImageAlphaMask.h; sourceTree = "<group>"; };
+		544E91C31F7E509300B6AA88 /* DHImageAlphaMask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DHImageAlphaMask.m; sourceTree = "<group>"; };
+		544E91C61F7F327300B6AA88 /* DHImageMaskViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DHImageMaskViewController.h; sourceTree = "<group>"; };
+		544E91C71F7F327300B6AA88 /* DHImageMaskViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DHImageMaskViewController.m; sourceTree = "<group>"; };
+		544E91CA1F7F3D8900B6AA88 /* 750.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 750.png; sourceTree = "<group>"; };
+		544E91CB1F7F3E9F00B6AA88 /* kriss.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = kriss.jpg; sourceTree = "<group>"; };
 		5479B07F1F2C42E100912E66 /* DHImageComponentFilterExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DHImageComponentFilterExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5479B0831F2C42E100912E66 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5479B0851F2C42E100912E66 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -148,6 +156,15 @@
 			path = DHFilter;
 			sourceTree = "<group>";
 		};
+		544E91C51F7F326400B6AA88 /* Mask */ = {
+			isa = PBXGroup;
+			children = (
+				544E91C61F7F327300B6AA88 /* DHImageMaskViewController.h */,
+				544E91C71F7F327300B6AA88 /* DHImageMaskViewController.m */,
+			);
+			path = Mask;
+			sourceTree = "<group>";
+		};
 		5479B0761F2C42E100912E66 = {
 			isa = PBXGroup;
 			children = (
@@ -173,6 +190,8 @@
 		5479B0811F2C42E100912E66 /* DHImageComponentFilterExample */ = {
 			isa = PBXGroup;
 			children = (
+				544E91CA1F7F3D8900B6AA88 /* 750.png */,
+				544E91CB1F7F3E9F00B6AA88 /* kriss.jpg */,
 				543C8DFE1F5CEDAB0036CD92 /* scene.jpg */,
 				5479B0BC1F2C59A400912E66 /* sample_kuru.jpg */,
 				54C47F0D1F63815A00ACECD1 /* food.jpg */,
@@ -184,6 +203,7 @@
 				5479B0891F2C42E100912E66 /* ViewController.m */,
 				543C8E3A1F5E79600036CD92 /* TakePictureViewController.h */,
 				543C8E3B1F5E79600036CD92 /* TakePictureViewController.m */,
+				544E91C51F7F326400B6AA88 /* Mask */,
 				54C47F241F63B0A100ACECD1 /* Skin Retouch */,
 				543C8D9F1F540BD90036CD92 /* DHFilter */,
 				5479B1961F300CB400912E66 /* ComponentFilter */,
@@ -244,6 +264,8 @@
 			children = (
 				54C47F251F63B0B500ACECD1 /* DHSkinRetouchViewController.h */,
 				54C47F261F63B0B500ACECD1 /* DHSkinRetouchViewController.m */,
+				544E91C21F7E509300B6AA88 /* DHImageAlphaMask.h */,
+				544E91C31F7E509300B6AA88 /* DHImageAlphaMask.m */,
 			);
 			name = "Skin Retouch";
 			path = "ComponentFilter/Skin Retouch";
@@ -449,6 +471,8 @@
 				5479B1A31F300CB400912E66 /* DHComponentFilterPickerCollectionViewController.m in Sources */,
 				5479B0841F2C42E100912E66 /* main.m in Sources */,
 				5479B1A51F300CB400912E66 /* DHTiltTypeChoosePanel.m in Sources */,
+				544E91C81F7F327400B6AA88 /* DHImageMaskViewController.m in Sources */,
+				544E91C41F7E509300B6AA88 /* DHImageAlphaMask.m in Sources */,
 				5479B1A41F300CB400912E66 /* DHSliderInputPanel.m in Sources */,
 				543C8E3C1F5E79600036CD92 /* TakePictureViewController.m in Sources */,
 				543C8DA21F540BF50036CD92 /* DHFilterPickerCollectionViewController.m in Sources */,
