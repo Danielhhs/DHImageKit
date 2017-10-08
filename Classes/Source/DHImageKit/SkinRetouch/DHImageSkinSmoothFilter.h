@@ -30,4 +30,9 @@ typedef NS_ENUM(NSInteger, DHImageSkinSmootherUnit) {
 @property (nonatomic, strong) NSArray *controlPoints;
 @property (nonatomic, strong) DHImageSkinSmootherRadius *radius;
 @property (nonatomic) CGFloat sharpnessFactor;
+
+- (void) updateWithTouchLocation:(CGPoint)location
+                      completion:(void (^)(void))completion;
+
+- (void) finishUpdating;
 @end

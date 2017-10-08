@@ -12,6 +12,7 @@
 #import "DHImageDissolveBlendFilter.h"
 #import "DHImageToneCurveFilter.h"
 #import "DHImageSharpenFilter.h"
+#import "DHImageStrengthMask.h"
 
 NSString * const kDHImageSkinSmoothCompositingFilterFragmentShaderString =
 SHADER_STRING
@@ -19,10 +20,12 @@ SHADER_STRING
  varying highp vec2 textureCoordinate;
  varying highp vec2 textureCoordinate2;
  varying highp vec2 textureCoordinate3;
+ varying highp vec2 textureCoordinate4;
  
  uniform sampler2D inputImageTexture;
  uniform sampler2D inputImageTexture2;
  uniform sampler2D inputImageTexture3;
+ uniform sampler2D inputImageTexture4;
  
  uniform highp vec2 renderCenter;
  uniform highp float renderRadius;
@@ -30,7 +33,9 @@ SHADER_STRING
      lowp vec4 image = texture2D(inputImageTexture, textureCoordinate);
      lowp vec4 toneCurvedImage = texture2D(inputImageTexture2, textureCoordinate);
      lowp vec4 mask = texture2D(inputImageTexture3, textureCoordinate);
-     gl_FragColor = vec4(mix(image.rgb,toneCurvedImage.rgb,1.0 - mask.b),1.0);
+     lowp vec4 strength = texture2D(inputImageTexture4, textureCoordinate4);
+     lowp vec4 processedColor = vec4(mix(image.rgb,toneCurvedImage.rgb,1.0 - mask.b),1.0);
+     gl_FragColor = vec4(mix(image.rgb, processedColor.rgb, strength.r), 1.0);
  }
  );
 
@@ -41,6 +46,7 @@ SHADER_STRING
 @property (nonatomic, strong) DHImageDissolveBlendFilter *dissolveBlendFilter;
 @property (nonatomic, strong) DHImageThreeInputFilter *compositeFilter;
 @property (nonatomic, strong) DHImageSharpenFilter *sharpenFilter;
+@property (nonatomic, strong) DHImageStrengthMask *strengthMask;
 
 @property (nonatomic) CGSize currentInputSize;
 @end
@@ -55,6 +61,7 @@ SHADER_STRING
         _exposureFilter.exposure = -1;
         [self addTarget:_exposureFilter];
         
+        
         _maskFilter = [[DHImageSkinSmoothMaskFilter alloc] init];
         [self addFilter:_maskFilter];
         [_exposureFilter addTarget:_maskFilter];
@@ -65,17 +72,20 @@ SHADER_STRING
         _dissolveBlendFilter = [[DHImageDissolveBlendFilter alloc] init];
         [self addFilter:_dissolveBlendFilter];
         [_toneCurveFilter addTarget:_dissolveBlendFilter atTextureLocation:1];
+        
+        _strengthMask = [[DHImageStrengthMask alloc] initWithWidth:750 height:750];
 
-        _compositeFilter = [[DHImageThreeInputFilter alloc] initWithFragmentShaderFromString:kDHImageSkinSmoothCompositingFilterFragmentShaderString];
+        _compositeFilter = [[DHImageFourInputFilter alloc] initWithFragmentShaderFromString:kDHImageSkinSmoothCompositingFilterFragmentShaderString];
         [_dissolveBlendFilter addTarget:_compositeFilter atTextureLocation:1];
         [_maskFilter addTarget:_compositeFilter atTextureLocation:2];
+        [_strengthMask addTarget:_compositeFilter atTextureLocation:3];
         [self addFilter:_compositeFilter];
         
         _sharpenFilter = [[DHImageSharpenFilter alloc] init];
         [self addFilter:_sharpenFilter];
         [_compositeFilter addTarget:_sharpenFilter];
         
-        self.initialFilters = @[_exposureFilter, _dissolveBlendFilter, _toneCurveFilter, _compositeFilter];
+        self.initialFilters = @[_exposureFilter, _toneCurveFilter, _dissolveBlendFilter, _compositeFilter];
         self.terminalFilter = _sharpenFilter;
         
         CGPoint controlPoint0 = CGPointMake(0, 0);
@@ -136,6 +146,16 @@ SHADER_STRING
 - (void)setAmount:(CGFloat)amount {
     _amount = amount;
     self.dissolveBlendFilter.mix = amount;
+}
+
+- (void) updateWithTouchLocation:(CGPoint)location completion:(void (^)(void))completion
+{
+    [_strengthMask updateWithTouchLocation:location completion:completion];
+}
+
+- (void) finishUpdating
+{
+    [_strengthMask finishUpdating];
 }
 @end
 

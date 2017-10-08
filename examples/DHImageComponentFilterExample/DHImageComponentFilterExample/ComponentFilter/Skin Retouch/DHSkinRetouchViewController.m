@@ -34,10 +34,13 @@
 
 - (void) handlePan:(UIPanGestureRecognizer *) pan
 {
+    CGPoint location = [pan locationInView:self.renderTarget];
     if (pan.state == UIGestureRecognizerStateBegan || pan.state == UIGestureRecognizerStateChanged) {
-        [self showOriginalImage];
+        [self.filter updateWithTouchLocation:location completion:^{
+            [self.picture processImage];
+        }];
     } else {
-        [self showProcessedImage];
+        [self.filter finishUpdating];
     }
 }
 
