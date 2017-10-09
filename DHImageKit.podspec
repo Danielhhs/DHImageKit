@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name         = "DHImageKit"
-  s.version      = "1.1.5"
+  s.version      = "1.1.6"
   s.summary      = "DHImageKit is a library that allows you to edit image easily"
   s.description  = "DHImageKit is a image editing library based on GPUImage. Providing both the abliity to add a filter to whole image and the ability to edit single component of a image"
   s.homepage     = "https://github.com/Danielhhs/DHImageKit"
