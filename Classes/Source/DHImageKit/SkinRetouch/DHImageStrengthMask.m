@@ -59,8 +59,8 @@ SHADER_STRING
  void main()
 {
     lowp vec4 textureColor = color * texture2D(texture, gl_PointCoord);
-//    gl_FragColor = vec4 (1.0, 0.0, 0.0, 1.0);
-    gl_FragColor = textureColor;
+    gl_FragColor = vec4 (1.0, 0.0, 0.0, 1.0);
+//    gl_FragColor = textureColor;
 }
 );
 @implementation DHImageStrengthMask

@@ -81,12 +81,14 @@ SHADER_STRING
         [_strengthMask addTarget:_compositeFilter atTextureLocation:3];
         [self addFilter:_compositeFilter];
         
-        _sharpenFilter = [[DHImageSharpenFilter alloc] init];
-        [self addFilter:_sharpenFilter];
-        [_compositeFilter addTarget:_sharpenFilter];
+//        _sharpenFilter = [[DHImageSharpenFilter alloc] init];
+//        _sharpenFilter.sharpness = 4.f;
+//        [_sharpenFilter updateWithStrength:1.f];
+//        [self addFilter:_sharpenFilter];
+//        [_compositeFilter addTarget:_sharpenFilter];
         
         self.initialFilters = @[_exposureFilter, _toneCurveFilter, _dissolveBlendFilter, _compositeFilter];
-        self.terminalFilter = _sharpenFilter;
+        self.terminalFilter = _compositeFilter;
         
         CGPoint controlPoint0 = CGPointMake(0, 0);
         CGPoint controlPoint1 = CGPointMake(120/255.0, 146/255.0);
@@ -95,8 +97,8 @@ SHADER_STRING
         self.controlPoints = @[[NSValue valueWithCGPoint:controlPoint0],
                                [NSValue valueWithCGPoint:controlPoint1],
                                [NSValue valueWithCGPoint:controlPoint2]];
-        self.radius = [DHImageSkinSmootherRadius radiusAsFractionOfImageWidth:4.5/750.0];
-        self.amount = 0.75;
+        self.radius = [DHImageSkinSmootherRadius radiusAsFractionOfImageWidth:10/750.0];
+        self.amount = 0.55;
     }
     return self;
 }
