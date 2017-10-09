@@ -58,8 +58,8 @@ SHADER_STRING
  
  void main()
 {
-    lowp vec4 textureColor = color * texture2D(texture, gl_PointCoord);
-    gl_FragColor = vec4 (1.0, 0.0, 0.0, 1.0);
+    lowp vec4 textureColor = texture2D(texture, gl_PointCoord);
+    gl_FragColor = textureColor;
 //    gl_FragColor = textureColor;
 }
 );
@@ -201,7 +201,7 @@ SHADER_STRING
     glEnable(GL_BLEND);
     glBlendFunc(GL_ONE, GL_ONE_MINUS_SRC_ALPHA);
     glUniformMatrix4fv(mvpUniform, 1, GL_FALSE, mvpMatrix.m);
-    glUniform1f(pointSizeUniform, 80);
+    glUniform1f(pointSizeUniform, 200);
     
     glBindBuffer(GL_ARRAY_BUFFER, vboId);
     glBufferData(GL_ARRAY_BUFFER, vertexCount*2*sizeof(GLfloat), vertexBuffer, GL_DYNAMIC_DRAW);

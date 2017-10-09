@@ -61,7 +61,7 @@ NSString *const kDHImageRiseShaderString = SHADER_STRING
         
         blowOutPicture = [DHImageFiltersHelper pictureWithImageNamed:@"blackboard1024"];
         overlayPicture = [DHImageFiltersHelper pictureWithImageNamed:@"overlayMap"];
-        mapPicture = [DHImageFiltersHelper pictureWithImageNamed:@"riseMap"];
+        mapPicture = [DHImageFiltersHelper pictureWithImageNamed:@"r1Map"];
         
         [blowOutPicture addTarget:filter atTextureLocation:1];
         [blowOutPicture processImage];

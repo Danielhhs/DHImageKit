@@ -141,11 +141,11 @@ NSString *const kDHEarlybirdShaderString = SHADER_STRING
         _filter = [[DHImageSixInputFilter alloc] initWithFragmentShaderFromString:kDHEarlybirdShaderString];
         [self addFilter:_filter];
         
-        _curvePicture = [DHImageFiltersHelper pictureWithImageNamed:@"earlyBirdCurves"],
+        _curvePicture = [DHImageFiltersHelper pictureWithImageNamed:@"ebCurves"],
         [_curvePicture addTarget:_filter atTextureLocation:1];
         [_curvePicture processImage];
         
-        _overlayPicture = [DHImageFiltersHelper pictureWithImageNamed:@"earlybirdOverlayMap"],
+        _overlayPicture = [DHImageFiltersHelper pictureWithImageNamed:@"ebOverlayMap"],
         [_overlayPicture addTarget:_filter atTextureLocation:2];
         [_overlayPicture processImage];
         
@@ -153,11 +153,11 @@ NSString *const kDHEarlybirdShaderString = SHADER_STRING
         [_vignettePicture addTarget:_filter atTextureLocation:3];
         [_vignettePicture processImage];
         
-        _blowoutPicture = [DHImageFiltersHelper pictureWithImageNamed:@"earlybirdBlowout"],
+        _blowoutPicture = [DHImageFiltersHelper pictureWithImageNamed:@"ebBlowout"],
         [_blowoutPicture addTarget:_filter atTextureLocation:4];
         [_blowoutPicture processImage];
         
-        _mapPicture = [DHImageFiltersHelper pictureWithImageNamed:@"earlybirdMap"],
+        _mapPicture = [DHImageFiltersHelper pictureWithImageNamed:@"ebMap"],
         [_mapPicture addTarget:_filter atTextureLocation:5];
         [_mapPicture processImage];
         

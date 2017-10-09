@@ -100,23 +100,23 @@ NSString *const kDHToasterShaderString = SHADER_STRING
         _filter = [[DHImageSixInputFilter alloc] initWithFragmentShaderFromString:kDHToasterShaderString];
         [self addFilter:_filter];
         
-        _metalPicture = [DHImageFiltersHelper pictureWithImageNamed:@"toasterMetal"];
+        _metalPicture = [DHImageFiltersHelper pictureWithImageNamed:@"t1Metal"];
         [_metalPicture addTarget:_filter atTextureLocation:1];
         [_metalPicture processImage];
         
-        _softLightPicture = [DHImageFiltersHelper pictureWithImageNamed:@"toasterSoftLight"];
+        _softLightPicture = [DHImageFiltersHelper pictureWithImageNamed:@"t1SoftLight"];
         [_softLightPicture addTarget:_filter atTextureLocation:2];
         [_softLightPicture processImage];
         
-        _curvesPicture = [DHImageFiltersHelper pictureWithImageNamed:@"toasterCurves"];
+        _curvesPicture = [DHImageFiltersHelper pictureWithImageNamed:@"t1Curves"];
         [_curvesPicture addTarget:_filter atTextureLocation:3];
         [_curvesPicture processImage];
         
-        _overlayPicture = [DHImageFiltersHelper pictureWithImageNamed:@"toasterOverlayMapWarm"];
+        _overlayPicture = [DHImageFiltersHelper pictureWithImageNamed:@"t1OverlayMapWarm"];
         [_overlayPicture addTarget:_filter atTextureLocation:4];
         [_overlayPicture processImage];
         
-        _shiftPicture = [DHImageFiltersHelper pictureWithImageNamed:@"toasterColorShift"];
+        _shiftPicture = [DHImageFiltersHelper pictureWithImageNamed:@"t1ColorShift"];
         [_shiftPicture addTarget:_filter atTextureLocation:5];
         [_shiftPicture processImage];
         

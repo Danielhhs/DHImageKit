@@ -107,23 +107,23 @@ NSString *const kDHFBrannanShaderString = SHADER_STRING
         _filter = [[DHImageSixInputFilter alloc] initWithFragmentShaderFromString:kDHFBrannanShaderString];
         [self addFilter:_filter];
         
-        _processPicture = [DHImageFiltersHelper pictureWithImageNamed:@"brannanProcess"];
+        _processPicture = [DHImageFiltersHelper pictureWithImageNamed:@"metalicProcess"];
         [_processPicture addTarget:_filter atTextureLocation:1];
         [_processPicture processImage];
         
-        _blowoutPicture = [DHImageFiltersHelper pictureWithImageNamed:@"brannanBlowout"];
+        _blowoutPicture = [DHImageFiltersHelper pictureWithImageNamed:@"metalicBlowout"];
         [_blowoutPicture addTarget:_filter atTextureLocation:2];
         [_blowoutPicture processImage];
         
-        _contrastPicture = [DHImageFiltersHelper pictureWithImageNamed:@"brannanContrast"];
+        _contrastPicture = [DHImageFiltersHelper pictureWithImageNamed:@"metalicContrast"];
         [_contrastPicture addTarget:_filter atTextureLocation:3];
         [_contrastPicture processImage];
         
-        _lumaPicture = [DHImageFiltersHelper pictureWithImageNamed:@"brannanLuma"];
+        _lumaPicture = [DHImageFiltersHelper pictureWithImageNamed:@"metalicLuma"];
         [_lumaPicture addTarget:_filter atTextureLocation:4];
         [_lumaPicture processImage];
         
-        _screenPicture = [DHImageFiltersHelper pictureWithImageNamed:@"brannanScreen"];
+        _screenPicture = [DHImageFiltersHelper pictureWithImageNamed:@"metalicScreen"];
         [_screenPicture addTarget:_filter atTextureLocation:5];
         [_screenPicture processImage];
         

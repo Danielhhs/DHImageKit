@@ -43,7 +43,7 @@ NSString *const kDHInkWellShaderString = SHADER_STRING
         _filter = [[DHImageTwoInputFilter alloc] initWithFragmentShaderFromString:kDHInkWellShaderString];
         [self addFilter:_filter];
         
-        _mapPicture = [DHImageFiltersHelper pictureWithImageNamed:@"inkwellMap"];
+        _mapPicture = [DHImageFiltersHelper pictureWithImageNamed:@"i1Map"];
         [_mapPicture addTarget:_filter atTextureLocation:1];
         [_mapPicture processImage];
         

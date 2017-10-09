@@ -24,7 +24,7 @@
     self = [super init];
     
     if (self) {
-        _toneCurveFilter = [[DHImageToneCurveFilter alloc] initWithACV:@"sierra-curve"];
+        _toneCurveFilter = [[DHImageToneCurveFilter alloc] initWithACV:@"s1-curve"];
         [self addFilter:_toneCurveFilter];
         
         _levelsFilter = [[DHImageLevelsFilter alloc] init];

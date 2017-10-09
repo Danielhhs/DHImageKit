@@ -79,7 +79,7 @@ NSString *const kDHSutroShaderString = SHADER_STRING
         [_mapPicture addTarget:_filter atTextureLocation:1];
         [_mapPicture processImage];
         
-        _metalPicture = [DHImageFiltersHelper pictureWithImageNamed:@"sutroMetal"];
+        _metalPicture = [DHImageFiltersHelper pictureWithImageNamed:@"s2Metal"];
         [_metalPicture addTarget:_filter atTextureLocation:2];
         [_metalPicture processImage];
         
@@ -87,11 +87,11 @@ NSString *const kDHSutroShaderString = SHADER_STRING
         [_softLightPicture addTarget:_filter atTextureLocation:3];
         [_softLightPicture processImage];
         
-        _edgeBurnPicture = [DHImageFiltersHelper pictureWithImageNamed:@"sutroEdgeBurn"];
+        _edgeBurnPicture = [DHImageFiltersHelper pictureWithImageNamed:@"s2EdgeBurn"];
         [_edgeBurnPicture addTarget:_filter atTextureLocation:4];
         [_edgeBurnPicture processImage];
         
-        _curvesPicture = [DHImageFiltersHelper pictureWithImageNamed:@"sutroCurves"];
+        _curvesPicture = [DHImageFiltersHelper pictureWithImageNamed:@"s2Curves"];
         [_curvesPicture addTarget:_filter atTextureLocation:5];
         [_curvesPicture processImage];
         

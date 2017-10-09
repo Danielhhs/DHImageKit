@@ -66,7 +66,7 @@ NSString *const kDHLomofiShaderString = SHADER_STRING
         _filter = [[DHImageThreeInputFilter alloc] initWithFragmentShaderFromString:kDHLomofiShaderString];
         [self addFilter:_filter];
         
-        _mapPicture = [DHImageFiltersHelper pictureWithImageNamed:@"lomoMap"];
+        _mapPicture = [DHImageFiltersHelper pictureWithImageNamed:@"l2Map"];
         [_mapPicture addTarget:_filter atTextureLocation:1];
         [_mapPicture processImage];
         

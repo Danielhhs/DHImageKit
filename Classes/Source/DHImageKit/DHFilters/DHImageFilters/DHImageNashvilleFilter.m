@@ -43,7 +43,7 @@ NSString *const kDHNashvilleShaderString = SHADER_STRING
     if (self) {
         _filter = [[DHImageTwoInputFilter alloc] initWithFragmentShaderFromString:kDHNashvilleShaderString];
         
-        _picture = [DHImageFiltersHelper pictureWithImageNamed:@"nashvilleMap"];
+        _picture = [DHImageFiltersHelper pictureWithImageNamed:@"n2Map"];
         [_picture addTarget:_filter atTextureLocation:1];
         [_picture processImage];
         

@@ -22,7 +22,7 @@
 {
     self = [super init];
     if (self) {
-        _toneCurveFilter = [[DHImageToneCurveFilter alloc] initWithACV:@"crema-curve"];
+        _toneCurveFilter = [[DHImageToneCurveFilter alloc] initWithACV:@"c2-curve"];
         [self addFilter:_toneCurveFilter];
         
         _saturationFilter = [[DHImageSaturationFilter alloc] init];

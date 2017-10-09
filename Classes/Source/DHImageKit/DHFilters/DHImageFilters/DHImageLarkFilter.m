@@ -20,7 +20,7 @@
 {
     self = [super init];
     if (self) {
-        _toneCurveFilter = [[DHImageToneCurveFilter alloc] initWithACV:@"lark-curve"];
+        _toneCurveFilter = [[DHImageToneCurveFilter alloc] initWithACV:@"l1-curve"];
         [self addFilter:_toneCurveFilter];
         
         _brightnessFilter = [[DHImageContrastBrightnessFilter alloc] init];

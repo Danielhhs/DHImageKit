@@ -69,11 +69,11 @@ NSString *const kDHValenciaShaderString = SHADER_STRING
         _filter = [[DHImageThreeInputFilter alloc] initWithFragmentShaderFromString:kDHValenciaShaderString];
         [self addFilter:_filter];
         
-        _mapPicture = [DHImageFiltersHelper pictureWithImageNamed:@"valenciaMap"];
+        _mapPicture = [DHImageFiltersHelper pictureWithImageNamed:@"v1Map"];
         [_mapPicture addTarget:_filter atTextureLocation:1];
         [_mapPicture processImage];
         
-        _gradientMapPicture = [DHImageFiltersHelper pictureWithImageNamed:@"valenciaGradientMap"];
+        _gradientMapPicture = [DHImageFiltersHelper pictureWithImageNamed:@"v1GradientMap"];
         [_gradientMapPicture addTarget:_filter atTextureLocation:2];
         [_gradientMapPicture processImage];
         

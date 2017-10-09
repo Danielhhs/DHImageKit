@@ -57,7 +57,7 @@ NSString *const kDHWaldenShaderString = SHADER_STRING
         _filter = [[DHImageThreeInputFilter alloc] initWithFragmentShaderFromString:kDHWaldenShaderString];
         [self addFilter:_filter];
         
-        _mapPicture = [DHImageFiltersHelper pictureWithImageNamed:@"waldenMap"];
+        _mapPicture = [DHImageFiltersHelper pictureWithImageNamed:@"w1Map"];
         [_mapPicture addTarget:_filter atTextureLocation:1];
         [_mapPicture processImage];
         

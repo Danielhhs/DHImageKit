@@ -77,19 +77,19 @@ void main()
         [_edgeBurnPicture addTarget:_filter atTextureLocation:1];
         [_edgeBurnPicture processImage];
         
-        _hefeMapPicture = [DHImageFiltersHelper pictureWithImageNamed:@"hefeMap"];
+        _hefeMapPicture = [DHImageFiltersHelper pictureWithImageNamed:@"h1Map"];
         [_hefeMapPicture addTarget:_filter atTextureLocation:2];
         [_hefeMapPicture processImage];
         
-        _hefeGradientMapPicture = [DHImageFiltersHelper pictureWithImageNamed:@"hefeGradientMap"];
+        _hefeGradientMapPicture = [DHImageFiltersHelper pictureWithImageNamed:@"h1Map"];
         [_hefeGradientMapPicture addTarget:_filter atTextureLocation:3];
         [_hefeGradientMapPicture processImage];
         
-        _hefeSoftLightPicture = [DHImageFiltersHelper pictureWithImageNamed:@"hefeSoftLight"];
+        _hefeSoftLightPicture = [DHImageFiltersHelper pictureWithImageNamed:@"h1SoftLight"];
         [_hefeSoftLightPicture addTarget:_filter atTextureLocation:4];
         [_hefeSoftLightPicture processImage];
         
-        _hefeMetalPicture = [DHImageFiltersHelper pictureWithImageNamed:@"hefeMetal"];
+        _hefeMetalPicture = [DHImageFiltersHelper pictureWithImageNamed:@"h1Metal"];
         [_hefeMetalPicture addTarget:_filter atTextureLocation:5];
         [_hefeMetalPicture processImage];
         

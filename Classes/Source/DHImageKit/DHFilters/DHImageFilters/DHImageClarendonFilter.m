@@ -18,7 +18,7 @@
 {
     self = [super init];
     if (self) {
-        _curveFilter = [[DHImageToneCurveFilter alloc] initWithACV:@"clarendon-curve"];
+        _curveFilter = [[DHImageToneCurveFilter alloc] initWithACV:@"c1-curve"];
         [self addFilter:_curveFilter];
         
         self.initialFilters = @[_curveFilter];

@@ -60,7 +60,7 @@ NSString *const kDHHudsonShaderString = SHADER_STRING
         _filter = [[DHImageFourInputFilter alloc] initWithFragmentShaderFromString:kDHHudsonShaderString];
         [self addFilter:_filter];
         
-        _blowOutPicture = [DHImageFiltersHelper pictureWithImageNamed:@"hudsonBackground"];
+        _blowOutPicture = [DHImageFiltersHelper pictureWithImageNamed:@"h2Background"];
         [_blowOutPicture addTarget:_filter atTextureLocation:1];
         [_blowOutPicture processImage];
         
@@ -68,7 +68,7 @@ NSString *const kDHHudsonShaderString = SHADER_STRING
         [_overlayPicture addTarget:_filter atTextureLocation:2];
         [_overlayPicture processImage];
         
-        _mapPicture = [DHImageFiltersHelper pictureWithImageNamed:@"hudsonMap"];
+        _mapPicture = [DHImageFiltersHelper pictureWithImageNamed:@"h2Map"];
         [_mapPicture addTarget:_filter atTextureLocation:3];
         [_mapPicture processImage];
         

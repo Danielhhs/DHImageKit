@@ -63,7 +63,7 @@ NSString *const kDHXproIIShaderString = SHADER_STRING
         _filter = [[DHImageThreeInputFilter alloc] initWithFragmentShaderFromString:kDHXproIIShaderString];
         [self addFilter:_filter];
         
-        _mapPicture = [DHImageFiltersHelper pictureWithImageNamed:@"xproMap"];
+        _mapPicture = [DHImageFiltersHelper pictureWithImageNamed:@"x1Map"];
         [_mapPicture addTarget:_filter atTextureLocation:1];
         [_mapPicture processImage];
         

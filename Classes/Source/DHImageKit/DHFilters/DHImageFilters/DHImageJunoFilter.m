@@ -24,7 +24,7 @@
         _vignetteFilter.vignetteStart = 0.5;
         [self addFilter:_vignetteFilter];
         
-        _curveFilter = [[DHImageToneCurveFilter alloc] initWithACV:@"juno-curve"];
+        _curveFilter = [[DHImageToneCurveFilter alloc] initWithACV:@"j1-curve"];
         [self addFilter:_curveFilter];
         [_vignetteFilter addTarget:_curveFilter];
         

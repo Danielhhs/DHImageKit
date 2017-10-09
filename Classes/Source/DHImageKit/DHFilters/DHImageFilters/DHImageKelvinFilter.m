@@ -54,7 +54,7 @@ NSString *const kDHLordKelvinShaderString = SHADER_STRING
         _filter = [[DHImageTwoInputFilter alloc] initWithFragmentShaderFromString:kDHLordKelvinShaderString];
         [self addFilter:_filter];
         
-        _mapPicture = [DHImageFiltersHelper pictureWithImageNamed:@"kelvinMap"];
+        _mapPicture = [DHImageFiltersHelper pictureWithImageNamed:@"k1Map"];
         [_mapPicture addTarget:_filter atTextureLocation:1];
         [_mapPicture processImage];
         

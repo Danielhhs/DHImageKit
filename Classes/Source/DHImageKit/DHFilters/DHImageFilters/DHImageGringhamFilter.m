@@ -19,7 +19,7 @@
 {
     self = [super init];
     if (self) {
-        _toneCurveFilter = [[DHImageToneCurveFilter alloc] initWithACV:@"gringham-curve"];
+        _toneCurveFilter = [[DHImageToneCurveFilter alloc] initWithACV:@"g2-curve"];
         
         [self addFilter:_toneCurveFilter];
         
