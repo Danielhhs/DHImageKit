@@ -59,7 +59,7 @@ SHADER_STRING
  void main()
 {
     lowp vec4 textureColor = texture2D(texture, gl_PointCoord);
-    gl_FragColor = textureColor;
+    gl_FragColor = vec4(1.0, 0.0, 0.0, 1.0);
 //    gl_FragColor = textureColor;
 }
 );
@@ -134,22 +134,7 @@ SHADER_STRING
     
     runAsynchronouslyOnVideoProcessingQueue(^{
         [self renderLineFromLocation:lastTouchLocation toLocation:location];
-        for (id<GPUImageInput> currentTarget in targets)
-        {
-            NSInteger indexOfObject = [targets indexOfObject:currentTarget];
-            NSInteger textureIndexOfTarget = [[targetTextureIndices objectAtIndex:indexOfObject] integerValue];
-            
-            [currentTarget setCurrentlyReceivingMonochromeInput:NO];
-            [currentTarget setInputSize:CGSizeMake(width, height) atIndex:textureIndexOfTarget];
-            [currentTarget setInputFramebuffer:outputFramebuffer atIndex:textureIndexOfTarget];
-            [currentTarget newFrameReadyAtTime:kCMTimeIndefinite atIndex:textureIndexOfTarget];
-        }
-        
-        dispatch_semaphore_signal(imageProcessSemaphore);
-        
-        if (completion != nil) {
-            completion();
-        }
+        [self informTargetsForFrameReadyWithCompletion:completion];
         lastTouchLocation = location;
     });
 }
@@ -157,6 +142,26 @@ SHADER_STRING
 - (void) finishUpdating
 {
     firstTouch = YES;
+}
+
+- (void) informTargetsForFrameReadyWithCompletion:(void (^)(void))completion
+{
+    for (id<GPUImageInput> currentTarget in targets)
+    {
+        NSInteger indexOfObject = [targets indexOfObject:currentTarget];
+        NSInteger textureIndexOfTarget = [[targetTextureIndices objectAtIndex:indexOfObject] integerValue];
+        
+        [currentTarget setCurrentlyReceivingMonochromeInput:NO];
+        [currentTarget setInputSize:CGSizeMake(width, height) atIndex:textureIndexOfTarget];
+        [currentTarget setInputFramebuffer:outputFramebuffer atIndex:textureIndexOfTarget];
+        [currentTarget newFrameReadyAtTime:kCMTimeIndefinite atIndex:textureIndexOfTarget];
+    }
+    
+    dispatch_semaphore_signal(imageProcessSemaphore);
+    
+    if (completion != nil) {
+        completion();
+    }
 }
 
 - (void) renderLineFromLocation:(CGPoint)start
@@ -201,7 +206,7 @@ SHADER_STRING
     glEnable(GL_BLEND);
     glBlendFunc(GL_ONE, GL_ONE_MINUS_SRC_ALPHA);
     glUniformMatrix4fv(mvpUniform, 1, GL_FALSE, mvpMatrix.m);
-    glUniform1f(pointSizeUniform, 200);
+    glUniform1f(pointSizeUniform, 80);
     
     glBindBuffer(GL_ARRAY_BUFFER, vboId);
     glBufferData(GL_ARRAY_BUFFER, vertexCount*2*sizeof(GLfloat), vertexBuffer, GL_DYNAMIC_DRAW);

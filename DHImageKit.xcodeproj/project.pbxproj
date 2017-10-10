@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4BC96BBB9EFA6CD18E033246 /* libPods-DHImageKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F6AD154790002DF779C08822 /* libPods-DHImageKit.a */; };
-		5435B72E1F66274A004F2F0F /* DHImageSharpenFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5435B72C1F66274A004F2F0F /* DHImageSharpenFilter.h */; };
+		5435B72E1F66274A004F2F0F /* DHImageSharpenFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5435B72C1F66274A004F2F0F /* DHImageSharpenFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5435B72F1F66274A004F2F0F /* DHImageSharpenFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5435B72D1F66274A004F2F0F /* DHImageSharpenFilter.m */; };
 		543C8DA51F540C960036CD92 /* DHImageFiltersHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 543C8DA31F540C960036CD92 /* DHImageFiltersHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		543C8DA61F540C960036CD92 /* DHImageFiltersHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 543C8DA41F540C960036CD92 /* DHImageFiltersHelper.m */; };
@@ -18,7 +18,7 @@
 		543C8DBB1F57A99D0036CD92 /* DHImageFilterInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 543C8DB91F57A99D0036CD92 /* DHImageFilterInfo.m */; };
 		543C8DBF1F57D9840036CD92 /* DHImageTwoInputFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 543C8DBD1F57D9840036CD92 /* DHImageTwoInputFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		543C8DC01F57D9840036CD92 /* DHImageTwoInputFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 543C8DBE1F57D9840036CD92 /* DHImageTwoInputFilter.m */; };
-		543C8DC31F57D99F0036CD92 /* DHImageFalseColorFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 543C8DC11F57D99F0036CD92 /* DHImageFalseColorFilter.h */; };
+		543C8DC31F57D99F0036CD92 /* DHImageFalseColorFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 543C8DC11F57D99F0036CD92 /* DHImageFalseColorFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		543C8DC41F57D99F0036CD92 /* DHImageFalseColorFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 543C8DC21F57D99F0036CD92 /* DHImageFalseColorFilter.m */; };
 		543C8DC81F57E3A90036CD92 /* DHImageGrayFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 543C8DC61F57E3A90036CD92 /* DHImageGrayFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		543C8DC91F57E3A90036CD92 /* DHImageGrayFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 543C8DC71F57E3A90036CD92 /* DHImageGrayFilter.m */; };
@@ -29,33 +29,33 @@
 		543C8DD71F57F9660036CD92 /* DHImageUpdatable.h in Headers */ = {isa = PBXBuildFile; fileRef = 543C8DD61F57F9660036CD92 /* DHImageUpdatable.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		543C8DDC1F57FDC60036CD92 /* DHImageToneCurveFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 543C8DDA1F57FDC60036CD92 /* DHImageToneCurveFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		543C8DDD1F57FDC60036CD92 /* DHImageToneCurveFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 543C8DDB1F57FDC60036CD92 /* DHImageToneCurveFilter.m */; };
-		543C8DE01F581A3E0036CD92 /* DHImageScreenBlendFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 543C8DDE1F581A3E0036CD92 /* DHImageScreenBlendFilter.h */; };
+		543C8DE01F581A3E0036CD92 /* DHImageScreenBlendFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 543C8DDE1F581A3E0036CD92 /* DHImageScreenBlendFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		543C8DE11F581A3E0036CD92 /* DHImageScreenBlendFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 543C8DDF1F581A3E0036CD92 /* DHImageScreenBlendFilter.m */; };
 		543C8DE81F58FDA10036CD92 /* DHImageFreshFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 543C8DE61F58FDA10036CD92 /* DHImageFreshFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		543C8DE91F58FDA10036CD92 /* DHImageFreshFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 543C8DE71F58FDA10036CD92 /* DHImageFreshFilter.m */; };
 		543C8DEC1F590BB10036CD92 /* DHImageMetalicFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 543C8DEA1F590BB10036CD92 /* DHImageMetalicFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		543C8DED1F590BB10036CD92 /* DHImageMetalicFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 543C8DEB1F590BB10036CD92 /* DHImageMetalicFilter.m */; };
-		543C8DF01F5926C10036CD92 /* DHImageContrastBrightnessFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 543C8DEE1F5926C10036CD92 /* DHImageContrastBrightnessFilter.h */; };
+		543C8DF01F5926C10036CD92 /* DHImageContrastBrightnessFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 543C8DEE1F5926C10036CD92 /* DHImageContrastBrightnessFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		543C8DF11F5926C10036CD92 /* DHImageContrastBrightnessFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 543C8DEF1F5926C10036CD92 /* DHImageContrastBrightnessFilter.m */; };
 		543C8DF41F5936120036CD92 /* DHImageLevelsFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 543C8DF21F5936110036CD92 /* DHImageLevelsFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		543C8DF51F5936120036CD92 /* DHImageLevelsFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 543C8DF31F5936110036CD92 /* DHImageLevelsFilter.m */; };
-		543C8DF81F593A260036CD92 /* DHImageColorMultiplyBlendFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 543C8DF61F593A260036CD92 /* DHImageColorMultiplyBlendFilter.h */; };
+		543C8DF81F593A260036CD92 /* DHImageColorMultiplyBlendFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 543C8DF61F593A260036CD92 /* DHImageColorMultiplyBlendFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		543C8DF91F593A260036CD92 /* DHImageColorMultiplyBlendFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 543C8DF71F593A260036CD92 /* DHImageColorMultiplyBlendFilter.m */; };
-		543C8DFC1F593BF50036CD92 /* DHImageBaseFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 543C8DFA1F593BF50036CD92 /* DHImageBaseFilter.h */; };
+		543C8DFC1F593BF50036CD92 /* DHImageBaseFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 543C8DFA1F593BF50036CD92 /* DHImageBaseFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		543C8DFD1F593BF50036CD92 /* DHImageBaseFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 543C8DFB1F593BF50036CD92 /* DHImageBaseFilter.m */; };
 		543C8E021F5CF47F0036CD92 /* DHImageVignetteFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 543C8E001F5CF47F0036CD92 /* DHImageVignetteFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		543C8E031F5CF47F0036CD92 /* DHImageVignetteFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 543C8E011F5CF47F0036CD92 /* DHImageVignetteFilter.m */; };
-		543C8E081F5D06390036CD92 /* DHImageGringhamFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 543C8E061F5D06390036CD92 /* DHImageGringhamFilter.h */; };
+		543C8E081F5D06390036CD92 /* DHImageGringhamFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 543C8E061F5D06390036CD92 /* DHImageGringhamFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		543C8E091F5D06390036CD92 /* DHImageGringhamFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 543C8E071F5D06390036CD92 /* DHImageGringhamFilter.m */; };
-		543C8E0C1F5D23850036CD92 /* DHImageSierraFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 543C8E0A1F5D23850036CD92 /* DHImageSierraFilter.h */; };
+		543C8E0C1F5D23850036CD92 /* DHImageSierraFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 543C8E0A1F5D23850036CD92 /* DHImageSierraFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		543C8E0D1F5D23850036CD92 /* DHImageSierraFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 543C8E0B1F5D23850036CD92 /* DHImageSierraFilter.m */; };
-		543C8E101F5D29560036CD92 /* DHImageRGBFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 543C8E0E1F5D29560036CD92 /* DHImageRGBFilter.h */; };
+		543C8E101F5D29560036CD92 /* DHImageRGBFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 543C8E0E1F5D29560036CD92 /* DHImageRGBFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		543C8E111F5D29560036CD92 /* DHImageRGBFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 543C8E0F1F5D29560036CD92 /* DHImageRGBFilter.m */; };
 		543C8E141F5D383C0036CD92 /* DHImageCremaFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 543C8E121F5D383C0036CD92 /* DHImageCremaFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		543C8E151F5D383C0036CD92 /* DHImageCremaFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 543C8E131F5D383C0036CD92 /* DHImageCremaFilter.m */; };
 		543C8E181F5D38B20036CD92 /* DHImageSaturationFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 543C8E161F5D38B20036CD92 /* DHImageSaturationFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		543C8E191F5D38B20036CD92 /* DHImageSaturationFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 543C8E171F5D38B20036CD92 /* DHImageSaturationFilter.m */; };
-		543C8E1C1F5D52610036CD92 /* DHImageRiseFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 543C8E1A1F5D52610036CD92 /* DHImageRiseFilter.h */; };
+		543C8E1C1F5D52610036CD92 /* DHImageRiseFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 543C8E1A1F5D52610036CD92 /* DHImageRiseFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		543C8E1D1F5D52610036CD92 /* DHImageRiseFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 543C8E1B1F5D52610036CD92 /* DHImageRiseFilter.m */; };
 		543C8E201F5D540A0036CD92 /* DHImageFourInputFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 543C8E1E1F5D540A0036CD92 /* DHImageFourInputFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		543C8E211F5D540A0036CD92 /* DHImageFourInputFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 543C8E1F1F5D540A0036CD92 /* DHImageFourInputFilter.m */; };
@@ -63,60 +63,58 @@
 		543C8E251F5D54AF0036CD92 /* DHImageThreeInputFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 543C8E231F5D54AF0036CD92 /* DHImageThreeInputFilter.m */; };
 		543C8E281F5D611B0036CD92 /* DHImageLarkFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 543C8E261F5D611B0036CD92 /* DHImageLarkFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		543C8E291F5D611B0036CD92 /* DHImageLarkFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 543C8E271F5D611B0036CD92 /* DHImageLarkFilter.m */; };
-		543C8E2C1F5E365D0036CD92 /* DHImageNashvilleFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 543C8E2A1F5E365D0036CD92 /* DHImageNashvilleFilter.h */; };
+		543C8E2C1F5E365D0036CD92 /* DHImageNashvilleFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 543C8E2A1F5E365D0036CD92 /* DHImageNashvilleFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		543C8E2D1F5E365D0036CD92 /* DHImageNashvilleFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 543C8E2B1F5E365D0036CD92 /* DHImageNashvilleFilter.m */; };
-		543C8E301F5E43FA0036CD92 /* DHImageClarendonFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 543C8E2E1F5E43FA0036CD92 /* DHImageClarendonFilter.h */; };
+		543C8E301F5E43FA0036CD92 /* DHImageClarendonFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 543C8E2E1F5E43FA0036CD92 /* DHImageClarendonFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		543C8E311F5E43FA0036CD92 /* DHImageClarendonFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 543C8E2F1F5E43FA0036CD92 /* DHImageClarendonFilter.m */; };
-		543C8E341F5E4A120036CD92 /* DHImageJunoFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 543C8E321F5E4A120036CD92 /* DHImageJunoFilter.h */; };
+		543C8E341F5E4A120036CD92 /* DHImageJunoFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 543C8E321F5E4A120036CD92 /* DHImageJunoFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		543C8E351F5E4A120036CD92 /* DHImageJunoFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 543C8E331F5E4A120036CD92 /* DHImageJunoFilter.m */; };
-		543C8E381F5E721D0036CD92 /* DHImageAmaroFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 543C8E361F5E721D0036CD92 /* DHImageAmaroFilter.h */; };
+		543C8E381F5E721D0036CD92 /* DHImageAmaroFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 543C8E361F5E721D0036CD92 /* DHImageAmaroFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		543C8E391F5E721D0036CD92 /* DHImageAmaroFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 543C8E371F5E721D0036CD92 /* DHImageAmaroFilter.m */; };
 		543C8E3F1F5E893E0036CD92 /* DHImageHudsonFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 543C8E3D1F5E893E0036CD92 /* DHImageHudsonFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		543C8E401F5E893E0036CD92 /* DHImageHudsonFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 543C8E3E1F5E893E0036CD92 /* DHImageHudsonFilter.m */; };
-		543C8E431F5E8FD20036CD92 /* DHImageValenciaFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 543C8E411F5E8FD20036CD92 /* DHImageValenciaFilter.h */; };
+		543C8E431F5E8FD20036CD92 /* DHImageValenciaFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 543C8E411F5E8FD20036CD92 /* DHImageValenciaFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		543C8E441F5E8FD20036CD92 /* DHImageValenciaFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 543C8E421F5E8FD20036CD92 /* DHImageValenciaFilter.m */; };
-		543C8E471F5EA5D10036CD92 /* DHImageXprollFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 543C8E451F5EA5D10036CD92 /* DHImageXprollFilter.h */; };
+		543C8E471F5EA5D10036CD92 /* DHImageXprollFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 543C8E451F5EA5D10036CD92 /* DHImageXprollFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		543C8E481F5EA5D10036CD92 /* DHImageXprollFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 543C8E461F5EA5D10036CD92 /* DHImageXprollFilter.m */; };
-		543C8E4B1F5EAD870036CD92 /* DHImageWaldenFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 543C8E491F5EAD870036CD92 /* DHImageWaldenFilter.h */; };
+		543C8E4B1F5EAD870036CD92 /* DHImageWaldenFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 543C8E491F5EAD870036CD92 /* DHImageWaldenFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		543C8E4C1F5EAD870036CD92 /* DHImageWaldenFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 543C8E4A1F5EAD870036CD92 /* DHImageWaldenFilter.m */; };
-		543C8E4F1F5EB1400036CD92 /* DHImageInkWellFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 543C8E4D1F5EB1400036CD92 /* DHImageInkWellFilter.h */; };
+		543C8E4F1F5EB1400036CD92 /* DHImageInkWellFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 543C8E4D1F5EB1400036CD92 /* DHImageInkWellFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		543C8E501F5EB1400036CD92 /* DHImageInkWellFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 543C8E4E1F5EB1400036CD92 /* DHImageInkWellFilter.m */; };
-		543C8E531F5EB3A30036CD92 /* DHImageHefeFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 543C8E511F5EB3A30036CD92 /* DHImageHefeFilter.h */; };
+		543C8E531F5EB3A30036CD92 /* DHImageHefeFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 543C8E511F5EB3A30036CD92 /* DHImageHefeFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		543C8E541F5EB3A30036CD92 /* DHImageHefeFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 543C8E521F5EB3A30036CD92 /* DHImageHefeFilter.m */; };
-		543C8E571F5EB4020036CD92 /* DHImageKelvinFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 543C8E551F5EB4020036CD92 /* DHImageKelvinFilter.h */; };
+		543C8E571F5EB4020036CD92 /* DHImageKelvinFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 543C8E551F5EB4020036CD92 /* DHImageKelvinFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		543C8E581F5EB4020036CD92 /* DHImageKelvinFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 543C8E561F5EB4020036CD92 /* DHImageKelvinFilter.m */; };
-		543C8E5B1F5EB6AB0036CD92 /* DHImageFiveInputFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 543C8E591F5EB6AB0036CD92 /* DHImageFiveInputFilter.h */; };
+		543C8E5B1F5EB6AB0036CD92 /* DHImageFiveInputFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 543C8E591F5EB6AB0036CD92 /* DHImageFiveInputFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		543C8E5C1F5EB6AB0036CD92 /* DHImageFiveInputFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 543C8E5A1F5EB6AB0036CD92 /* DHImageFiveInputFilter.m */; };
-		543C8E5F1F5EB7A40036CD92 /* DHImageSixInputFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 543C8E5D1F5EB7A40036CD92 /* DHImageSixInputFilter.h */; };
+		543C8E5F1F5EB7A40036CD92 /* DHImageSixInputFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 543C8E5D1F5EB7A40036CD92 /* DHImageSixInputFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		543C8E601F5EB7A40036CD92 /* DHImageSixInputFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 543C8E5E1F5EB7A40036CD92 /* DHImageSixInputFilter.m */; };
-		543C8E631F5EBF020036CD92 /* DHImageEarlybirdFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 543C8E611F5EBF020036CD92 /* DHImageEarlybirdFilter.h */; };
+		543C8E631F5EBF020036CD92 /* DHImageEarlybirdFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 543C8E611F5EBF020036CD92 /* DHImageEarlybirdFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		543C8E641F5EBF020036CD92 /* DHImageEarlybirdFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 543C8E621F5EBF020036CD92 /* DHImageEarlybirdFilter.m */; };
-		543C8E671F5F87230036CD92 /* DHImageSutroFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 543C8E651F5F87230036CD92 /* DHImageSutroFilter.h */; };
+		543C8E671F5F87230036CD92 /* DHImageSutroFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 543C8E651F5F87230036CD92 /* DHImageSutroFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		543C8E681F5F87230036CD92 /* DHImageSutroFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 543C8E661F5F87230036CD92 /* DHImageSutroFilter.m */; };
-		543C8E6B1F5F8CEE0036CD92 /* DHImageToasterFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 543C8E691F5F8CEE0036CD92 /* DHImageToasterFilter.h */; };
+		543C8E6B1F5F8CEE0036CD92 /* DHImageToasterFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 543C8E691F5F8CEE0036CD92 /* DHImageToasterFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		543C8E6C1F5F8CEE0036CD92 /* DHImageToasterFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 543C8E6A1F5F8CEE0036CD92 /* DHImageToasterFilter.m */; };
 		543C8E6F1F5F92B60036CD92 /* DHImageWillowFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 543C8E6D1F5F92B60036CD92 /* DHImageWillowFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		543C8E701F5F92B60036CD92 /* DHImageWillowFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 543C8E6E1F5F92B60036CD92 /* DHImageWillowFilter.m */; };
-		543C8E731F5F92FA0036CD92 /* DHImageGrayScaleFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 543C8E711F5F92FA0036CD92 /* DHImageGrayScaleFilter.h */; };
+		543C8E731F5F92FA0036CD92 /* DHImageGrayScaleFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 543C8E711F5F92FA0036CD92 /* DHImageGrayScaleFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		543C8E741F5F92FA0036CD92 /* DHImageGrayScaleFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 543C8E721F5F92FA0036CD92 /* DHImageGrayScaleFilter.m */; };
-		543C8E771F5F972D0036CD92 /* DHImageExposureFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 543C8E751F5F972D0036CD92 /* DHImageExposureFilter.h */; };
+		543C8E771F5F972D0036CD92 /* DHImageExposureFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 543C8E751F5F972D0036CD92 /* DHImageExposureFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		543C8E781F5F972D0036CD92 /* DHImageExposureFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 543C8E761F5F972D0036CD92 /* DHImageExposureFilter.m */; };
-		543C8E7B1F5FD1AA0036CD92 /* DHImageLofiFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 543C8E791F5FD1AA0036CD92 /* DHImageLofiFilter.h */; };
+		543C8E7B1F5FD1AA0036CD92 /* DHImageLofiFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 543C8E791F5FD1AA0036CD92 /* DHImageLofiFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		543C8E7C1F5FD1AA0036CD92 /* DHImageLofiFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 543C8E7A1F5FD1AA0036CD92 /* DHImageLofiFilter.m */; };
-		543C8E7F1F5FD50B0036CD92 /* DHImageNormalFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 543C8E7D1F5FD50B0036CD92 /* DHImageNormalFilter.h */; };
+		543C8E7F1F5FD50B0036CD92 /* DHImageNormalFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 543C8E7D1F5FD50B0036CD92 /* DHImageNormalFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		543C8E801F5FD50B0036CD92 /* DHImageNormalFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 543C8E7E1F5FD50B0036CD92 /* DHImageNormalFilter.m */; };
-		543C8E8A1F626B400036CD92 /* DHImageIcyFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 543C8E881F626B3F0036CD92 /* DHImageIcyFilter.h */; };
+		543C8E8A1F626B400036CD92 /* DHImageIcyFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 543C8E881F626B3F0036CD92 /* DHImageIcyFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		543C8E8B1F626B400036CD92 /* DHImageIcyFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 543C8E891F626B400036CD92 /* DHImageIcyFilter.m */; };
-		543C8E8E1F626E7F0036CD92 /* DHImageWarmthFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 543C8E8C1F626E7F0036CD92 /* DHImageWarmthFilter.h */; };
+		543C8E8E1F626E7F0036CD92 /* DHImageWarmthFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 543C8E8C1F626E7F0036CD92 /* DHImageWarmthFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		543C8E8F1F626E7F0036CD92 /* DHImageWarmthFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 543C8E8D1F626E7F0036CD92 /* DHImageWarmthFilter.m */; };
-		543C8E921F627A430036CD92 /* DHImageVignetteBlendFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 543C8E901F627A420036CD92 /* DHImageVignetteBlendFilter.h */; };
+		543C8E921F627A430036CD92 /* DHImageVignetteBlendFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 543C8E901F627A420036CD92 /* DHImageVignetteBlendFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		543C8E931F627A430036CD92 /* DHImageVignetteBlendFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 543C8E911F627A420036CD92 /* DHImageVignetteBlendFilter.m */; };
-		543C8E961F6295370036CD92 /* DHImageOverlayBlendFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 543C8E941F6295370036CD92 /* DHImageOverlayBlendFilter.h */; };
+		543C8E961F6295370036CD92 /* DHImageOverlayBlendFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 543C8E941F6295370036CD92 /* DHImageOverlayBlendFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		543C8E971F6295370036CD92 /* DHImageOverlayBlendFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 543C8E951F6295370036CD92 /* DHImageOverlayBlendFilter.m */; };
-		543C8E9A1F637B0A0036CD92 /* DHImageFoodFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 543C8E981F637B0A0036CD92 /* DHImageFoodFilter.h */; };
+		543C8E9A1F637B0A0036CD92 /* DHImageFoodFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 543C8E981F637B0A0036CD92 /* DHImageFoodFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		543C8E9B1F637B0A0036CD92 /* DHImageFoodFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 543C8E991F637B0A0036CD92 /* DHImageFoodFilter.m */; };
-		546D21711F887BF800DE4B7D /* DHImageStrengthMask.h in Headers */ = {isa = PBXBuildFile; fileRef = 546D216F1F887BF800DE4B7D /* DHImageStrengthMask.h */; };
-		546D21721F887BF800DE4B7D /* DHImageStrengthMask.m in Sources */ = {isa = PBXBuildFile; fileRef = 546D21701F887BF800DE4B7D /* DHImageStrengthMask.m */; };
 		5478858C1F481E4400808C87 /* DHImageColorFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 547885431F481E4400808C87 /* DHImageColorFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5478858D1F481E4400808C87 /* DHImageColorFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 547885441F481E4400808C87 /* DHImageColorFilter.m */; };
 		5478858E1F481E4400808C87 /* DHImageRotateFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 547885451F481E4400808C87 /* DHImageRotateFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -138,36 +136,44 @@
 		547885CF1F481E4400808C87 /* DHImageOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 547885891F481E4400808C87 /* DHImageOperation.m */; };
 		547885D01F481E4400808C87 /* DHImageKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 5478858A1F481E4400808C87 /* DHImageKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		547885D11F481E4400808C87 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5478858B1F481E4400808C87 /* Info.plist */; };
-		54C2E1451F76551B0026E134 /* DHImageHighlightFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 54C2E1431F76551B0026E134 /* DHImageHighlightFilter.h */; };
+		54A0601B1F8C539C00F14EBE /* DHImageSkinWhitenFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 54A060191F8C539C00F14EBE /* DHImageSkinWhitenFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		54A0601C1F8C539C00F14EBE /* DHImageSkinWhitenFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 54A0601A1F8C539C00F14EBE /* DHImageSkinWhitenFilter.m */; };
+		54A060261F8C557700F14EBE /* DHImageSkinSmootherRadius.h in Headers */ = {isa = PBXBuildFile; fileRef = 54A060241F8C557700F14EBE /* DHImageSkinSmootherRadius.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		54A060271F8C557700F14EBE /* DHImageSkinSmootherRadius.m in Sources */ = {isa = PBXBuildFile; fileRef = 54A060251F8C557700F14EBE /* DHImageSkinSmootherRadius.m */; };
+		54A0602A1F8C560800F14EBE /* DHImageSkinFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 54A060281F8C560800F14EBE /* DHImageSkinFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		54A0602B1F8C560800F14EBE /* DHImageSkinFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 54A060291F8C560800F14EBE /* DHImageSkinFilter.m */; };
+		54A0602C1F8C671300F14EBE /* DHImageStrengthMask.m in Sources */ = {isa = PBXBuildFile; fileRef = 54A060231F8C53E100F14EBE /* DHImageStrengthMask.m */; };
+		54A0602D1F8C671800F14EBE /* DHImageStrengthMask.h in Headers */ = {isa = PBXBuildFile; fileRef = 54A060221F8C53E100F14EBE /* DHImageStrengthMask.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		54A0602E1F8C675200F14EBE /* DHImageSkinSmoothMaskFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 54A060211F8C53E100F14EBE /* DHImageSkinSmoothMaskFilter.m */; };
+		54A0602F1F8C675500F14EBE /* DHImageSkinSmoothMaskFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 54A060201F8C53E100F14EBE /* DHImageSkinSmoothMaskFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		54A060301F8C675A00F14EBE /* DHImageSkinSmoothHighPassFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 54A0601F1F8C53E100F14EBE /* DHImageSkinSmoothHighPassFilter.m */; };
+		54A060311F8C675C00F14EBE /* DHImageSkinSmoothHighPassFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 54A0601E1F8C53E100F14EBE /* DHImageSkinSmoothHighPassFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		54C2E1451F76551B0026E134 /* DHImageHighlightFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 54C2E1431F76551B0026E134 /* DHImageHighlightFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		54C2E1461F76551B0026E134 /* DHImageHighlightFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 54C2E1441F76551B0026E134 /* DHImageHighlightFilter.m */; };
-		54C2E1491F765AF00026E134 /* DHImageShadowsFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 54C2E1471F765AF00026E134 /* DHImageShadowsFilter.h */; };
+		54C2E1491F765AF00026E134 /* DHImageShadowsFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 54C2E1471F765AF00026E134 /* DHImageShadowsFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		54C2E14A1F765AF00026E134 /* DHImageShadowsFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 54C2E1481F765AF00026E134 /* DHImageShadowsFilter.m */; };
-		54C47F111F63824000ACECD1 /* DHImagePosterizeFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 54C47F0F1F63824000ACECD1 /* DHImagePosterizeFilter.h */; };
+		54C47F111F63824000ACECD1 /* DHImagePosterizeFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 54C47F0F1F63824000ACECD1 /* DHImagePosterizeFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		54C47F121F63824000ACECD1 /* DHImagePosterizeFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 54C47F101F63824000ACECD1 /* DHImagePosterizeFilter.m */; };
 		54C47F161F6394BB00ACECD1 /* DHImageSkinSmoothFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 54C47F141F6394BB00ACECD1 /* DHImageSkinSmoothFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		54C47F171F6394BB00ACECD1 /* DHImageSkinSmoothFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 54C47F151F6394BB00ACECD1 /* DHImageSkinSmoothFilter.m */; };
-		54C47F1A1F63951900ACECD1 /* DHImageColorInvertFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 54C47F181F63951900ACECD1 /* DHImageColorInvertFilter.h */; };
+		54C47F1A1F63951900ACECD1 /* DHImageColorInvertFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 54C47F181F63951900ACECD1 /* DHImageColorInvertFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		54C47F1B1F63951900ACECD1 /* DHImageColorInvertFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 54C47F191F63951900ACECD1 /* DHImageColorInvertFilter.m */; };
-		54C47F221F639AE000ACECD1 /* DHImageFilterGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = 54C47F201F639AE000ACECD1 /* DHImageFilterGroup.h */; };
+		54C47F221F639AE000ACECD1 /* DHImageFilterGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = 54C47F201F639AE000ACECD1 /* DHImageFilterGroup.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		54C47F231F639AE000ACECD1 /* DHImageFilterGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 54C47F211F639AE000ACECD1 /* DHImageFilterGroup.m */; };
-		54C47F2C1F63B56200ACECD1 /* DHImageVividLightBlendFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 54C47F2A1F63B56200ACECD1 /* DHImageVividLightBlendFilter.h */; };
+		54C47F2C1F63B56200ACECD1 /* DHImageVividLightBlendFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 54C47F2A1F63B56200ACECD1 /* DHImageVividLightBlendFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		54C47F2D1F63B56200ACECD1 /* DHImageVividLightBlendFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 54C47F2B1F63B56200ACECD1 /* DHImageVividLightBlendFilter.m */; };
-		54C47F301F63BA0B00ACECD1 /* DHImageHighPassFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 54C47F2E1F63BA0B00ACECD1 /* DHImageHighPassFilter.h */; };
+		54C47F301F63BA0B00ACECD1 /* DHImageHighPassFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 54C47F2E1F63BA0B00ACECD1 /* DHImageHighPassFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		54C47F311F63BA0B00ACECD1 /* DHImageHighPassFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 54C47F2F1F63BA0B00ACECD1 /* DHImageHighPassFilter.m */; };
-		54C47F341F63BA4C00ACECD1 /* DHImageDissolveBlendFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 54C47F321F63BA4C00ACECD1 /* DHImageDissolveBlendFilter.h */; };
+		54C47F341F63BA4C00ACECD1 /* DHImageDissolveBlendFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 54C47F321F63BA4C00ACECD1 /* DHImageDissolveBlendFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		54C47F351F63BA4C00ACECD1 /* DHImageDissolveBlendFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 54C47F331F63BA4C00ACECD1 /* DHImageDissolveBlendFilter.m */; };
-		54C47F381F63BB8300ACECD1 /* DHImageLowPassFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 54C47F361F63BB8300ACECD1 /* DHImageLowPassFilter.h */; };
+		54C47F381F63BB8300ACECD1 /* DHImageLowPassFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 54C47F361F63BB8300ACECD1 /* DHImageLowPassFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		54C47F391F63BB8300ACECD1 /* DHImageLowPassFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 54C47F371F63BB8300ACECD1 /* DHImageLowPassFilter.m */; };
-		54C47F3C1F63BC2200ACECD1 /* DHImageBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 54C47F3A1F63BC2200ACECD1 /* DHImageBuffer.h */; };
+		54C47F3C1F63BC2200ACECD1 /* DHImageBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 54C47F3A1F63BC2200ACECD1 /* DHImageBuffer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		54C47F3D1F63BC2200ACECD1 /* DHImageBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 54C47F3B1F63BC2200ACECD1 /* DHImageBuffer.m */; };
-		54C47F401F63BDC600ACECD1 /* DHImageDifferenceBlendFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 54C47F3E1F63BDC600ACECD1 /* DHImageDifferenceBlendFilter.h */; };
+		54C47F401F63BDC600ACECD1 /* DHImageDifferenceBlendFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 54C47F3E1F63BDC600ACECD1 /* DHImageDifferenceBlendFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		54C47F411F63BDC600ACECD1 /* DHImageDifferenceBlendFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 54C47F3F1F63BDC600ACECD1 /* DHImageDifferenceBlendFilter.m */; };
-		54C47F441F63D4C300ACECD1 /* DHImageSkinSmoothHighPassFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 54C47F421F63D4C300ACECD1 /* DHImageSkinSmoothHighPassFilter.h */; };
-		54C47F451F63D4C300ACECD1 /* DHImageSkinSmoothHighPassFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 54C47F431F63D4C300ACECD1 /* DHImageSkinSmoothHighPassFilter.m */; };
-		54C47F481F63D53000ACECD1 /* DHImageGaussianBlurFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 54C47F461F63D53000ACECD1 /* DHImageGaussianBlurFilter.h */; };
+		54C47F481F63D53000ACECD1 /* DHImageGaussianBlurFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 54C47F461F63D53000ACECD1 /* DHImageGaussianBlurFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		54C47F491F63D53000ACECD1 /* DHImageGaussianBlurFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 54C47F471F63D53000ACECD1 /* DHImageGaussianBlurFilter.m */; };
-		54C47F4C1F63E00800ACECD1 /* DHImageSkinSmoothMaskFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 54C47F4A1F63E00800ACECD1 /* DHImageSkinSmoothMaskFilter.h */; };
-		54C47F4D1F63E00800ACECD1 /* DHImageSkinSmoothMaskFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 54C47F4B1F63E00800ACECD1 /* DHImageSkinSmoothMaskFilter.m */; };
 		54FE32DC1F48123E001C7DC4 /* DHImageKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54FE32D21F48123E001C7DC4 /* DHImageKit.framework */; };
 /* End PBXBuildFile section */
 
@@ -290,8 +296,6 @@
 		543C8E951F6295370036CD92 /* DHImageOverlayBlendFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHImageOverlayBlendFilter.m; sourceTree = "<group>"; };
 		543C8E981F637B0A0036CD92 /* DHImageFoodFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHImageFoodFilter.h; sourceTree = "<group>"; };
 		543C8E991F637B0A0036CD92 /* DHImageFoodFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHImageFoodFilter.m; sourceTree = "<group>"; };
-		546D216F1F887BF800DE4B7D /* DHImageStrengthMask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DHImageStrengthMask.h; sourceTree = "<group>"; };
-		546D21701F887BF800DE4B7D /* DHImageStrengthMask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DHImageStrengthMask.m; sourceTree = "<group>"; };
 		547885431F481E4400808C87 /* DHImageColorFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHImageColorFilter.h; sourceTree = "<group>"; };
 		547885441F481E4400808C87 /* DHImageColorFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHImageColorFilter.m; sourceTree = "<group>"; };
 		547885451F481E4400808C87 /* DHImageRotateFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHImageRotateFilter.h; sourceTree = "<group>"; };
@@ -313,6 +317,18 @@
 		547885891F481E4400808C87 /* DHImageOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHImageOperation.m; sourceTree = "<group>"; };
 		5478858A1F481E4400808C87 /* DHImageKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DHImageKit.h; path = Classes/Source/DHImageKit.h; sourceTree = "<group>"; };
 		5478858B1F481E4400808C87 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Classes/Source/Info.plist; sourceTree = "<group>"; };
+		54A060191F8C539C00F14EBE /* DHImageSkinWhitenFilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DHImageSkinWhitenFilter.h; sourceTree = "<group>"; };
+		54A0601A1F8C539C00F14EBE /* DHImageSkinWhitenFilter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DHImageSkinWhitenFilter.m; sourceTree = "<group>"; };
+		54A0601E1F8C53E100F14EBE /* DHImageSkinSmoothHighPassFilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DHImageSkinSmoothHighPassFilter.h; sourceTree = "<group>"; };
+		54A0601F1F8C53E100F14EBE /* DHImageSkinSmoothHighPassFilter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DHImageSkinSmoothHighPassFilter.m; sourceTree = "<group>"; };
+		54A060201F8C53E100F14EBE /* DHImageSkinSmoothMaskFilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DHImageSkinSmoothMaskFilter.h; sourceTree = "<group>"; };
+		54A060211F8C53E100F14EBE /* DHImageSkinSmoothMaskFilter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DHImageSkinSmoothMaskFilter.m; sourceTree = "<group>"; };
+		54A060221F8C53E100F14EBE /* DHImageStrengthMask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DHImageStrengthMask.h; sourceTree = "<group>"; };
+		54A060231F8C53E100F14EBE /* DHImageStrengthMask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DHImageStrengthMask.m; sourceTree = "<group>"; };
+		54A060241F8C557700F14EBE /* DHImageSkinSmootherRadius.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DHImageSkinSmootherRadius.h; sourceTree = "<group>"; };
+		54A060251F8C557700F14EBE /* DHImageSkinSmootherRadius.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DHImageSkinSmootherRadius.m; sourceTree = "<group>"; };
+		54A060281F8C560800F14EBE /* DHImageSkinFilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DHImageSkinFilter.h; sourceTree = "<group>"; };
+		54A060291F8C560800F14EBE /* DHImageSkinFilter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DHImageSkinFilter.m; sourceTree = "<group>"; };
 		54C2E1431F76551B0026E134 /* DHImageHighlightFilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DHImageHighlightFilter.h; sourceTree = "<group>"; };
 		54C2E1441F76551B0026E134 /* DHImageHighlightFilter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DHImageHighlightFilter.m; sourceTree = "<group>"; };
 		54C2E1471F765AF00026E134 /* DHImageShadowsFilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DHImageShadowsFilter.h; sourceTree = "<group>"; };
@@ -337,12 +353,8 @@
 		54C47F3B1F63BC2200ACECD1 /* DHImageBuffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHImageBuffer.m; sourceTree = "<group>"; };
 		54C47F3E1F63BDC600ACECD1 /* DHImageDifferenceBlendFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHImageDifferenceBlendFilter.h; sourceTree = "<group>"; };
 		54C47F3F1F63BDC600ACECD1 /* DHImageDifferenceBlendFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHImageDifferenceBlendFilter.m; sourceTree = "<group>"; };
-		54C47F421F63D4C300ACECD1 /* DHImageSkinSmoothHighPassFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHImageSkinSmoothHighPassFilter.h; sourceTree = "<group>"; };
-		54C47F431F63D4C300ACECD1 /* DHImageSkinSmoothHighPassFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHImageSkinSmoothHighPassFilter.m; sourceTree = "<group>"; };
 		54C47F461F63D53000ACECD1 /* DHImageGaussianBlurFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHImageGaussianBlurFilter.h; sourceTree = "<group>"; };
 		54C47F471F63D53000ACECD1 /* DHImageGaussianBlurFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHImageGaussianBlurFilter.m; sourceTree = "<group>"; };
-		54C47F4A1F63E00800ACECD1 /* DHImageSkinSmoothMaskFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHImageSkinSmoothMaskFilter.h; sourceTree = "<group>"; };
-		54C47F4B1F63E00800ACECD1 /* DHImageSkinSmoothMaskFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHImageSkinSmoothMaskFilter.m; sourceTree = "<group>"; };
 		54FE32D21F48123E001C7DC4 /* DHImageKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DHImageKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		54FE32DB1F48123E001C7DC4 /* DHImageKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DHImageKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		56F737120C6D5D4F0ED1B23B /* Pods-DHImageKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DHImageKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-DHImageKit/Pods-DHImageKit.release.xcconfig"; sourceTree = "<group>"; };
@@ -584,17 +596,31 @@
 			path = UndoManager;
 			sourceTree = "<group>";
 		};
+		54A0601D1F8C53E100F14EBE /* BaseFilters */ = {
+			isa = PBXGroup;
+			children = (
+				54A0601E1F8C53E100F14EBE /* DHImageSkinSmoothHighPassFilter.h */,
+				54A0601F1F8C53E100F14EBE /* DHImageSkinSmoothHighPassFilter.m */,
+				54A060201F8C53E100F14EBE /* DHImageSkinSmoothMaskFilter.h */,
+				54A060211F8C53E100F14EBE /* DHImageSkinSmoothMaskFilter.m */,
+				54A060221F8C53E100F14EBE /* DHImageStrengthMask.h */,
+				54A060231F8C53E100F14EBE /* DHImageStrengthMask.m */,
+				54A060241F8C557700F14EBE /* DHImageSkinSmootherRadius.h */,
+				54A060251F8C557700F14EBE /* DHImageSkinSmootherRadius.m */,
+			);
+			path = BaseFilters;
+			sourceTree = "<group>";
+		};
 		54C47F131F6393F200ACECD1 /* SkinRetouch */ = {
 			isa = PBXGroup;
 			children = (
+				54A0601D1F8C53E100F14EBE /* BaseFilters */,
+				54A060281F8C560800F14EBE /* DHImageSkinFilter.h */,
+				54A060291F8C560800F14EBE /* DHImageSkinFilter.m */,
 				54C47F141F6394BB00ACECD1 /* DHImageSkinSmoothFilter.h */,
 				54C47F151F6394BB00ACECD1 /* DHImageSkinSmoothFilter.m */,
-				54C47F421F63D4C300ACECD1 /* DHImageSkinSmoothHighPassFilter.h */,
-				54C47F431F63D4C300ACECD1 /* DHImageSkinSmoothHighPassFilter.m */,
-				54C47F4A1F63E00800ACECD1 /* DHImageSkinSmoothMaskFilter.h */,
-				54C47F4B1F63E00800ACECD1 /* DHImageSkinSmoothMaskFilter.m */,
-				546D216F1F887BF800DE4B7D /* DHImageStrengthMask.h */,
-				546D21701F887BF800DE4B7D /* DHImageStrengthMask.m */,
+				54A060191F8C539C00F14EBE /* DHImageSkinWhitenFilter.h */,
+				54A0601A1F8C539C00F14EBE /* DHImageSkinWhitenFilter.m */,
 			);
 			path = SkinRetouch;
 			sourceTree = "<group>";
@@ -637,86 +663,89 @@
 			buildActionMask = 2147483647;
 			files = (
 				5478859B1F481E4400808C87 /* DHImageEditor.h in Headers */,
+				543C8DBF1F57D9840036CD92 /* DHImageTwoInputFilter.h in Headers */,
+				543C8DC81F57E3A90036CD92 /* DHImageGrayFilter.h in Headers */,
+				5478859D1F481E4400808C87 /* DHImageHelper.h in Headers */,
+				547885941F481E4400808C87 /* DHRadialTiltShiftFilter.h in Headers */,
+				5478858C1F481E4400808C87 /* DHImageColorFilter.h in Headers */,
+				543C8DD01F57E9160036CD92 /* DHImageColorDarkenBlendFilter.h in Headers */,
+				543C8DAA1F56C5E60036CD92 /* DHImageFilter.h in Headers */,
+				547885961F481E4400808C87 /* DHTiltShiftFilter.h in Headers */,
+				543C8DD71F57F9660036CD92 /* DHImageUpdatable.h in Headers */,
+				5478859A1F481E4400808C87 /* DHImageConstants.h in Headers */,
 				54C2E1451F76551B0026E134 /* DHImageHighlightFilter.h in Headers */,
 				54C47F111F63824000ACECD1 /* DHImagePosterizeFilter.h in Headers */,
 				54C47F381F63BB8300ACECD1 /* DHImageLowPassFilter.h in Headers */,
 				543C8E1C1F5D52610036CD92 /* DHImageRiseFilter.h in Headers */,
+				54A060261F8C557700F14EBE /* DHImageSkinSmootherRadius.h in Headers */,
 				5435B72E1F66274A004F2F0F /* DHImageSharpenFilter.h in Headers */,
 				543C8E0C1F5D23850036CD92 /* DHImageSierraFilter.h in Headers */,
 				543C8E5F1F5EB7A40036CD92 /* DHImageSixInputFilter.h in Headers */,
-				543C8DBF1F57D9840036CD92 /* DHImageTwoInputFilter.h in Headers */,
 				543C8E5B1F5EB6AB0036CD92 /* DHImageFiveInputFilter.h in Headers */,
 				543C8E9A1F637B0A0036CD92 /* DHImageFoodFilter.h in Headers */,
-				543C8DC81F57E3A90036CD92 /* DHImageGrayFilter.h in Headers */,
 				543C8E101F5D29560036CD92 /* DHImageRGBFilter.h in Headers */,
-				5478859D1F481E4400808C87 /* DHImageHelper.h in Headers */,
+				54A060311F8C675C00F14EBE /* DHImageSkinSmoothHighPassFilter.h in Headers */,
 				543C8E8E1F626E7F0036CD92 /* DHImageWarmthFilter.h in Headers */,
 				54C47F2C1F63B56200ACECD1 /* DHImageVividLightBlendFilter.h in Headers */,
 				543C8E6B1F5F8CEE0036CD92 /* DHImageToasterFilter.h in Headers */,
-				547885941F481E4400808C87 /* DHRadialTiltShiftFilter.h in Headers */,
 				543C8DFC1F593BF50036CD92 /* DHImageBaseFilter.h in Headers */,
 				543C8E571F5EB4020036CD92 /* DHImageKelvinFilter.h in Headers */,
-				5478858C1F481E4400808C87 /* DHImageColorFilter.h in Headers */,
-				54C47F441F63D4C300ACECD1 /* DHImageSkinSmoothHighPassFilter.h in Headers */,
-				543C8DD01F57E9160036CD92 /* DHImageColorDarkenBlendFilter.h in Headers */,
 				543C8DE01F581A3E0036CD92 /* DHImageScreenBlendFilter.h in Headers */,
-				543C8DAA1F56C5E60036CD92 /* DHImageFilter.h in Headers */,
 				54C47F301F63BA0B00ACECD1 /* DHImageHighPassFilter.h in Headers */,
-				547885961F481E4400808C87 /* DHTiltShiftFilter.h in Headers */,
+				54A0602A1F8C560800F14EBE /* DHImageSkinFilter.h in Headers */,
 				543C8E301F5E43FA0036CD92 /* DHImageClarendonFilter.h in Headers */,
-				543C8DD71F57F9660036CD92 /* DHImageUpdatable.h in Headers */,
-				5478859A1F481E4400808C87 /* DHImageConstants.h in Headers */,
 				543C8E961F6295370036CD92 /* DHImageOverlayBlendFilter.h in Headers */,
-				543C8E201F5D540A0036CD92 /* DHImageFourInputFilter.h in Headers */,
-				543C8DCC1F57E3CB0036CD92 /* DHImageOldFasionFilter.h in Headers */,
-				543C8DDC1F57FDC60036CD92 /* DHImageToneCurveFilter.h in Headers */,
-				543C8E141F5D383C0036CD92 /* DHImageCremaFilter.h in Headers */,
 				543C8E4B1F5EAD870036CD92 /* DHImageWaldenFilter.h in Headers */,
 				543C8E431F5E8FD20036CD92 /* DHImageValenciaFilter.h in Headers */,
 				543C8E081F5D06390036CD92 /* DHImageGringhamFilter.h in Headers */,
-				543C8E3F1F5E893E0036CD92 /* DHImageHudsonFilter.h in Headers */,
 				54C47F341F63BA4C00ACECD1 /* DHImageDissolveBlendFilter.h in Headers */,
 				543C8DF01F5926C10036CD92 /* DHImageContrastBrightnessFilter.h in Headers */,
 				543C8E8A1F626B400036CD92 /* DHImageIcyFilter.h in Headers */,
 				543C8DC31F57D99F0036CD92 /* DHImageFalseColorFilter.h in Headers */,
-				543C8E021F5CF47F0036CD92 /* DHImageVignetteFilter.h in Headers */,
+				54A0601B1F8C539C00F14EBE /* DHImageSkinWhitenFilter.h in Headers */,
+				54A0602F1F8C675500F14EBE /* DHImageSkinSmoothMaskFilter.h in Headers */,
 				543C8E341F5E4A120036CD92 /* DHImageJunoFilter.h in Headers */,
-				543C8E241F5D54AF0036CD92 /* DHImageThreeInputFilter.h in Headers */,
 				543C8E671F5F87230036CD92 /* DHImageSutroFilter.h in Headers */,
-				543C8E181F5D38B20036CD92 /* DHImageSaturationFilter.h in Headers */,
 				543C8E7F1F5FD50B0036CD92 /* DHImageNormalFilter.h in Headers */,
 				543C8E4F1F5EB1400036CD92 /* DHImageInkWellFilter.h in Headers */,
-				5478858E1F481E4400808C87 /* DHImageRotateFilter.h in Headers */,
-				547885D01F481E4400808C87 /* DHImageKit.h in Headers */,
-				54C47F4C1F63E00800ACECD1 /* DHImageSkinSmoothMaskFilter.h in Headers */,
-				543C8DEC1F590BB10036CD92 /* DHImageMetalicFilter.h in Headers */,
-				547885901F481E4400808C87 /* DHImageStructureFilter.h in Headers */,
 				54C47F401F63BDC600ACECD1 /* DHImageDifferenceBlendFilter.h in Headers */,
-				547885921F481E4400808C87 /* DHLinearTiltShiftFilter.h in Headers */,
 				543C8E531F5EB3A30036CD92 /* DHImageHefeFilter.h in Headers */,
-				547885CE1F481E4400808C87 /* DHImageOperation.h in Headers */,
 				543C8E381F5E721D0036CD92 /* DHImageAmaroFilter.h in Headers */,
 				543C8E771F5F972D0036CD92 /* DHImageExposureFilter.h in Headers */,
 				543C8E7B1F5FD1AA0036CD92 /* DHImageLofiFilter.h in Headers */,
-				543C8E281F5D611B0036CD92 /* DHImageLarkFilter.h in Headers */,
 				54C47F221F639AE000ACECD1 /* DHImageFilterGroup.h in Headers */,
-				543C8DBA1F57A99D0036CD92 /* DHImageFilterInfo.h in Headers */,
 				54C47F481F63D53000ACECD1 /* DHImageGaussianBlurFilter.h in Headers */,
-				54C47F161F6394BB00ACECD1 /* DHImageSkinSmoothFilter.h in Headers */,
-				543C8DF41F5936120036CD92 /* DHImageLevelsFilter.h in Headers */,
 				543C8E2C1F5E365D0036CD92 /* DHImageNashvilleFilter.h in Headers */,
-				543C8E6F1F5F92B60036CD92 /* DHImageWillowFilter.h in Headers */,
 				54C47F1A1F63951900ACECD1 /* DHImageColorInvertFilter.h in Headers */,
 				543C8E471F5EA5D10036CD92 /* DHImageXprollFilter.h in Headers */,
-				543C8DA51F540C960036CD92 /* DHImageFiltersHelper.h in Headers */,
 				543C8E631F5EBF020036CD92 /* DHImageEarlybirdFilter.h in Headers */,
+				54A0602D1F8C671800F14EBE /* DHImageStrengthMask.h in Headers */,
 				54C2E1491F765AF00026E134 /* DHImageShadowsFilter.h in Headers */,
-				543C8DE81F58FDA10036CD92 /* DHImageFreshFilter.h in Headers */,
 				543C8E731F5F92FA0036CD92 /* DHImageGrayScaleFilter.h in Headers */,
 				54C47F3C1F63BC2200ACECD1 /* DHImageBuffer.h in Headers */,
 				543C8E921F627A430036CD92 /* DHImageVignetteBlendFilter.h in Headers */,
 				543C8DF81F593A260036CD92 /* DHImageColorMultiplyBlendFilter.h in Headers */,
-				546D21711F887BF800DE4B7D /* DHImageStrengthMask.h in Headers */,
+				543C8E201F5D540A0036CD92 /* DHImageFourInputFilter.h in Headers */,
+				543C8DCC1F57E3CB0036CD92 /* DHImageOldFasionFilter.h in Headers */,
+				543C8DDC1F57FDC60036CD92 /* DHImageToneCurveFilter.h in Headers */,
+				543C8E141F5D383C0036CD92 /* DHImageCremaFilter.h in Headers */,
+				543C8E3F1F5E893E0036CD92 /* DHImageHudsonFilter.h in Headers */,
+				543C8E021F5CF47F0036CD92 /* DHImageVignetteFilter.h in Headers */,
+				543C8E241F5D54AF0036CD92 /* DHImageThreeInputFilter.h in Headers */,
+				543C8E181F5D38B20036CD92 /* DHImageSaturationFilter.h in Headers */,
+				5478858E1F481E4400808C87 /* DHImageRotateFilter.h in Headers */,
+				547885D01F481E4400808C87 /* DHImageKit.h in Headers */,
+				543C8DEC1F590BB10036CD92 /* DHImageMetalicFilter.h in Headers */,
+				547885901F481E4400808C87 /* DHImageStructureFilter.h in Headers */,
+				547885921F481E4400808C87 /* DHLinearTiltShiftFilter.h in Headers */,
+				547885CE1F481E4400808C87 /* DHImageOperation.h in Headers */,
+				543C8E281F5D611B0036CD92 /* DHImageLarkFilter.h in Headers */,
+				543C8DBA1F57A99D0036CD92 /* DHImageFilterInfo.h in Headers */,
+				54C47F161F6394BB00ACECD1 /* DHImageSkinSmoothFilter.h in Headers */,
+				543C8DF41F5936120036CD92 /* DHImageLevelsFilter.h in Headers */,
+				543C8E6F1F5F92B60036CD92 /* DHImageWillowFilter.h in Headers */,
+				543C8DA51F540C960036CD92 /* DHImageFiltersHelper.h in Headers */,
+				543C8DE81F58FDA10036CD92 /* DHImageFreshFilter.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -862,7 +891,9 @@
 				5478859C1F481E4400808C87 /* DHImageEditor.m in Sources */,
 				543C8DBB1F57A99D0036CD92 /* DHImageFilterInfo.m in Sources */,
 				547885951F481E4400808C87 /* DHRadialTiltShiftFilter.m in Sources */,
+				54A0602C1F8C671300F14EBE /* DHImageStrengthMask.m in Sources */,
 				54C47F491F63D53000ACECD1 /* DHImageGaussianBlurFilter.m in Sources */,
+				54A0602E1F8C675200F14EBE /* DHImageSkinSmoothMaskFilter.m in Sources */,
 				543C8DC41F57D99F0036CD92 /* DHImageFalseColorFilter.m in Sources */,
 				543C8DF11F5926C10036CD92 /* DHImageContrastBrightnessFilter.m in Sources */,
 				543C8DC91F57E3A90036CD92 /* DHImageGrayFilter.m in Sources */,
@@ -870,8 +901,6 @@
 				543C8E781F5F972D0036CD92 /* DHImageExposureFilter.m in Sources */,
 				543C8E191F5D38B20036CD92 /* DHImageSaturationFilter.m in Sources */,
 				543C8DED1F590BB10036CD92 /* DHImageMetalicFilter.m in Sources */,
-				54C47F4D1F63E00800ACECD1 /* DHImageSkinSmoothMaskFilter.m in Sources */,
-				54C47F451F63D4C300ACECD1 /* DHImageSkinSmoothHighPassFilter.m in Sources */,
 				543C8E0D1F5D23850036CD92 /* DHImageSierraFilter.m in Sources */,
 				543C8DD11F57E9160036CD92 /* DHImageColorDarkenBlendFilter.m in Sources */,
 				543C8E7C1F5FD1AA0036CD92 /* DHImageLofiFilter.m in Sources */,
@@ -900,16 +929,19 @@
 				5435B72F1F66274A004F2F0F /* DHImageSharpenFilter.m in Sources */,
 				54C47F2D1F63B56200ACECD1 /* DHImageVividLightBlendFilter.m in Sources */,
 				543C8DE91F58FDA10036CD92 /* DHImageFreshFilter.m in Sources */,
-				546D21721F887BF800DE4B7D /* DHImageStrengthMask.m in Sources */,
+				54A0602B1F8C560800F14EBE /* DHImageSkinFilter.m in Sources */,
 				54C2E1461F76551B0026E134 /* DHImageHighlightFilter.m in Sources */,
+				54A060271F8C557700F14EBE /* DHImageSkinSmootherRadius.m in Sources */,
 				547885931F481E4400808C87 /* DHLinearTiltShiftFilter.m in Sources */,
 				543C8E641F5EBF020036CD92 /* DHImageEarlybirdFilter.m in Sources */,
+				54A060301F8C675A00F14EBE /* DHImageSkinSmoothHighPassFilter.m in Sources */,
 				54C47F311F63BA0B00ACECD1 /* DHImageHighPassFilter.m in Sources */,
 				543C8E441F5E8FD20036CD92 /* DHImageValenciaFilter.m in Sources */,
 				543C8E9B1F637B0A0036CD92 /* DHImageFoodFilter.m in Sources */,
 				543C8E601F5EB7A40036CD92 /* DHImageSixInputFilter.m in Sources */,
 				543C8E251F5D54AF0036CD92 /* DHImageThreeInputFilter.m in Sources */,
 				54C47F351F63BA4C00ACECD1 /* DHImageDissolveBlendFilter.m in Sources */,
+				54A0601C1F8C539C00F14EBE /* DHImageSkinWhitenFilter.m in Sources */,
 				54C47F171F6394BB00ACECD1 /* DHImageSkinSmoothFilter.m in Sources */,
 				543C8E541F5EB3A30036CD92 /* DHImageHefeFilter.m in Sources */,
 				54C47F3D1F63BC2200ACECD1 /* DHImageBuffer.m in Sources */,

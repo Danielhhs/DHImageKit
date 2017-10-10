@@ -6,7 +6,7 @@
 //  Copyright © 2017年 Huang Hongsen. All rights reserved.
 //
 
-#import <DHImageKit/DHImageKit.h>
+#import "DHImageTwoInputFilter.h"
 
 @interface DHImageDissolveBlendFilter : DHImageTwoInputFilter
 {

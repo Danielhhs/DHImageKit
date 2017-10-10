@@ -1,1 +1,1 @@
-../../../../../../Classes/Source/DHImageKit/SkinRetouch/DHImageSkinSmoothMaskFilter.h
+../../../../../../Classes/Source/DHImageKit/SkinRetouch/BaseFilters/DHImageSkinSmoothMaskFilter.h

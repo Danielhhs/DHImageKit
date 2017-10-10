@@ -6,33 +6,8 @@
 //  Copyright © 2017年 Huang Hongsen. All rights reserved.
 //
 
-#import <GPUImage/GPUImage.h>
-#import "DHImageFilterGroup.h"
+#import "DHImageSkinFilter.h"
 
-typedef NS_ENUM(NSInteger, DHImageSkinSmootherUnit) {
-    DHImageSkinSmootherUnitPixel = 0,
-    DHImageSkinSmootherUnitFractionOfImage = 1,
-};
-
-@interface DHImageSkinSmootherRadius : NSObject <NSCopying, NSSecureCoding>
-@property (nonatomic) CGFloat value;
-@property (nonatomic) DHImageSkinSmootherUnit unit;
-
-
-- (instancetype)init NS_UNAVAILABLE;
-
-+ (instancetype)radiusInPixels:(CGFloat)pixels;
-+ (instancetype)radiusAsFractionOfImageWidth:(CGFloat)fraction;
-@end
-
-@interface DHImageSkinSmoothFilter : DHImageFilterGroup
-@property (nonatomic) CGFloat amount;
+@interface DHImageSkinSmoothFilter : DHImageSkinFilter
 @property (nonatomic, strong) NSArray *controlPoints;
-@property (nonatomic, strong) DHImageSkinSmootherRadius *radius;
-@property (nonatomic) CGFloat sharpnessFactor;
-
-- (void) updateWithTouchLocation:(CGPoint)location
-                      completion:(void (^)(void))completion;
-
-- (void) finishUpdating;
 @end

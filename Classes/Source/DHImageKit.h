@@ -72,5 +72,6 @@ FOUNDATION_EXPORT const unsigned char DHImageKitVersionString[];
 #import "DHImageLofiFilter.h"
 
 //Skin Retouch
+#import "DHImageSkinFilter.h"
 #import "DHImageSkinSmoothFilter.h"
 

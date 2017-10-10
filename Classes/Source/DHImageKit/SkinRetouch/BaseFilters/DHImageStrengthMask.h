@@ -15,5 +15,5 @@
 
 - (void) finishUpdating;
 
-
+- (void) informTargetsForFrameReadyWithCompletion:(void (^)(void))completion;
 @end

@@ -1,1 +1,1 @@
-../../../../../../Classes/Source/DHImageKit/SkinRetouch/DHImageStrengthMask.h
+../../../../../../Classes/Source/DHImageKit/SkinRetouch/BaseFilters/DHImageStrengthMask.h

@@ -19,13 +19,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "../../Classes/Source/DHImageKit/DHFilters/Base Filters/DHImageSharpenFilter.m"
-            timestampString = "529152558.146297"
+            filePath = "DHImageComponentFilterExample/ComponentFilter/Skin Retouch/DHSkinRetouchViewController.m"
+            timestampString = "529312689.565942"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "117"
-            endingLineNumber = "117"
-            landmarkName = "-setSharpness:"
+            startingLineNumber = "94"
+            endingLineNumber = "94"
+            landmarkName = "-imagePicker:didPickImage:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -35,29 +35,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "../../Classes/Source/DHImageKit/DHFilters/Base Filters/DHImageSharpenFilter.m"
-            timestampString = "529152558.146644"
+            filePath = "DHImageComponentFilterExample/ComponentFilter/Skin Retouch/DHSkinRetouchViewController.m"
+            timestampString = "529312689.566031"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "97"
-            endingLineNumber = "97"
-            landmarkName = "-setupFilterForSize:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "../../Classes/Source/DHImageKit/DHFilters/Base Filters/DHImageSharpenFilter.m"
-            timestampString = "529152558.146888"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "88"
-            endingLineNumber = "88"
-            landmarkName = "-init"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "-viewDidAppear:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

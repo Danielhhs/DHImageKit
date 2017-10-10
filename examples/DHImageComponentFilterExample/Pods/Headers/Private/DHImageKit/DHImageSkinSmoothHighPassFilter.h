@@ -1,1 +1,1 @@
-../../../../../../Classes/Source/DHImageKit/SkinRetouch/DHImageSkinSmoothHighPassFilter.h
+../../../../../../Classes/Source/DHImageKit/SkinRetouch/BaseFilters/DHImageSkinSmoothHighPassFilter.h
