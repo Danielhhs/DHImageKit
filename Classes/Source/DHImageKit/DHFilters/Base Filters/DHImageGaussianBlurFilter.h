@@ -6,8 +6,10 @@
 //  Copyright © 2017年 Huang Hongsen. All rights reserved.
 //
 
-#import "DHImageBaseFilter.h"
-
-@interface DHImageGaussianBlurFilter : DHImageBaseFilter
+#import <GPUImage/GPUImage.h>
+#import "DHImageUpdatable.h"
+@interface DHImageGaussianBlurFilter : GPUImageGaussianBlurFilter<DHImageUpdatable> {
+    GLuint strengthUniform;
+}
 
 @end

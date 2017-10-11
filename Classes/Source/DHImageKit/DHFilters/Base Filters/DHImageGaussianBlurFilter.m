@@ -10,4 +10,19 @@
 
 @implementation DHImageGaussianBlurFilter
 
+- (instancetype) init
+{
+    self = [super init];
+    if (self) {
+        strengthUniform = [filterProgram uniformIndex:@"strength"];
+        [self updateWithStrength:1.f];
+    }
+    return self;
+}
+
+- (void) updateWithStrength:(double)strength
+{
+    [self setFloat:strength forUniform:strengthUniform program:filterProgram];
+}
+
 @end

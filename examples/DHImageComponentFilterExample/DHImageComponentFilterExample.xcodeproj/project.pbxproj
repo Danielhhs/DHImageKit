@@ -27,6 +27,7 @@
 		5479B1A31F300CB400912E66 /* DHComponentFilterPickerCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5479B19C1F300CB400912E66 /* DHComponentFilterPickerCollectionViewController.m */; };
 		5479B1A41F300CB400912E66 /* DHSliderInputPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5479B19E1F300CB400912E66 /* DHSliderInputPanel.m */; };
 		5479B1A51F300CB400912E66 /* DHTiltTypeChoosePanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5479B1A01F300CB400912E66 /* DHTiltTypeChoosePanel.m */; };
+		5498DBBB1F8DEE0000E68FDB /* scar.png in Resources */ = {isa = PBXBuildFile; fileRef = 5498DBBA1F8DEDEF00E68FDB /* scar.png */; };
 		54A060431F8CA32E00F14EBE /* ImagePickerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54A060421F8CA32E00F14EBE /* ImagePickerTableViewController.m */; };
 		54A060441F8CA73500F14EBE /* freckle1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 54A060331F8CA26E00F14EBE /* freckle1.jpg */; };
 		54A060451F8CA73800F14EBE /* freckle2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 54A060341F8CA26E00F14EBE /* freckle2.jpg */; };
@@ -105,6 +106,7 @@
 		5479B19E1F300CB400912E66 /* DHSliderInputPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHSliderInputPanel.m; sourceTree = "<group>"; };
 		5479B19F1F300CB400912E66 /* DHTiltTypeChoosePanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTiltTypeChoosePanel.h; sourceTree = "<group>"; };
 		5479B1A01F300CB400912E66 /* DHTiltTypeChoosePanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTiltTypeChoosePanel.m; sourceTree = "<group>"; };
+		5498DBBA1F8DEDEF00E68FDB /* scar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scar.png; sourceTree = "<group>"; };
 		54A060331F8CA26E00F14EBE /* freckle1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = freckle1.jpg; sourceTree = "<group>"; };
 		54A060341F8CA26E00F14EBE /* freckle2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = freckle2.jpg; sourceTree = "<group>"; };
 		54A060351F8CA26E00F14EBE /* freckle3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = freckle3.jpg; sourceTree = "<group>"; };
@@ -219,6 +221,7 @@
 		5479B0811F2C42E100912E66 /* DHImageComponentFilterExample */ = {
 			isa = PBXGroup;
 			children = (
+				5498DBBA1F8DEDEF00E68FDB /* scar.png */,
 				544E91CA1F7F3D8900B6AA88 /* 750.png */,
 				544E91CB1F7F3E9F00B6AA88 /* kriss.jpg */,
 				543C8DFE1F5CEDAB0036CD92 /* scene.jpg */,
@@ -451,6 +454,7 @@
 				54A060491F8CA73B00F14EBE /* freckle6.jpg in Resources */,
 				54A060481F8CA73B00F14EBE /* freckle5.jpg in Resources */,
 				54A0604C1F8CA74100F14EBE /* pimple2.jpg in Resources */,
+				5498DBBB1F8DEE0000E68FDB /* scar.png in Resources */,
 				54A060471F8CA73B00F14EBE /* freckle4.jpg in Resources */,
 				54A060501F8CA74100F14EBE /* pimple6.jpg in Resources */,
 				54A060441F8CA73500F14EBE /* freckle1.jpg in Resources */,

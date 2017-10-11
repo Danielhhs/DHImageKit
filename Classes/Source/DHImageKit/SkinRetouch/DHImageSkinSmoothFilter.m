@@ -95,7 +95,7 @@ SHADER_STRING
         self.controlPoints = @[[NSValue valueWithCGPoint:controlPoint0],
                                [NSValue valueWithCGPoint:controlPoint1],
                                [NSValue valueWithCGPoint:controlPoint2]];
-        self.radius = [DHImageSkinSmootherRadius radiusAsFractionOfImageWidth:85/size.width];
+        self.radius = [DHImageSkinSmootherRadius radiusAsFractionOfImageWidth:0.13];
         self.amount = 0.85;
         self.sharpnessFactor = 6.f;
     }

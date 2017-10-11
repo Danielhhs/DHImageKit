@@ -41,7 +41,6 @@ SHADER_STRING
 @property (nonatomic, strong) DHImageExposureFilter *exposureFilter;
 @property (nonatomic, strong) DHImageToneCurveFilter *toneCurveFilter;
 @property (nonatomic, strong) DHImageThreeInputFilter *compositeFilter;
-@property (nonatomic) CGSize currentInputSize;
 @end
 
 @implementation DHImageSkinWhitenFilter

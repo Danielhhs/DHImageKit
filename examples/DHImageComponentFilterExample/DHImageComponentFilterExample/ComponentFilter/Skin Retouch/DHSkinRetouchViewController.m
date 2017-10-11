@@ -27,7 +27,7 @@
     [self.view addSubview:self.strengthSlider];
     // Do any additional setup after loading the view.
     [self.strengthSlider addTarget:self action:@selector(strengthChanged:) forControlEvents:UIControlEventValueChanged];
-    _picture = [[GPUImagePicture alloc] initWithImage:[UIImage imageNamed:@"SampleImage.jpg"]];
+    _picture = [[GPUImagePicture alloc] initWithImage:[UIImage imageNamed:@"scar.png"]];
     
     _filter = [[DHImageSkinSmoothFilter alloc] initWithSize:CGSizeMake(750, 750)];
     
@@ -64,15 +64,13 @@
     }
 }
 
-- (void) showOriginalImage
-{
+- (IBAction)showOriginalImage:(id)sender {
     [self.picture removeAllTargets];
     [self.picture addTarget:self.renderTarget];
     [self.picture processImage];
 }
 
-- (void) showProcessedImage
-{
+- (IBAction)showProcessedImage:(id)sender {
     [self.picture removeAllTargets];
     [self.picture addTarget:self.filter];
     [self.picture processImage];
