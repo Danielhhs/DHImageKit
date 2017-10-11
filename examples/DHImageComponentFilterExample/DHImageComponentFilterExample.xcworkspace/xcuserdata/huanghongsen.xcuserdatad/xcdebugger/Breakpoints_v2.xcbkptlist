@@ -20,11 +20,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DHImageComponentFilterExample/ComponentFilter/Skin Retouch/DHSkinRetouchViewController.m"
-            timestampString = "529312689.565942"
+            timestampString = "529318080.016128"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "94"
-            endingLineNumber = "94"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
             landmarkName = "-imagePicker:didPickImage:"
             landmarkType = "7">
          </BreakpointContent>
@@ -35,13 +35,45 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "DHImageComponentFilterExample/ComponentFilter/Skin Retouch/DHSkinRetouchViewController.m"
-            timestampString = "529312689.566031"
+            filePath = "../../Classes/Source/DHImageKit/DHFilters/Base Filters/DHImageSoftLightBlendFilter.m"
+            timestampString = "529380606.555474"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
-            landmarkName = "-viewDidAppear:"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "-newFrameReadyAtTime:atIndex:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../Classes/Source/DHImageKit/SkinRetouch/BaseFilters/DHImageStrengthMask.m"
+            timestampString = "529380606.555614"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "264"
+            endingLineNumber = "264"
+            landmarkName = "-textureFromName:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../Classes/Source/DHImageKit/SkinRetouch/BaseFilters/DHImageStrengthMask.m"
+            timestampString = "529380606.556115"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "215"
+            endingLineNumber = "215"
+            landmarkName = "-renderLineFromLocation:toLocation:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

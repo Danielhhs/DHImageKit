@@ -10,4 +10,5 @@
 
 @interface DHImageSkinWhitenFilter : DHImageSkinFilter
 
+@property (nonatomic, strong) NSArray *controlPoints;
 @end

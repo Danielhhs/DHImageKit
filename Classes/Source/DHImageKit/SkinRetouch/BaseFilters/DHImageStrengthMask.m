@@ -9,6 +9,13 @@
 #import "DHImageStrengthMask.h"
 #import <GLKit/GLKit.h>
 
+// Texture
+typedef struct {
+    GLuint tid;
+    GLsizei width, height;
+} textureInfo_t;
+
+
 @interface DHImageStrengthMask() {
     CGPoint lastTouchLocation;
     BOOL firstTouch;
@@ -20,15 +27,10 @@
     GLint pointSizeUniform, vertexColorUniform, samplerUniform, mvpUniform;
     GLuint frameBuffer;
     GLKMatrix4 mvpMatrix;
+    textureInfo_t textureInfo;
 }
 @property (nonatomic) CGFloat contentScaleFactor;
 @end
-
-// Texture
-typedef struct {
-    GLuint id;
-    GLsizei width, height;
-} textureInfo_t;
 
 #define kBrushPixelStep 3
 NSString * const kDHImageStrengthMaskVertexShaderString =
@@ -59,8 +61,8 @@ SHADER_STRING
  void main()
 {
     lowp vec4 textureColor = texture2D(texture, gl_PointCoord);
-    gl_FragColor = vec4(1.0, 0.0, 0.0, 1.0);
-//    gl_FragColor = textureColor;
+//    gl_FragColor = vec4(1.0, 1.0, 1.0, 1.0);
+    gl_FragColor = textureColor * 0.6;
 }
 );
 @implementation DHImageStrengthMask
@@ -88,7 +90,7 @@ SHADER_STRING
             program = [[GLProgram alloc] initWithVertexShaderString:kDHImageStrengthMaskVertexShaderString fragmentShaderString:kDHImageStrengthMaskFragmentShaderString];
             
             glGenBuffers(1, &vboId);
-            [self textureFromName:@"Particle.png"];
+            textureInfo = [self textureFromName:@"Particle.png"];
             if (!program.initialized)
             {
                 [program addAttribute:@"inVertex"];
@@ -206,7 +208,11 @@ SHADER_STRING
     glEnable(GL_BLEND);
     glBlendFunc(GL_ONE, GL_ONE_MINUS_SRC_ALPHA);
     glUniformMatrix4fv(mvpUniform, 1, GL_FALSE, mvpMatrix.m);
-    glUniform1f(pointSizeUniform, 80);
+    glUniform1f(pointSizeUniform, 120);
+    
+    glActiveTexture(GL_TEXTURE0);
+    glBindTexture(GL_TEXTURE_2D, textureInfo.tid);
+    glUniform1i(samplerUniform, 0);
     
     glBindBuffer(GL_ARRAY_BUFFER, vboId);
     glBufferData(GL_ARRAY_BUFFER, vertexCount*2*sizeof(GLfloat), vertexBuffer, GL_DYNAMIC_DRAW);
@@ -275,11 +281,11 @@ SHADER_STRING
         // Release  the image data; it's no longer needed
         free(brushData);
         
-        texture.id = texId;
+        texture.tid = texId;
         texture.width = (int)width;
         texture.height = (int)height;
     } else {
-        texture.id = 0;
+        texture.tid = 0;
         texture.width = 0;
         texture.height = 0;
     }

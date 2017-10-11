@@ -41,6 +41,7 @@
 		54A0604E1F8CA74100F14EBE /* pimple4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 54A0603E1F8CA26E00F14EBE /* pimple4.jpg */; };
 		54A0604F1F8CA74100F14EBE /* pimple5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 54A0603F1F8CA26E00F14EBE /* pimple5.jpg */; };
 		54A060501F8CA74100F14EBE /* pimple6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 54A060401F8CA26E00F14EBE /* pimple6.jpg */; };
+		54A060531F8CB0DF00F14EBE /* SkinFiltersTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54A060521F8CB0DF00F14EBE /* SkinFiltersTableViewController.m */; };
 		54C47F0E1F63815A00ACECD1 /* food.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 54C47F0D1F63815A00ACECD1 /* food.jpg */; };
 		54C47F271F63B0B500ACECD1 /* DHSkinRetouchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54C47F261F63B0B500ACECD1 /* DHSkinRetouchViewController.m */; };
 		54C47F291F63B4B200ACECD1 /* SampleImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 54C47F281F63B4B200ACECD1 /* SampleImage.jpg */; };
@@ -119,6 +120,8 @@
 		54A060401F8CA26E00F14EBE /* pimple6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pimple6.jpg; sourceTree = "<group>"; };
 		54A060411F8CA32E00F14EBE /* ImagePickerTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImagePickerTableViewController.h; sourceTree = "<group>"; };
 		54A060421F8CA32E00F14EBE /* ImagePickerTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImagePickerTableViewController.m; sourceTree = "<group>"; };
+		54A060511F8CB0DF00F14EBE /* SkinFiltersTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SkinFiltersTableViewController.h; sourceTree = "<group>"; };
+		54A060521F8CB0DF00F14EBE /* SkinFiltersTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SkinFiltersTableViewController.m; sourceTree = "<group>"; };
 		54C47F0D1F63815A00ACECD1 /* food.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = food.jpg; sourceTree = "<group>"; };
 		54C47F251F63B0B500ACECD1 /* DHSkinRetouchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHSkinRetouchViewController.h; sourceTree = "<group>"; };
 		54C47F261F63B0B500ACECD1 /* DHSkinRetouchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHSkinRetouchViewController.m; sourceTree = "<group>"; };
@@ -321,6 +324,8 @@
 				54A0603A1F8CA26E00F14EBE /* pimple */,
 				54C47F251F63B0B500ACECD1 /* DHSkinRetouchViewController.h */,
 				54C47F261F63B0B500ACECD1 /* DHSkinRetouchViewController.m */,
+				54A060511F8CB0DF00F14EBE /* SkinFiltersTableViewController.h */,
+				54A060521F8CB0DF00F14EBE /* SkinFiltersTableViewController.m */,
 			);
 			name = "Skin Retouch";
 			path = "ComponentFilter/Skin Retouch";
@@ -532,6 +537,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5479B08A1F2C42E100912E66 /* ViewController.m in Sources */,
+				54A060531F8CB0DF00F14EBE /* SkinFiltersTableViewController.m in Sources */,
 				5479B0871F2C42E100912E66 /* AppDelegate.m in Sources */,
 				54C47F271F63B0B500ACECD1 /* DHSkinRetouchViewController.m in Sources */,
 				5479B1A11F300CB400912E66 /* DHColorPickerCollectionViewController.m in Sources */,

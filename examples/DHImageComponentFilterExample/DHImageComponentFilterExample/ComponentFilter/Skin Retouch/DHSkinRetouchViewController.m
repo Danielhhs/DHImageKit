@@ -9,8 +9,9 @@
 #import "DHSkinRetouchViewController.h"
 #import <DHImageKit/DHImageKit.h>
 #import "ImagePickerTableViewController.h"
+#import "SkinFiltersTableViewController.h"
 
-@interface DHSkinRetouchViewController ()<ImagePickerTableViewControllerDelegate>
+@interface DHSkinRetouchViewController ()<ImagePickerTableViewControllerDelegate, SkinFiltersTableViewControllerDelegate>
 @property (strong, nonatomic) UISlider *strengthSlider;
 @property (weak, nonatomic) IBOutlet GPUImageView *renderTarget;
 @property (nonatomic, strong) GPUImagePicture *picture;
@@ -38,7 +39,9 @@
     [self.renderTarget addGestureRecognizer:pan];
     
     UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithTitle:@"选图" style:UIBarButtonItemStylePlain target:self action:@selector(showPic)];
-    self.navigationItem.rightBarButtonItem = rightButton;
+    
+    UIBarButtonItem *leftButton = [[UIBarButtonItem alloc] initWithTitle:@"元素" style:UIBarButtonItemStylePlain target:self action:@selector(showFilters)];
+    self.navigationItem.rightBarButtonItems = @[leftButton, rightButton];
 }
 
 - (void) viewDidAppear:(BOOL)animated
@@ -106,5 +109,23 @@
         [names addObject:[NSString stringWithFormat:@"pimple%d.jpg", i]];
     }
     return names;
+}
+
+- (void) showFilters
+{
+    SkinFiltersTableViewController *filterPicker = [[SkinFiltersTableViewController alloc] init];
+    filterPicker.filterDelegate = self;
+    [self.navigationController pushViewController:filterPicker animated:YES];
+}
+
+- (void) filterPicker:(SkinFiltersTableViewController *)filterPicker didPickFilter:(DHImageSkinFilter *)filter
+{
+    [self.filter removeAllTargets];
+    [self.picture removeAllTargets];
+    self.filter = filter;
+    [self.picture addTarget:self.filter];
+    [self.filter addTarget:self.renderTarget];
+    [self.filter updateWithStrength:1.f];
+    [self.picture processImage];
 }
 @end
