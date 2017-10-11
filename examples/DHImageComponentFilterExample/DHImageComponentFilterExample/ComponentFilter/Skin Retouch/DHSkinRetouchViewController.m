@@ -105,7 +105,7 @@
         [names addObject:[NSString stringWithFormat:@"freckle%d.jpg", i]];
     }
     
-    for (int i = 0; i <= 6; i++) {
+    for (int i = 1; i <= 6; i++) {
         [names addObject:[NSString stringWithFormat:@"pimple%d.jpg", i]];
     }
     return names;
