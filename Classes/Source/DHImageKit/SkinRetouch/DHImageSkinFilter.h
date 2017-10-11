@@ -15,18 +15,13 @@
 
 @interface DHImageSkinFilter : DHImageFilterGroup
 - (instancetype) initWithSize:(CGSize)size;
-
-@property (nonatomic, strong) DHImageSkinSmootherRadius *radius;
-@property (nonatomic) CGFloat amount;
-@property (nonatomic) CGFloat sharpnessFactor;
 - (void) updateWithTouchLocation:(CGPoint)location
                       completion:(void (^)(void))completion;
 
 - (void) finishUpdating;
 
 //InternalFilters
-@property (nonatomic, strong, readonly) DHImageSkinSmoothMaskFilter *maskFilter;
-@property (nonatomic, strong, readonly) DHImageSharpenFilter *sharpenFilter;
 @property (nonatomic, strong, readonly) DHImageStrengthMask *strengthMask;
-@property (nonatomic, strong, readonly) DHImageDissolveBlendFilter *dissolveBlendFilter;
+
+@property (nonatomic) CGSize currentInputSize;
 @end

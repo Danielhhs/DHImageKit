@@ -41,6 +41,9 @@ SHADER_STRING
 @property (nonatomic, strong) DHImageExposureFilter *exposureFilter;
 @property (nonatomic, strong) DHImageToneCurveFilter *toneCurveFilter;
 @property (nonatomic, strong) DHImageFourInputFilter *compositeFilter;
+@property (nonatomic, strong) DHImageSkinSmoothMaskFilter *maskFilter;
+@property (nonatomic, strong) DHImageSharpenFilter *sharpenFilter;
+@property (nonatomic, strong) DHImageDissolveBlendFilter *dissolveBlendFilter;
 @end
 
 @implementation DHImageSkinSmoothFilter
@@ -49,6 +52,19 @@ SHADER_STRING
 {
     self = [super initWithSize:size];
     if (self) {
+        
+        _maskFilter = [[DHImageSkinSmoothMaskFilter alloc] init];
+        [self addFilter:_maskFilter];
+        
+        _dissolveBlendFilter = [[DHImageDissolveBlendFilter alloc] init];
+        [self addFilter:_dissolveBlendFilter];
+        
+        _sharpenFilter = [[DHImageSharpenFilter alloc] init];
+        _sharpenFilter.sharpness = 4.f;
+        [_sharpenFilter updateWithStrength:1.f];
+        [self addFilter:_sharpenFilter];
+        
+        
         _exposureFilter = [[DHImageExposureFilter alloc] init];
         _exposureFilter.exposure = -1.5;
         [self addTarget:_exposureFilter];
@@ -91,5 +107,48 @@ SHADER_STRING
     _controlPoints = [controlPoints copy];
     self.toneCurveFilter.rgbCompositeControlPoints = _controlPoints;
 }
+
+- (void)setRadius:(DHImageSkinSmootherRadius *)radius {
+    _radius = radius.copy;
+    [self updateHighPassRadius];
+}
+
+
+- (void)setAmount:(CGFloat)amount {
+    _amount = amount;
+    self.dissolveBlendFilter.mix = amount;
+}
+
+- (void)setInputSize:(CGSize)newSize atIndex:(NSInteger)textureIndex {
+    [super setInputSize:newSize atIndex:textureIndex];
+    [self updateHighPassRadius];
+}
+
+- (void)setSharpnessFactor:(CGFloat)sharpnessFactor {
+    _sharpnessFactor = sharpnessFactor;
+    self.sharpenFilter.sharpness = sharpnessFactor * self.amount;
+}
+
+- (void)updateHighPassRadius {
+    CGSize inputSize = self.currentInputSize;
+    if (inputSize.width * inputSize.height > 0) {
+        CGFloat radiusInPixels = 0;
+        switch (self.radius.unit) {
+            case DHImageSkinSmootherUnitPixel:
+                radiusInPixels = self.radius.value;
+                break;
+            case DHImageSkinSmootherUnitFractionOfImage:
+                radiusInPixels = ceil(inputSize.width * self.radius.value);
+                break;
+            default:
+                break;
+        }
+        if (radiusInPixels != self.maskFilter.highPassRadiusInPixels) {
+            self.maskFilter.highPassRadiusInPixels = radiusInPixels;
+        }
+    }
+}
+
+
 @end
 

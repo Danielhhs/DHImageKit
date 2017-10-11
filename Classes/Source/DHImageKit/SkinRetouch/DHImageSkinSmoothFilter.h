@@ -10,4 +10,8 @@
 
 @interface DHImageSkinSmoothFilter : DHImageSkinFilter
 @property (nonatomic, strong) NSArray *controlPoints;
+
+@property (nonatomic, strong) DHImageSkinSmootherRadius *radius;
+@property (nonatomic) CGFloat amount;
+@property (nonatomic) CGFloat sharpnessFactor;
 @end
