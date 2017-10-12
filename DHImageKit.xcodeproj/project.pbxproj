@@ -136,6 +136,9 @@
 		547885CF1F481E4400808C87 /* DHImageOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 547885891F481E4400808C87 /* DHImageOperation.m */; };
 		547885D01F481E4400808C87 /* DHImageKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 5478858A1F481E4400808C87 /* DHImageKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		547885D11F481E4400808C87 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5478858B1F481E4400808C87 /* Info.plist */; };
+		5492A17D1F8F45AE000CF24E /* DHImageScarHealFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5492A17C1F8F45AE000CF24E /* DHImageScarHealFilter.m */; };
+		5492A1801F8F45D3000CF24E /* DHImageSkinHealingFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5492A17E1F8F45D3000CF24E /* DHImageSkinHealingFilter.h */; };
+		5492A1811F8F45D3000CF24E /* DHImageSkinHealingFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5492A17F1F8F45D3000CF24E /* DHImageSkinHealingFilter.m */; };
 		5498DBB41F8DC9CF00E68FDB /* DHImageSkinScarRepairFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5498DBB21F8DC9CF00E68FDB /* DHImageSkinScarRepairFilter.h */; };
 		5498DBB51F8DC9CF00E68FDB /* DHImageSkinScarRepairFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5498DBB31F8DC9CF00E68FDB /* DHImageSkinScarRepairFilter.m */; };
 		5498DBB81F8DE0C400E68FDB /* DHImageAddBlendFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5498DBB61F8DE0C400E68FDB /* DHImageAddBlendFilter.h */; };
@@ -325,6 +328,10 @@
 		547885891F481E4400808C87 /* DHImageOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHImageOperation.m; sourceTree = "<group>"; };
 		5478858A1F481E4400808C87 /* DHImageKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DHImageKit.h; path = Classes/Source/DHImageKit.h; sourceTree = "<group>"; };
 		5478858B1F481E4400808C87 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Classes/Source/Info.plist; sourceTree = "<group>"; };
+		5492A17B1F8F45AE000CF24E /* DHImageScarHealFilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DHImageScarHealFilter.h; sourceTree = "<group>"; };
+		5492A17C1F8F45AE000CF24E /* DHImageScarHealFilter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DHImageScarHealFilter.m; sourceTree = "<group>"; };
+		5492A17E1F8F45D3000CF24E /* DHImageSkinHealingFilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DHImageSkinHealingFilter.h; sourceTree = "<group>"; };
+		5492A17F1F8F45D3000CF24E /* DHImageSkinHealingFilter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DHImageSkinHealingFilter.m; sourceTree = "<group>"; };
 		5498DBB21F8DC9CF00E68FDB /* DHImageSkinScarRepairFilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DHImageSkinScarRepairFilter.h; sourceTree = "<group>"; };
 		5498DBB31F8DC9CF00E68FDB /* DHImageSkinScarRepairFilter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DHImageSkinScarRepairFilter.m; sourceTree = "<group>"; };
 		5498DBB61F8DE0C400E68FDB /* DHImageAddBlendFilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DHImageAddBlendFilter.h; sourceTree = "<group>"; };
@@ -629,6 +636,8 @@
 				54A060231F8C53E100F14EBE /* DHImageStrengthMask.m */,
 				54A060241F8C557700F14EBE /* DHImageSkinSmootherRadius.h */,
 				54A060251F8C557700F14EBE /* DHImageSkinSmootherRadius.m */,
+				5492A17B1F8F45AE000CF24E /* DHImageScarHealFilter.h */,
+				5492A17C1F8F45AE000CF24E /* DHImageScarHealFilter.m */,
 			);
 			path = BaseFilters;
 			sourceTree = "<group>";
@@ -645,6 +654,8 @@
 				54A0601A1F8C539C00F14EBE /* DHImageSkinWhitenFilter.m */,
 				5498DBB21F8DC9CF00E68FDB /* DHImageSkinScarRepairFilter.h */,
 				5498DBB31F8DC9CF00E68FDB /* DHImageSkinScarRepairFilter.m */,
+				5492A17E1F8F45D3000CF24E /* DHImageSkinHealingFilter.h */,
+				5492A17F1F8F45D3000CF24E /* DHImageSkinHealingFilter.m */,
 			);
 			path = SkinRetouch;
 			sourceTree = "<group>";
@@ -698,6 +709,7 @@
 				543C8DD71F57F9660036CD92 /* DHImageUpdatable.h in Headers */,
 				5478859A1F481E4400808C87 /* DHImageConstants.h in Headers */,
 				54C2E1451F76551B0026E134 /* DHImageHighlightFilter.h in Headers */,
+				5492A1801F8F45D3000CF24E /* DHImageSkinHealingFilter.h in Headers */,
 				54C47F111F63824000ACECD1 /* DHImagePosterizeFilter.h in Headers */,
 				54C47F381F63BB8300ACECD1 /* DHImageLowPassFilter.h in Headers */,
 				543C8E1C1F5D52610036CD92 /* DHImageRiseFilter.h in Headers */,
@@ -957,6 +969,7 @@
 				543C8E091F5D06390036CD92 /* DHImageGringhamFilter.m in Sources */,
 				5435B72F1F66274A004F2F0F /* DHImageSharpenFilter.m in Sources */,
 				54C47F2D1F63B56200ACECD1 /* DHImageVividLightBlendFilter.m in Sources */,
+				5492A17D1F8F45AE000CF24E /* DHImageScarHealFilter.m in Sources */,
 				543C8DE91F58FDA10036CD92 /* DHImageFreshFilter.m in Sources */,
 				54A0602B1F8C560800F14EBE /* DHImageSkinFilter.m in Sources */,
 				54C2E1461F76551B0026E134 /* DHImageHighlightFilter.m in Sources */,
@@ -997,6 +1010,7 @@
 				5478858D1F481E4400808C87 /* DHImageColorFilter.m in Sources */,
 				543C8E8B1F626B400036CD92 /* DHImageIcyFilter.m in Sources */,
 				543C8E971F6295370036CD92 /* DHImageOverlayBlendFilter.m in Sources */,
+				5492A1811F8F45D3000CF24E /* DHImageSkinHealingFilter.m in Sources */,
 				547885971F481E4400808C87 /* DHTiltShiftFilter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

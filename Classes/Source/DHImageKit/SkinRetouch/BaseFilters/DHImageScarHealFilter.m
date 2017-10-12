@@ -6,7 +6,7 @@
 //  Copyright © 2017年 Huang Hongsen. All rights reserved.
 //
 
-#import "DHImageSkinHealFilter.h"
+#import "DHImageScarHealFilter.h"
 #define sin sin
 #define cos cos
 #if TARGET_IPHONE_SIMULATOR || TARGET_OS_IPHONE
@@ -45,21 +45,21 @@ SHADER_STRING
          vec2 edgePoint = (pointToCenter / distanceToCenter * radius + touchCenter) / resolution;
          vec4 edgeColor = texture2D(inputImageTexture, edgePoint);
          vec3 gradientRGB = mix(centerColor.rgb, edgeColor.rgb, distanceToCenter / radius);
-         gl_FragColor = vec4(mix(image.rgb, gradientRGB, 0.6), 1.0);
+         gl_FragColor = vec4(mix(image.rgb, gradientRGB, 0.3), 1.0);
 //         gl_FragColor = vec4(vec3(distanceToCenter / radius), 1.0);
      }
  }
  );
 #endif
 
-@interface DHImageSkinHealFilter() {
+@interface DHImageScarHealFilter() {
     GLuint centerUniform, radiusUniform, resolutionUniform;
 }
 @property (nonatomic) CGSize resolution;
 @property (nonatomic) CGPoint center;
 @end
 
-@implementation DHImageSkinHealFilter
+@implementation DHImageScarHealFilter
 
 - (instancetype) initWithSize:(CGSize)size
 {

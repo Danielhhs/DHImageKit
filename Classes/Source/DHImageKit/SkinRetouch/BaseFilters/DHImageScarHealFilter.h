@@ -8,7 +8,7 @@
 
 #import <DHImageKit/DHImageKit.h>
 
-@interface DHImageSkinHealFilter : DHImageBaseFilter
+@interface DHImageScarHealFilter : DHImageBaseFilter
 
 - (instancetype) initWithSize:(CGSize)size;
 

@@ -10,6 +10,7 @@
 #import <DHImageKit/DHImageKit.h>
 #import "DHImageSkinWhitenFilter.h"
 #import "DHImageSkinScarRepairFilter.h"
+#import "DHImageSkinHealingFilter.h"
 
 @interface SkinFiltersTableViewController ()
 @property (nonatomic, strong) NSArray *filters;
@@ -21,7 +22,7 @@
     [super viewDidLoad];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"];
     
-    self.filters = @[@"磨平", @"美白", @"祛疤"];
+    self.filters = @[@"磨平", @"美白", @"祛疤", @"磨滑"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -57,6 +58,8 @@
         filter = [[DHImageSkinWhitenFilter alloc] initWithSize:CGSizeMake(750, 750)];
     } else if (indexPath.row == 2) {
         filter = [[DHImageSkinScarRepairFilter alloc] initWithSize:CGSizeMake(750, 750)];
+    } else if (indexPath.row == 3) {
+        filter = [[DHImageSkinHealingFilter alloc] initWithSize:CGSizeMake(750, 750)];
     }
     [self.filterDelegate filterPicker:self didPickFilter:filter];
 }

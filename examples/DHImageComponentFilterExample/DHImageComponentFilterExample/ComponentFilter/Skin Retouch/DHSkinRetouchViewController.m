@@ -15,7 +15,7 @@
 @property (strong, nonatomic) UISlider *strengthSlider;
 @property (weak, nonatomic) IBOutlet GPUImageView *renderTarget;
 @property (nonatomic, strong) GPUImagePicture *picture;
-@property (nonatomic, strong) DHImageSkinSmoothFilter *filter;
+@property (nonatomic, strong) DHImageSkinFilter *filter;
 @end
 
 @implementation DHSkinRetouchViewController
