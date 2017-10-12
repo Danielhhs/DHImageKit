@@ -27,21 +27,21 @@
 		5479B1A31F300CB400912E66 /* DHComponentFilterPickerCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5479B19C1F300CB400912E66 /* DHComponentFilterPickerCollectionViewController.m */; };
 		5479B1A41F300CB400912E66 /* DHSliderInputPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5479B19E1F300CB400912E66 /* DHSliderInputPanel.m */; };
 		5479B1A51F300CB400912E66 /* DHTiltTypeChoosePanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5479B1A01F300CB400912E66 /* DHTiltTypeChoosePanel.m */; };
+		5492A16E1F8F44EC000CF24E /* freckle1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5492A1671F8F44E4000CF24E /* freckle1.jpg */; };
+		5492A16F1F8F44EC000CF24E /* freckle2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5492A1681F8F44E4000CF24E /* freckle2.jpg */; };
+		5492A1701F8F44EC000CF24E /* freckle3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5492A1691F8F44E4000CF24E /* freckle3.jpg */; };
+		5492A1711F8F44EC000CF24E /* freckle4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5492A16A1F8F44E4000CF24E /* freckle4.jpg */; };
+		5492A1721F8F44EC000CF24E /* freckle5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5492A16B1F8F44E4000CF24E /* freckle5.jpg */; };
+		5492A1731F8F44EC000CF24E /* freckle6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5492A16C1F8F44E4000CF24E /* freckle6.jpg */; };
+		5492A1741F8F44EC000CF24E /* freckle7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5492A16D1F8F44E4000CF24E /* freckle7.jpg */; };
+		5492A1751F8F44F1000CF24E /* pimple1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5492A1601F8F44E4000CF24E /* pimple1.jpg */; };
+		5492A1761F8F44F1000CF24E /* pimple2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5492A1611F8F44E4000CF24E /* pimple2.jpg */; };
+		5492A1771F8F44F1000CF24E /* pimple3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5492A1621F8F44E4000CF24E /* pimple3.jpg */; };
+		5492A1781F8F44F1000CF24E /* pimple4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5492A1631F8F44E4000CF24E /* pimple4.jpg */; };
+		5492A1791F8F44F1000CF24E /* pimple5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5492A1641F8F44E4000CF24E /* pimple5.jpg */; };
+		5492A17A1F8F44F1000CF24E /* pimple6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5492A1651F8F44E4000CF24E /* pimple6.jpg */; };
 		5498DBBB1F8DEE0000E68FDB /* scar.png in Resources */ = {isa = PBXBuildFile; fileRef = 5498DBBA1F8DEDEF00E68FDB /* scar.png */; };
 		54A060431F8CA32E00F14EBE /* ImagePickerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54A060421F8CA32E00F14EBE /* ImagePickerTableViewController.m */; };
-		54A060441F8CA73500F14EBE /* freckle1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 54A060331F8CA26E00F14EBE /* freckle1.jpg */; };
-		54A060451F8CA73800F14EBE /* freckle2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 54A060341F8CA26E00F14EBE /* freckle2.jpg */; };
-		54A060461F8CA73B00F14EBE /* freckle3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 54A060351F8CA26E00F14EBE /* freckle3.jpg */; };
-		54A060471F8CA73B00F14EBE /* freckle4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 54A060361F8CA26E00F14EBE /* freckle4.jpg */; };
-		54A060481F8CA73B00F14EBE /* freckle5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 54A060371F8CA26E00F14EBE /* freckle5.jpg */; };
-		54A060491F8CA73B00F14EBE /* freckle6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 54A060381F8CA26E00F14EBE /* freckle6.jpg */; };
-		54A0604A1F8CA73B00F14EBE /* freckle7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 54A060391F8CA26E00F14EBE /* freckle7.jpg */; };
-		54A0604B1F8CA74100F14EBE /* pimple1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 54A0603B1F8CA26E00F14EBE /* pimple1.jpg */; };
-		54A0604C1F8CA74100F14EBE /* pimple2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 54A0603C1F8CA26E00F14EBE /* pimple2.jpg */; };
-		54A0604D1F8CA74100F14EBE /* pimple3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 54A0603D1F8CA26E00F14EBE /* pimple3.jpg */; };
-		54A0604E1F8CA74100F14EBE /* pimple4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 54A0603E1F8CA26E00F14EBE /* pimple4.jpg */; };
-		54A0604F1F8CA74100F14EBE /* pimple5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 54A0603F1F8CA26E00F14EBE /* pimple5.jpg */; };
-		54A060501F8CA74100F14EBE /* pimple6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 54A060401F8CA26E00F14EBE /* pimple6.jpg */; };
 		54A060531F8CB0DF00F14EBE /* SkinFiltersTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54A060521F8CB0DF00F14EBE /* SkinFiltersTableViewController.m */; };
 		54C47F0E1F63815A00ACECD1 /* food.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 54C47F0D1F63815A00ACECD1 /* food.jpg */; };
 		54C47F271F63B0B500ACECD1 /* DHSkinRetouchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54C47F261F63B0B500ACECD1 /* DHSkinRetouchViewController.m */; };
@@ -106,20 +106,20 @@
 		5479B19E1F300CB400912E66 /* DHSliderInputPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHSliderInputPanel.m; sourceTree = "<group>"; };
 		5479B19F1F300CB400912E66 /* DHTiltTypeChoosePanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTiltTypeChoosePanel.h; sourceTree = "<group>"; };
 		5479B1A01F300CB400912E66 /* DHTiltTypeChoosePanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTiltTypeChoosePanel.m; sourceTree = "<group>"; };
+		5492A1601F8F44E4000CF24E /* pimple1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pimple1.jpg; sourceTree = "<group>"; };
+		5492A1611F8F44E4000CF24E /* pimple2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pimple2.jpg; sourceTree = "<group>"; };
+		5492A1621F8F44E4000CF24E /* pimple3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pimple3.jpg; sourceTree = "<group>"; };
+		5492A1631F8F44E4000CF24E /* pimple4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pimple4.jpg; sourceTree = "<group>"; };
+		5492A1641F8F44E4000CF24E /* pimple5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pimple5.jpg; sourceTree = "<group>"; };
+		5492A1651F8F44E4000CF24E /* pimple6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pimple6.jpg; sourceTree = "<group>"; };
+		5492A1671F8F44E4000CF24E /* freckle1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = freckle1.jpg; sourceTree = "<group>"; };
+		5492A1681F8F44E4000CF24E /* freckle2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = freckle2.jpg; sourceTree = "<group>"; };
+		5492A1691F8F44E4000CF24E /* freckle3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = freckle3.jpg; sourceTree = "<group>"; };
+		5492A16A1F8F44E4000CF24E /* freckle4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = freckle4.jpg; sourceTree = "<group>"; };
+		5492A16B1F8F44E4000CF24E /* freckle5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = freckle5.jpg; sourceTree = "<group>"; };
+		5492A16C1F8F44E4000CF24E /* freckle6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = freckle6.jpg; sourceTree = "<group>"; };
+		5492A16D1F8F44E4000CF24E /* freckle7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = freckle7.jpg; sourceTree = "<group>"; };
 		5498DBBA1F8DEDEF00E68FDB /* scar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scar.png; sourceTree = "<group>"; };
-		54A060331F8CA26E00F14EBE /* freckle1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = freckle1.jpg; sourceTree = "<group>"; };
-		54A060341F8CA26E00F14EBE /* freckle2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = freckle2.jpg; sourceTree = "<group>"; };
-		54A060351F8CA26E00F14EBE /* freckle3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = freckle3.jpg; sourceTree = "<group>"; };
-		54A060361F8CA26E00F14EBE /* freckle4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = freckle4.jpg; sourceTree = "<group>"; };
-		54A060371F8CA26E00F14EBE /* freckle5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = freckle5.jpg; sourceTree = "<group>"; };
-		54A060381F8CA26E00F14EBE /* freckle6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = freckle6.jpg; sourceTree = "<group>"; };
-		54A060391F8CA26E00F14EBE /* freckle7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = freckle7.jpg; sourceTree = "<group>"; };
-		54A0603B1F8CA26E00F14EBE /* pimple1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pimple1.jpg; sourceTree = "<group>"; };
-		54A0603C1F8CA26E00F14EBE /* pimple2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pimple2.jpg; sourceTree = "<group>"; };
-		54A0603D1F8CA26E00F14EBE /* pimple3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pimple3.jpg; sourceTree = "<group>"; };
-		54A0603E1F8CA26E00F14EBE /* pimple4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pimple4.jpg; sourceTree = "<group>"; };
-		54A0603F1F8CA26E00F14EBE /* pimple5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pimple5.jpg; sourceTree = "<group>"; };
-		54A060401F8CA26E00F14EBE /* pimple6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pimple6.jpg; sourceTree = "<group>"; };
 		54A060411F8CA32E00F14EBE /* ImagePickerTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImagePickerTableViewController.h; sourceTree = "<group>"; };
 		54A060421F8CA32E00F14EBE /* ImagePickerTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImagePickerTableViewController.m; sourceTree = "<group>"; };
 		54A060511F8CB0DF00F14EBE /* SkinFiltersTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SkinFiltersTableViewController.h; sourceTree = "<group>"; };
@@ -293,38 +293,38 @@
 			path = ComponentFilter;
 			sourceTree = "<group>";
 		};
-		54A060321F8CA26E00F14EBE /* freckle */ = {
+		5492A15F1F8F44E4000CF24E /* pimple */ = {
 			isa = PBXGroup;
 			children = (
-				54A060331F8CA26E00F14EBE /* freckle1.jpg */,
-				54A060341F8CA26E00F14EBE /* freckle2.jpg */,
-				54A060351F8CA26E00F14EBE /* freckle3.jpg */,
-				54A060361F8CA26E00F14EBE /* freckle4.jpg */,
-				54A060371F8CA26E00F14EBE /* freckle5.jpg */,
-				54A060381F8CA26E00F14EBE /* freckle6.jpg */,
-				54A060391F8CA26E00F14EBE /* freckle7.jpg */,
-			);
-			path = freckle;
-			sourceTree = "<group>";
-		};
-		54A0603A1F8CA26E00F14EBE /* pimple */ = {
-			isa = PBXGroup;
-			children = (
-				54A0603B1F8CA26E00F14EBE /* pimple1.jpg */,
-				54A0603C1F8CA26E00F14EBE /* pimple2.jpg */,
-				54A0603D1F8CA26E00F14EBE /* pimple3.jpg */,
-				54A0603E1F8CA26E00F14EBE /* pimple4.jpg */,
-				54A0603F1F8CA26E00F14EBE /* pimple5.jpg */,
-				54A060401F8CA26E00F14EBE /* pimple6.jpg */,
+				5492A1601F8F44E4000CF24E /* pimple1.jpg */,
+				5492A1611F8F44E4000CF24E /* pimple2.jpg */,
+				5492A1621F8F44E4000CF24E /* pimple3.jpg */,
+				5492A1631F8F44E4000CF24E /* pimple4.jpg */,
+				5492A1641F8F44E4000CF24E /* pimple5.jpg */,
+				5492A1651F8F44E4000CF24E /* pimple6.jpg */,
 			);
 			path = pimple;
+			sourceTree = "<group>";
+		};
+		5492A1661F8F44E4000CF24E /* freckle */ = {
+			isa = PBXGroup;
+			children = (
+				5492A1671F8F44E4000CF24E /* freckle1.jpg */,
+				5492A1681F8F44E4000CF24E /* freckle2.jpg */,
+				5492A1691F8F44E4000CF24E /* freckle3.jpg */,
+				5492A16A1F8F44E4000CF24E /* freckle4.jpg */,
+				5492A16B1F8F44E4000CF24E /* freckle5.jpg */,
+				5492A16C1F8F44E4000CF24E /* freckle6.jpg */,
+				5492A16D1F8F44E4000CF24E /* freckle7.jpg */,
+			);
+			path = freckle;
 			sourceTree = "<group>";
 		};
 		54C47F241F63B0A100ACECD1 /* Skin Retouch */ = {
 			isa = PBXGroup;
 			children = (
-				54A060321F8CA26E00F14EBE /* freckle */,
-				54A0603A1F8CA26E00F14EBE /* pimple */,
+				5492A1661F8F44E4000CF24E /* freckle */,
+				5492A15F1F8F44E4000CF24E /* pimple */,
 				54C47F251F63B0B500ACECD1 /* DHSkinRetouchViewController.h */,
 				54C47F261F63B0B500ACECD1 /* DHSkinRetouchViewController.m */,
 				54A060511F8CB0DF00F14EBE /* SkinFiltersTableViewController.h */,
@@ -446,28 +446,28 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				54A0604A1F8CA73B00F14EBE /* freckle7.jpg in Resources */,
+				5492A1731F8F44EC000CF24E /* freckle6.jpg in Resources */,
+				5492A1781F8F44F1000CF24E /* pimple4.jpg in Resources */,
+				5492A1721F8F44EC000CF24E /* freckle5.jpg in Resources */,
+				5492A17A1F8F44F1000CF24E /* pimple6.jpg in Resources */,
+				5492A16E1F8F44EC000CF24E /* freckle1.jpg in Resources */,
 				54C47F0E1F63815A00ACECD1 /* food.jpg in Resources */,
-				54A0604B1F8CA74100F14EBE /* pimple1.jpg in Resources */,
+				5492A1711F8F44EC000CF24E /* freckle4.jpg in Resources */,
+				5492A1791F8F44F1000CF24E /* pimple5.jpg in Resources */,
 				543C8E051F5CFD010036CD92 /* portrait.jpg in Resources */,
+				5492A16F1F8F44EC000CF24E /* freckle2.jpg in Resources */,
 				5479B0921F2C42E100912E66 /* LaunchScreen.storyboard in Resources */,
-				54A060491F8CA73B00F14EBE /* freckle6.jpg in Resources */,
-				54A060481F8CA73B00F14EBE /* freckle5.jpg in Resources */,
-				54A0604C1F8CA74100F14EBE /* pimple2.jpg in Resources */,
 				5498DBBB1F8DEE0000E68FDB /* scar.png in Resources */,
-				54A060471F8CA73B00F14EBE /* freckle4.jpg in Resources */,
-				54A060501F8CA74100F14EBE /* pimple6.jpg in Resources */,
-				54A060441F8CA73500F14EBE /* freckle1.jpg in Resources */,
-				54A0604F1F8CA74100F14EBE /* pimple5.jpg in Resources */,
+				5492A1701F8F44EC000CF24E /* freckle3.jpg in Resources */,
 				54C47F291F63B4B200ACECD1 /* SampleImage.jpg in Resources */,
-				54A060451F8CA73800F14EBE /* freckle2.jpg in Resources */,
-				54A0604D1F8CA74100F14EBE /* pimple3.jpg in Resources */,
 				5479B08F1F2C42E100912E66 /* Assets.xcassets in Resources */,
 				543C8DFF1F5CEDAB0036CD92 /* scene.jpg in Resources */,
 				5479B0BD1F2C59A400912E66 /* sample_kuru.jpg in Resources */,
-				54A060461F8CA73B00F14EBE /* freckle3.jpg in Resources */,
+				5492A1741F8F44EC000CF24E /* freckle7.jpg in Resources */,
+				5492A1761F8F44F1000CF24E /* pimple2.jpg in Resources */,
 				5479B08D1F2C42E100912E66 /* Main.storyboard in Resources */,
-				54A0604E1F8CA74100F14EBE /* pimple4.jpg in Resources */,
+				5492A1771F8F44F1000CF24E /* pimple3.jpg in Resources */,
+				5492A1751F8F44F1000CF24E /* pimple1.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
