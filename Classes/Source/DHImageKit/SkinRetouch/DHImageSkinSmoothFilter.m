@@ -33,7 +33,8 @@ SHADER_STRING
      lowp vec4 mask = texture2D(inputImageTexture3, textureCoordinate);
      lowp vec4 strengthMap = texture2D(inputImageTexture4, textureCoordinate4);
      lowp vec4 processedColor = vec4(mix(image.rgb,toneCurvedImage.rgb,(1.0 - mask.b) * strength),1.0);
-     gl_FragColor = vec4(mix(image.rgb, processedColor.rgb, strengthMap.a), 1.0);
+//     gl_FragColor = vec4(mix(image.rgb, processedColor.rgb, strengthMap.r), 1.0);
+     gl_FragColor = strengthMap;
  }
  );
 
@@ -98,6 +99,8 @@ SHADER_STRING
         self.radius = [DHImageSkinSmootherRadius radiusAsFractionOfImageWidth:0.13];
         self.amount = 0.85;
         self.sharpnessFactor = 6.f;
+        
+        [self.strengthMask informTargetsForFrameReadyWithCompletion:nil];
     }
     return self;
 }

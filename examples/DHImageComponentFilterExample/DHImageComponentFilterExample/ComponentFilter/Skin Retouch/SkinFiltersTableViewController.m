@@ -22,7 +22,7 @@
     [super viewDidLoad];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"];
     
-    self.filters = @[@"磨平", @"美白", @"祛疤", @"磨滑"];
+    self.filters = @[@"磨平", @"美白", @"磨滑", @"祛疤"];
 }
 
 - (void)didReceiveMemoryWarning {

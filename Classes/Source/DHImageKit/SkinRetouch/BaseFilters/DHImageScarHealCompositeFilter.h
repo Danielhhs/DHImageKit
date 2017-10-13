@@ -1,5 +1,5 @@
 //
-//  DHImageSkinHealingFilter.h
+//  DHImageScarHealCompositeFilter.h
 //  DHImageKit
 //
 //  Created by 黄鸿森 on 2017/10/12.
@@ -8,8 +8,7 @@
 
 #import <DHImageKit/DHImageKit.h>
 
-@interface DHImageSkinHealingFilter : DHImageSkinFilter
-
+@interface DHImageScarHealCompositeFilter : DHImageTwoInputFilter
 @property (nonatomic) CGFloat radius;
-
+- (void) updateWithLocation:(CGPoint)location;
 @end

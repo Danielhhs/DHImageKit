@@ -10,6 +10,7 @@
 
 @interface DHImageSkinFilter()
 @property (nonatomic, strong, readwrite) DHImageStrengthMask *strengthMask;
+@property (nonatomic) CGFloat scale;
 @end
 
 @implementation DHImageSkinFilter
@@ -18,6 +19,7 @@
 {
     self = [super init];
     if (self) {
+        _scale = [UIScreen mainScreen].scale;
         _strengthMask = [[DHImageStrengthMask alloc] initWithWidth:size.width height:size.height];
     }
     return self;
@@ -30,7 +32,8 @@
 
 - (void) updateWithTouchLocation:(CGPoint)location completion:(void (^)(void))completion
 {
-    [_strengthMask updateWithTouchLocation:location completion:completion];
+    CGPoint locInRealSize = CGPointMake(location.x * self.currentInputSize.width / self.scale, location.y * self.currentInputSize.height / self.scale);
+    [_strengthMask updateWithTouchLocation:locInRealSize completion:completion];
 }
 
 - (void) finishUpdating

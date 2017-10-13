@@ -8,6 +8,7 @@
 
 #import "DHSkinRetouchViewController.h"
 #import <DHImageKit/DHImageKit.h>
+#import "DHImageSkinHealingFilter.h"
 #import "ImagePickerTableViewController.h"
 #import "SkinFiltersTableViewController.h"
 
@@ -16,24 +17,23 @@
 @property (weak, nonatomic) IBOutlet GPUImageView *renderTarget;
 @property (nonatomic, strong) GPUImagePicture *picture;
 @property (nonatomic, strong) DHImageSkinFilter *filter;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+
+@property (nonatomic, strong) UIImage *image;
+@property (nonatomic, strong) Class filterClass;
 @end
 
 @implementation DHSkinRetouchViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.imageView.hidden = YES;
     self.strengthSlider = [[UISlider alloc] initWithFrame:CGRectMake(20, 450, 300, 40)];
     self.strengthSlider.value = 1.f;
     [self.view addSubview:self.strengthSlider];
     // Do any additional setup after loading the view.
     [self.strengthSlider addTarget:self action:@selector(strengthChanged:) forControlEvents:UIControlEventValueChanged];
-    _picture = [[GPUImagePicture alloc] initWithImage:[UIImage imageNamed:@"scar.png"]];
-    
-    _filter = [[DHImageSkinSmoothFilter alloc] initWithSize:CGSizeMake(750, 750)];
-    
-    [_picture addTarget:_filter];
-    [_filter addTarget:self.renderTarget];
-    [self.picture processImage];
+    [self initGLWithImage:[UIImage imageNamed:@"kriss.jpg"] filterClass:[DHImageSkinSmoothFilter class] updateImage:YES];
     
     UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePan:)];
     [self.renderTarget addGestureRecognizer:pan];
@@ -55,25 +55,30 @@
 - (void) handlePan:(UIPanGestureRecognizer *) pan
 {
     CGPoint location = [pan locationInView:self.renderTarget];
+    location.x /= self.renderTarget.frame.size.width;
+    location.y /= self.renderTarget.frame.size.height;
     if (pan.state == UIGestureRecognizerStateBegan || pan.state == UIGestureRecognizerStateChanged) {
         [self.filter updateWithTouchLocation:location completion:^{
             [self.picture processImage];
         }];
     } else {
         [self.filter finishUpdating];
+        if ([self.filterClass isEqual:[DHImageSkinHealingFilter class]]) {
+            [self.filter removeAllTargets];
+            [self.picture processImageUpToFilter:self.filter withCompletionHandler:^(UIImage *processedImage) {
+                [self initGLWithImage:processedImage filterClass:self.filterClass updateImage:NO];
+            }];
+        }
     }
 }
 
 - (IBAction)showOriginalImage:(id)sender {
-    [self.picture removeAllTargets];
-    [self.picture addTarget:self.renderTarget];
-    [self.picture processImage];
+    self.imageView.image = self.image;
+    self.imageView.hidden = NO;
 }
 
 - (IBAction)showProcessedImage:(id)sender {
-    [self.picture removeAllTargets];
-    [self.picture addTarget:self.filter];
-    [self.picture processImage];
+    self.imageView.hidden = YES;
 }
 
 - (void) strengthChanged:(UISlider *)slider
@@ -92,8 +97,7 @@
 
 - (void) imagePicker:(ImagePickerTableViewController *)imagePicker didPickImage:(UIImage *)image
 {
-    self.picture = [[GPUImagePicture alloc] initWithImage:image];
-    [self.picture addTarget:self.filter];
+    [self initGLWithImage:image filterClass:self.filterClass updateImage:YES];
 }
 
 - (NSArray *) imageNames
@@ -118,12 +122,28 @@
 
 - (void) filterPicker:(SkinFiltersTableViewController *)filterPicker didPickFilter:(DHImageSkinFilter *)filter
 {
-    [self.filter removeAllTargets];
-    [self.picture removeAllTargets];
-    self.filter = filter;
-    [self.picture addTarget:self.filter];
-    [self.filter addTarget:self.renderTarget];
-    [self.filter updateWithStrength:1.f];
+    [self initGLWithImage:self.image filterClass:[filter class] updateImage:NO];
+}
+
+- (void) initGLWithImage:(UIImage *)image
+             filterClass:(Class)filterClass
+             updateImage:(BOOL)updateImage
+{
+    [_picture removeAllTargets];
+    [_filter removeAllTargets];
+    if (updateImage) {
+        self.image = image;
+    }
+    self.filterClass = filterClass;
+    _picture = [[GPUImagePicture alloc] initWithImage:image];
+    
+    _filter = [[filterClass alloc] initWithSize:[_picture outputImageSize]];
+    
+    [_picture addTarget:_filter];
+    [_filter addTarget:self.renderTarget];
+    
+    [self.filter updateWithStrength:1.0];
     [self.picture processImage];
+    
 }
 @end
