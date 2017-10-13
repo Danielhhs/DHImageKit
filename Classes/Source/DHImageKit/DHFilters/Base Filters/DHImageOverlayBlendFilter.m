@@ -57,4 +57,8 @@ NSString *const kDHImageOverlayBlendFragmentShaderString = SHADER_STRING
     return self;
 }
 
+- (void) newFrameReadyAtTime:(CMTime)frameTime atIndex:(NSInteger)textureIndex
+{
+    [super newFrameReadyAtTime:frameTime atIndex:textureIndex];
+}
 @end
