@@ -19,6 +19,8 @@
 @property (nonatomic, strong) DHImageSkinFilter *filter;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
+@property (nonatomic, strong) UIImage *originalImage;
+
 @property (nonatomic, strong) UIImage *image;
 @property (nonatomic, strong) Class filterClass;
 @end
@@ -33,7 +35,8 @@
     [self.view addSubview:self.strengthSlider];
     // Do any additional setup after loading the view.
     [self.strengthSlider addTarget:self action:@selector(strengthChanged:) forControlEvents:UIControlEventValueChanged];
-    [self initGLWithImage:[UIImage imageNamed:@"kriss.jpg"] filterClass:[DHImageSkinSmoothFilter class] updateImage:YES];
+    self.originalImage = [UIImage imageNamed:@"kriss.jpg"];
+    [self initGLWithImage:_originalImage filterClass:[DHImageSkinSmoothFilter class] updateImage:YES];
     
     UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePan:)];
     [self.renderTarget addGestureRecognizer:pan];
@@ -73,12 +76,19 @@
 }
 
 - (IBAction)showOriginalImage:(id)sender {
-    self.imageView.image = self.image;
+    self.imageView.image = self.originalImage;
     self.imageView.hidden = NO;
 }
 
 - (IBAction)showProcessedImage:(id)sender {
     self.imageView.hidden = YES;
+}
+
+- (IBAction)finish:(id)sender {
+    [self.filter removeAllTargets];
+    [self.picture processImageUpToFilter:self.filter withCompletionHandler:^(UIImage *processedImage) {
+        [self initGLWithImage:processedImage filterClass:self.filterClass updateImage:YES];
+    }];
 }
 
 - (void) strengthChanged:(UISlider *)slider
@@ -97,12 +107,13 @@
 
 - (void) imagePicker:(ImagePickerTableViewController *)imagePicker didPickImage:(UIImage *)image
 {
+    self.originalImage = image;
     [self initGLWithImage:image filterClass:self.filterClass updateImage:YES];
 }
 
 - (NSArray *) imageNames
 {
-    NSMutableArray *names = [NSMutableArray array];
+    NSMutableArray *names = [@[@"kriss.jpg", @"SampleImage.jpg"] mutableCopy];
     for (int i = 1; i <= 7; i++) {
         [names addObject:[NSString stringWithFormat:@"freckle%d.jpg", i]];
     }
@@ -137,7 +148,10 @@
     self.filterClass = filterClass;
     _picture = [[GPUImagePicture alloc] initWithImage:image];
     
-    _filter = [[filterClass alloc] initWithSize:[_picture outputImageSize]];
+    CGSize size = [_picture outputImageSize];
+    size.width -= 2;
+    size.height -= 2;
+    _filter = [[filterClass alloc] initWithSize:size];
     
     [_picture addTarget:_filter];
     [_filter addTarget:self.renderTarget];

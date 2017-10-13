@@ -99,13 +99,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "../../Classes/Source/DHImageKit/SkinRetouch/DHImageSkinFilter.m"
-            timestampString = "529551136.826133"
+            filePath = "../../Classes/Source/DHImageKit/SkinRetouch/DHImageSkinSmoothFilter.m"
+            timestampString = "529570395.385093"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
-            landmarkName = "-updateWithTouchLocation:completion:"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "-initWithSize:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -115,13 +115,29 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "DHImageComponentFilterExample/ComponentFilter/Skin Retouch/DHSkinRetouchViewController.m"
-            timestampString = "529551136.826217"
+            filePath = "../../Classes/Source/DHImageKit/SkinRetouch/DHImageSkinSmoothFilter.m"
+            timestampString = "529570395.385186"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "132"
-            endingLineNumber = "132"
-            landmarkName = "-initGLWithImage:filterClass:updateImage:"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
+            landmarkName = "-initWithSize:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DHImageComponentFilterExample/Mask/DHImageMaskViewController.m"
+            timestampString = "529559685.074446"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "-viewDidLoad"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

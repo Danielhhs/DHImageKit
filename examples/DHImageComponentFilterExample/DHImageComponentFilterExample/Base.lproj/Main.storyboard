@@ -440,11 +440,19 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G6I-le-Acl">
-                                <rect key="frame" x="283" y="596" width="31" height="30"/>
+                                <rect key="frame" x="135" y="596" width="31" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="处理"/>
                                 <connections>
                                     <action selector="showProcessedImage:" destination="6FF-h8-CQ8" eventType="touchUpInside" id="gkK-fi-LrE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KdY-Lq-1ih">
+                                <rect key="frame" x="257" y="596" width="31" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="完成"/>
+                                <connections>
+                                    <action selector="finish:" destination="6FF-h8-CQ8" eventType="touchUpInside" id="XPU-EH-IHu"/>
                                 </connections>
                             </button>
                         </subviews>
