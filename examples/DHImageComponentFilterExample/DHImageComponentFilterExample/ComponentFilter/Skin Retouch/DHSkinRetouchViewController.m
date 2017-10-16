@@ -11,8 +11,9 @@
 #import "DHImageSkinHealingFilter.h"
 #import "ImagePickerTableViewController.h"
 #import "SkinFiltersTableViewController.h"
+#import "TakePictureViewController.h"
 
-@interface DHSkinRetouchViewController ()<ImagePickerTableViewControllerDelegate, SkinFiltersTableViewControllerDelegate>
+@interface DHSkinRetouchViewController ()<ImagePickerTableViewControllerDelegate, SkinFiltersTableViewControllerDelegate, TakePictureViewControllerDelegate>
 @property (strong, nonatomic) UISlider *strengthSlider;
 @property (weak, nonatomic) IBOutlet GPUImageView *renderTarget;
 @property (nonatomic, strong) GPUImagePicture *picture;
@@ -90,6 +91,12 @@
         [self initGLWithImage:processedImage filterClass:self.filterClass updateImage:YES];
     }];
 }
+- (IBAction)takePhoto:(id)sender {
+    TakePictureViewController *takePic = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"TakePictureViewController"];
+    takePic.delegate = self;
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:takePic];
+    [self.navigationController presentViewController:nav animated:YES completion:nil];
+}
 
 - (void) strengthChanged:(UISlider *)slider
 {
@@ -159,5 +166,11 @@
     [self.filter updateWithStrength:1.0];
     [self.picture processImage];
     
+}
+
+- (void) didTakePicture:(UIImage *)picture
+{
+    self.originalImage = picture;
+    [self initGLWithImage:picture filterClass:self.filterClass updateImage:YES];
 }
 @end

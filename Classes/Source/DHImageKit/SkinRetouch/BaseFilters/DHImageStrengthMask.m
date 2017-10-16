@@ -208,7 +208,7 @@ SHADER_STRING
     glEnable(GL_BLEND);
     glBlendFunc(GL_ONE, GL_ONE_MINUS_SRC_ALPHA);
     glUniformMatrix4fv(mvpUniform, 1, GL_FALSE, mvpMatrix.m);
-    glUniform1f(pointSizeUniform, 150);
+    glUniform1f(pointSizeUniform, width / 5);
     
     glActiveTexture(GL_TEXTURE0);
     glBindTexture(GL_TEXTURE_2D, textureInfo.tid);

@@ -19,7 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.camera = [[GPUImageStillCamera alloc] init];
+    self.camera = [[GPUImageStillCamera alloc] initWithSessionPreset:AVCaptureSessionPresetMedium cameraPosition:AVCaptureDevicePositionBack];
     _camera.outputImageOrientation = [UIApplication sharedApplication].statusBarOrientation;
     _camera.horizontallyMirrorFrontFacingCamera = YES;
     
