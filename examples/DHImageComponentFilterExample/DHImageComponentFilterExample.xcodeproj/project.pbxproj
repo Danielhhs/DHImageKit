@@ -13,6 +13,7 @@
 		543C8E3C1F5E79600036CD92 /* TakePictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 543C8E3B1F5E79600036CD92 /* TakePictureViewController.m */; };
 		543C8E831F5FD87A0036CD92 /* DHIFFilterCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 543C8E821F5FD87A0036CD92 /* DHIFFilterCollectionViewCell.m */; };
 		544E91C81F7F327400B6AA88 /* DHImageMaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 544E91C71F7F327300B6AA88 /* DHImageMaskViewController.m */; };
+		546EAAD21FB2B49700DD9B37 /* FaceRecognitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 546EAAD11FB2B49700DD9B37 /* FaceRecognitionViewController.m */; };
 		5479B0841F2C42E100912E66 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5479B0831F2C42E100912E66 /* main.m */; };
 		5479B0871F2C42E100912E66 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5479B0861F2C42E100912E66 /* AppDelegate.m */; };
 		5479B08A1F2C42E100912E66 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5479B0891F2C42E100912E66 /* ViewController.m */; };
@@ -79,6 +80,8 @@
 		544E91C71F7F327300B6AA88 /* DHImageMaskViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DHImageMaskViewController.m; sourceTree = "<group>"; };
 		544E91CA1F7F3D8900B6AA88 /* 750.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 750.png; sourceTree = "<group>"; };
 		544E91CB1F7F3E9F00B6AA88 /* kriss.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = kriss.jpg; sourceTree = "<group>"; };
+		546EAAD01FB2B49700DD9B37 /* FaceRecognitionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FaceRecognitionViewController.h; sourceTree = "<group>"; };
+		546EAAD11FB2B49700DD9B37 /* FaceRecognitionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FaceRecognitionViewController.m; sourceTree = "<group>"; };
 		5479B07F1F2C42E100912E66 /* DHImageComponentFilterExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DHImageComponentFilterExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5479B0831F2C42E100912E66 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5479B0851F2C42E100912E66 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -195,6 +198,15 @@
 			path = Mask;
 			sourceTree = "<group>";
 		};
+		546EAACF1FB2A66400DD9B37 /* FaceRecognition */ = {
+			isa = PBXGroup;
+			children = (
+				546EAAD01FB2B49700DD9B37 /* FaceRecognitionViewController.h */,
+				546EAAD11FB2B49700DD9B37 /* FaceRecognitionViewController.m */,
+			);
+			path = FaceRecognition;
+			sourceTree = "<group>";
+		};
 		5479B0761F2C42E100912E66 = {
 			isa = PBXGroup;
 			children = (
@@ -235,6 +247,7 @@
 				54A060421F8CA32E00F14EBE /* ImagePickerTableViewController.m */,
 				543C8E3A1F5E79600036CD92 /* TakePictureViewController.h */,
 				543C8E3B1F5E79600036CD92 /* TakePictureViewController.m */,
+				546EAACF1FB2A66400DD9B37 /* FaceRecognition */,
 				544E91C51F7F326400B6AA88 /* Mask */,
 				54C47F241F63B0A100ACECD1 /* Skin Retouch */,
 				543C8D9F1F540BD90036CD92 /* DHFilter */,
@@ -547,6 +560,7 @@
 				5479B1A31F300CB400912E66 /* DHComponentFilterPickerCollectionViewController.m in Sources */,
 				5479B0841F2C42E100912E66 /* main.m in Sources */,
 				5479B1A51F300CB400912E66 /* DHTiltTypeChoosePanel.m in Sources */,
+				546EAAD21FB2B49700DD9B37 /* FaceRecognitionViewController.m in Sources */,
 				544E91C81F7F327400B6AA88 /* DHImageMaskViewController.m in Sources */,
 				5479B1A41F300CB400912E66 /* DHSliderInputPanel.m in Sources */,
 				54A060431F8CA32E00F14EBE /* ImagePickerTableViewController.m in Sources */,
@@ -706,6 +720,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 69JC3H46Q9;
 				INFOPLIST_FILE = DHImageComponentFilterExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.huanghongsen.DHImageComponentFilterExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -719,6 +734,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 69JC3H46Q9;
 				INFOPLIST_FILE = DHImageComponentFilterExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.huanghongsen.DHImageComponentFilterExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
