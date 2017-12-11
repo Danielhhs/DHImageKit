@@ -22,6 +22,12 @@ typedef NS_OPTIONS(NSInteger, DHImageFaceFeature) {
 - (instancetype) initWithImage:(UIImage *)image
                   faceFeatures:(DHImageFaceFeature)features;
 
+- (CGPoint) leftPupilPosition;
+- (CGPoint) rightPupilPosition;
+
+- (NSArray *) leftContourPoints;
+- (NSArray *) rightContourPoints;
+
 - (void)generateMask;
 - (BOOL)generateMaskWithCompletion:(void (^)(void))completion;
 @end

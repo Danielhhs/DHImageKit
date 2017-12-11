@@ -13,6 +13,12 @@
 @interface DHImageFaceLandmarkMask() {
     dispatch_semaphore_t imageUpdateSemaphore;
     CGSize pixelSizeOfImage;
+    
+    CGPoint _leftPupilPosition;
+    CGPoint _rightPupilPosition;
+    
+    NSArray *_leftFaceContourPoints;
+    NSArray *_rightFaceContourPoints;
 }
 @end
 
@@ -107,6 +113,36 @@
                                         imageSize:imageSize];
         [paths addObject:path];
     }
+    VNFaceLandmarkRegion2D *leftPupil = landmarks.leftPupil;
+    _leftPupilPosition = [self _normalizedPointInImageWithNormalizedPoint:leftPupil.normalizedPoints[0] boundingBox:observation.boundingBox imageSize:imageSize];
+    
+    VNFaceLandmarkRegion2D *rightPupil = landmarks.rightPupil;
+    _rightPupilPosition = [self _normalizedPointInImageWithNormalizedPoint:rightPupil.normalizedPoints[0] boundingBox:observation.boundingBox imageSize:imageSize];
+    
+    VNFaceLandmarkRegion2D *faceContour = landmarks.faceContour;
+    NSMutableArray *leftPoints = [NSMutableArray array];
+    NSMutableArray *rightPoints = [NSMutableArray array];
+    for (int i = 0; i < faceContour.pointCount; i++) {
+        CGPoint point = [self _normalizedPointInImageWithNormalizedPoint:faceContour.normalizedPoints[i] boundingBox:observation.boundingBox imageSize:imageSize];
+        if (i < faceContour.pointCount / 2) {
+            [leftPoints addObject:@(point.x)];
+            [leftPoints addObject:@(point.y)];
+        } else {
+            NSInteger rightStart = faceContour.pointCount / 2;
+            if (faceContour.pointCount % 2 == 1) {
+                rightStart = faceContour.pointCount / 2 + 1;
+            }
+            if (i >= rightStart) {
+                [rightPoints insertObject:@(point.y) atIndex:0];
+                [rightPoints insertObject:@(point.x) atIndex:0];
+            }
+        }
+    }
+    NSLog(@"left points = %@", leftPoints);
+    NSLog(@"right points = %@", rightPoints);
+    _leftFaceContourPoints = leftPoints;
+    _rightFaceContourPoints = rightPoints;
+    
     return paths;
 }
 
@@ -117,9 +153,7 @@
     UIBezierPath *path = [UIBezierPath bezierPath];
     for (int i = 0; i < region.pointCount; i++) {
         CGPoint point = [region normalizedPoints][i];
-        CGFloat rectWidth = imageSize.width * boundingBox.size.width;
-        CGFloat rectHeight = imageSize.height * boundingBox.size.height;
-        CGPoint p = CGPointMake(point.x * rectWidth + boundingBox.origin.x * imageSize.width, imageSize.height - (boundingBox.origin.y * imageSize.height +  point.y * rectHeight));
+        CGPoint p = [self _pointInImageWithNormalizedPoint:point boundingBox:boundingBox imageSize:imageSize];
         if (i == 0) {
             [path moveToPoint:p];
         } else {
@@ -130,6 +164,24 @@
         }
     }
     return path;
+}
+
+- (CGPoint) _pointInImageWithNormalizedPoint:(CGPoint)point
+                                boundingBox:(CGRect)boundingBox
+                                  imageSize:(CGSize)imageSize
+{
+    CGFloat rectWidth = imageSize.width * boundingBox.size.width;
+    CGFloat rectHeight = imageSize.height * boundingBox.size.height;
+    CGPoint p = CGPointMake(point.x * rectWidth + boundingBox.origin.x * imageSize.width, imageSize.height - (boundingBox.origin.y * imageSize.height +  point.y * rectHeight));
+    return p;
+}
+
+- (CGPoint) _normalizedPointInImageWithNormalizedPoint:(CGPoint)point
+                                           boundingBox:(CGRect)boundingBox
+                                             imageSize:(CGSize)imageSize
+{
+    CGPoint p = [self _pointInImageWithNormalizedPoint:point boundingBox:boundingBox imageSize:imageSize];
+    return CGPointMake(p.x / imageSize.width, p.y / imageSize.height);
 }
 
 - (char *) _generateStrenthMapWithImage:(UIImage *)image
@@ -194,4 +246,23 @@
     return YES;
 }
 
+- (CGPoint) leftPupilPosition
+{
+    return _leftPupilPosition;
+}
+
+- (CGPoint) rightPupilPosition
+{
+    return _rightPupilPosition;
+}
+
+- (NSArray *) leftContourPoints
+{
+    return _leftFaceContourPoints;
+}
+
+- (NSArray *) rightContourPoints
+{
+    return _rightFaceContourPoints;
+}
 @end
