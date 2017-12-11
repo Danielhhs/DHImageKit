@@ -47,6 +47,8 @@
 		54C47F0E1F63815A00ACECD1 /* food.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 54C47F0D1F63815A00ACECD1 /* food.jpg */; };
 		54C47F271F63B0B500ACECD1 /* DHSkinRetouchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54C47F261F63B0B500ACECD1 /* DHSkinRetouchViewController.m */; };
 		54C47F291F63B4B200ACECD1 /* SampleImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 54C47F281F63B4B200ACECD1 /* SampleImage.jpg */; };
+		54F63FC31FDE395900A615FB /* RealTimeFaceRecognitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54F63FC21FDE395900A615FB /* RealTimeFaceRecognitionViewController.m */; };
+		54F63FC51FDE6DA200A615FB /* liqian.png in Resources */ = {isa = PBXBuildFile; fileRef = 54F63FC41FDE6DA200A615FB /* liqian.png */; };
 		7CE9E0372092281D81F550AE /* libPods-DHImageComponentFilterExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D83CAFC791B31B8303F6D25 /* libPods-DHImageComponentFilterExample.a */; };
 /* End PBXBuildFile section */
 
@@ -130,6 +132,9 @@
 		54C47F251F63B0B500ACECD1 /* DHSkinRetouchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHSkinRetouchViewController.h; sourceTree = "<group>"; };
 		54C47F261F63B0B500ACECD1 /* DHSkinRetouchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHSkinRetouchViewController.m; sourceTree = "<group>"; };
 		54C47F281F63B4B200ACECD1 /* SampleImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = SampleImage.jpg; sourceTree = "<group>"; };
+		54F63FC11FDE395900A615FB /* RealTimeFaceRecognitionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RealTimeFaceRecognitionViewController.h; sourceTree = "<group>"; };
+		54F63FC21FDE395900A615FB /* RealTimeFaceRecognitionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RealTimeFaceRecognitionViewController.m; sourceTree = "<group>"; };
+		54F63FC41FDE6DA200A615FB /* liqian.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = liqian.png; sourceTree = "<group>"; };
 		6D83CAFC791B31B8303F6D25 /* libPods-DHImageComponentFilterExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DHImageComponentFilterExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		97E620C5E377BC2D2A797B39 /* Pods-DHImageComponentFilterExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DHImageComponentFilterExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-DHImageComponentFilterExample/Pods-DHImageComponentFilterExample.release.xcconfig"; sourceTree = "<group>"; };
 		FB8CBCF47600C73A3E5F68BC /* Pods-DHImageComponentFilterExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DHImageComponentFilterExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DHImageComponentFilterExample/Pods-DHImageComponentFilterExample.debug.xcconfig"; sourceTree = "<group>"; };
@@ -203,6 +208,8 @@
 			children = (
 				546EAAD01FB2B49700DD9B37 /* FaceRecognitionViewController.h */,
 				546EAAD11FB2B49700DD9B37 /* FaceRecognitionViewController.m */,
+				54F63FC11FDE395900A615FB /* RealTimeFaceRecognitionViewController.h */,
+				54F63FC21FDE395900A615FB /* RealTimeFaceRecognitionViewController.m */,
 			);
 			path = FaceRecognition;
 			sourceTree = "<group>";
@@ -236,6 +243,7 @@
 				544E91CB1F7F3E9F00B6AA88 /* kriss.jpg */,
 				543C8DFE1F5CEDAB0036CD92 /* scene.jpg */,
 				5479B0BC1F2C59A400912E66 /* sample_kuru.jpg */,
+				54F63FC41FDE6DA200A615FB /* liqian.png */,
 				54C47F0D1F63815A00ACECD1 /* food.jpg */,
 				543C8E041F5CFD010036CD92 /* portrait.jpg */,
 				54C47F281F63B4B200ACECD1 /* SampleImage.jpg */,
@@ -477,6 +485,7 @@
 				5492A1761F8F44F1000CF24E /* pimple2.jpg in Resources */,
 				5492A1821F8F579B000CF24E /* kriss.jpg in Resources */,
 				5479B08D1F2C42E100912E66 /* Main.storyboard in Resources */,
+				54F63FC51FDE6DA200A615FB /* liqian.png in Resources */,
 				5492A1771F8F44F1000CF24E /* pimple3.jpg in Resources */,
 				5492A1751F8F44F1000CF24E /* pimple1.jpg in Resources */,
 			);
@@ -551,6 +560,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54F63FC31FDE395900A615FB /* RealTimeFaceRecognitionViewController.m in Sources */,
 				5479B08A1F2C42E100912E66 /* ViewController.m in Sources */,
 				54A060531F8CB0DF00F14EBE /* SkinFiltersTableViewController.m in Sources */,
 				5479B0871F2C42E100912E66 /* AppDelegate.m in Sources */,

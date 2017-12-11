@@ -24,6 +24,7 @@
 
 @implementation DHImageFaceLandmarkMask
 
+
 - (instancetype) initWithImage:(UIImage *)image
                   faceFeatures:(DHImageFaceFeature)features
 {

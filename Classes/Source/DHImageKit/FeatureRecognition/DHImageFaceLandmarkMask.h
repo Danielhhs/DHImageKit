@@ -22,6 +22,9 @@ typedef NS_OPTIONS(NSInteger, DHImageFaceFeature) {
 - (instancetype) initWithImage:(UIImage *)image
                   faceFeatures:(DHImageFaceFeature)features;
 
+- (instancetype) initWithPixelBuffer:(CVPixelBufferRef)pixelBuffer
+                        faceFeatures:(DHImageFaceFeature)features;
+
 - (CGPoint) leftPupilPosition;
 - (CGPoint) rightPupilPosition;
 

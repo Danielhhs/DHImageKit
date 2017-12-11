@@ -100,6 +100,26 @@
                                             <segue destination="P0A-Rr-0Va" kind="show" id="XFd-Wy-yQH"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Yfj-DP-1WI">
+                                        <rect key="frame" x="0.0" y="176" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Yfj-DP-1WI" id="FRM-Kc-e9p">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Real Time Face Recognition" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NML-lO-SNV">
+                                                    <rect key="frame" x="16" y="12" width="211" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="18l-1F-Au4" kind="show" id="kJt-bx-Q1B"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -448,7 +468,51 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K0a-QI-JI9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-898.39999999999998" y="1055.6221889055473"/>
+            <point key="canvasLocation" x="-530" y="1233"/>
+        </scene>
+        <!--Real Time Face Recognition View Controller-->
+        <scene sceneID="Ter-a9-0IS">
+            <objects>
+                <viewController id="18l-1F-Au4" customClass="RealTimeFaceRecognitionViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EVa-Os-ewe"/>
+                        <viewControllerLayoutGuide type="bottom" id="3le-hF-HX6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bLi-0a-gWs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="40X-nF-TcE" customClass="GPUImageView">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Yn1-DQ-ios">
+                                <rect key="frame" x="15" y="618" width="347" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="faceValueChanged:" destination="18l-1F-Au4" eventType="valueChanged" id="DdI-D7-jJo"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="k0n-SJ-6Pn">
+                                <rect key="frame" x="17" y="561" width="345" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="eyesValueChanged:" destination="18l-1F-Au4" eventType="valueChanged" id="iRT-AU-3eS"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="eyesSlider" destination="k0n-SJ-6Pn" id="sdU-PQ-kdJ"/>
+                        <outlet property="faceSlider" destination="Yn1-DQ-ios" id="dCK-hj-nEr"/>
+                        <outlet property="renderTarget" destination="40X-nF-TcE" id="g4y-d9-sXM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OIK-96-v9P" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1274.4000000000001" y="1064.6176911544228"/>
         </scene>
         <!--Image Mask View Controller-->
         <scene sceneID="DhR-ql-tZU">
@@ -484,7 +548,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hVL-lJ-d4i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="0.80000000000000004" y="1327.2863568215894"/>
+            <point key="canvasLocation" x="271" y="1194"/>
         </scene>
         <!--Skin Retouch View Controller-->
         <scene sceneID="cfY-LV-i7D">

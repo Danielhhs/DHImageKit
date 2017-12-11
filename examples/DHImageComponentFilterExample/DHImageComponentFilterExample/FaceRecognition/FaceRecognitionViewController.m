@@ -19,9 +19,9 @@
 @property (nonatomic, strong) DHImageFaceLandmarkMask *mask;
 @property (nonatomic, strong) GPUImagePicture *picture;
 @property (nonatomic, strong) DHImageChangeLipColorFilter *filter;
-@property (nonatomic, strong) DHImageEyesMagnifyFilter *eysFilter;
 @property (weak, nonatomic) IBOutlet UISlider *eyesSlider;
 @property (nonatomic, strong) DHImageFaceThinningFilter *faceThinningFilter;
+@property (nonatomic, strong) DHImageEyesMagnifyFilter *eysFilter;
 @end
 
 @implementation FaceRecognitionViewController
@@ -46,7 +46,7 @@
     self.slider.maximumValue = 0.3;
     self.eyesSlider.minimumValue = 0;
     self.eyesSlider.maximumValue = 1.f;
-    UIImage *image = [UIImage imageNamed:@"SampleImage.jpg"];
+    UIImage *image = [UIImage imageNamed:@"liqian.png"];
     self.mask = [[DHImageFaceLandmarkMask alloc] initWithImage:image faceFeatures:DHImageFaceFeatureLip];
     self.eysFilter = [[DHImageEyesMagnifyFilter alloc] init];
     self.eysFilter.scaleRatio = 0;
@@ -65,7 +65,7 @@
     [self.eysFilter addTarget:self.faceThinningFilter];
     [self.faceThinningFilter addTarget:self.renderTarget];
     
-        self.picture = [[GPUImagePicture alloc] initWithImage:[UIImage imageNamed:@"SampleImage.jpg"]];
+        self.picture = [[GPUImagePicture alloc] initWithImage:[UIImage imageNamed:@"liqian.png"]];
         [self.picture addTarget:self.eysFilter];
         [self.picture processImage];
     

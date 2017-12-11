@@ -244,7 +244,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DHImageComponentFilterExample/FaceRecognition/FaceRecognitionViewController.m"
-            timestampString = "534657124.343013"
+            timestampString = "534674284.613051"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "70"
@@ -260,13 +260,61 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DHImageComponentFilterExample/FaceRecognition/FaceRecognitionViewController.m"
-            timestampString = "534657124.343906"
+            timestampString = "534674284.61315"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "96"
             endingLineNumber = "96"
             landmarkName = "-eyesChanged:"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DHImageComponentFilterExample/FaceRecognition/RealTimeFaceRecognitionViewController.m"
+            timestampString = "534674284.613228"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "-willOutputSampleBuffer:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__64-[RealTimeFaceRecognitionViewController willOutputSampleBuffer:]_block_invoke"
+                  moduleName = "DHImageComponentFilterExample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/huanghongsen/Developer/DHKit/DHImageKit/examples/DHImageComponentFilterExample/DHImageComponentFilterExample/FaceRecognition/RealTimeFaceRecognitionViewController.m"
+                  timestampString = "534671392.117805"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "82"
+                  endingLineNumber = "82"
+                  offsetFromSymbolStart = "420">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__64-[RealTimeFaceRecognitionViewController willOutputSampleBuffer:]_block_invoke_2"
+                  moduleName = "DHImageComponentFilterExample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/huanghongsen/Developer/DHKit/DHImageKit/examples/DHImageComponentFilterExample/DHImageComponentFilterExample/FaceRecognition/RealTimeFaceRecognitionViewController.m"
+                  timestampString = "534671392.119631"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "82"
+                  endingLineNumber = "82"
+                  offsetFromSymbolStart = "60">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
